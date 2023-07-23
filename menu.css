@@ -1,0 +1,6906 @@
+@import url('https://fonts.googleapis.com/css2?family=Kristi&family=Poppins&family=Yeseva+One&display=swap');
+
+:root {
+    --Poppins: 'Poppins', sans-serif;
+    --Kristi: 'Kristi', cursive;
+    --Yeseva: 'Yeseva One', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    list-style: none;
+    text-decoration: none;
+    background: none;
+    box-sizing: border-box;
+}
+
+a{
+    color:inherit;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width:100vw;
+    height:3rem;
+    position:fixed;
+    z-index:10;
+    background:#00000081;
+}
+
+.elroyale {
+    width:7.5rem;
+    height:3rem;
+    background:url(../Images/El-Royale_Logo_Colored.png) center/cover no-repeat;
+    margin: 0rem 1rem 0rem 1rem;
+    float:left;
+}
+
+.elroyale:hover {
+    outline:2px solid #a3682c;
+}
+
+.navMenu {
+    clear:both;
+    background:#000000b2;
+    color:white;
+    text-align:center;
+    max-width:100%;
+    height:30rem;
+    overflow: hidden;
+    transform:translateX(100vw);
+    transition: transform 0.2s ease-out;
+}
+
+.navLink {
+    display:block;
+    font-size: 2rem;
+    padding:1rem 2rem 1rem 1rem;
+}
+
+.menuBtn {
+    float:right;
+    display:none;
+}
+
+.hamburgerContainer {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:2rem;
+    height:2rem;
+    float:right;
+    margin:0.5rem 1rem 0.5rem 1rem;
+    position:relative;
+}
+
+.hamburgerLine {
+    display:block;
+    width:1.2rem;
+    height:3px;
+    background:#fff;
+    position:relative;
+    transition: background 0.1s linear;
+}
+
+.hamburgerLine::before {
+    content: "";
+    width:1.5rem;
+    height:100%;
+    background:#fff;
+    position:absolute;
+    top:-6px;
+    transition: all 0.2s linear;
+}
+
+.hamburgerLine::after {
+    content: "";
+    width:1.8rem;
+    height:100%;
+    background:#fff;
+    position:absolute;
+    top:6px;
+    transition: all 0.2s linear;
+}
+
+.menuBtn:checked ~ .navMenu {
+    transform:translateX(0vw);
+}
+
+.menuBtn:checked ~ .hamburgerContainer .hamburgerLine {
+    background:transparent;
+}
+
+.menuBtn:checked ~ .hamburgerContainer .hamburgerLine::before {
+    transform:rotate(135deg);
+    top:0px;
+    width:1.5rem;
+}
+
+.menuBtn:checked ~ .hamburgerContainer .hamburgerLine::after {
+    transform:rotate(-135deg);
+    top:0px;
+    width:1.5rem;
+}
+
+.menuBanner {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(#0000006b, #0000006b), url(../Images/Pizza_Hut_New_Menu.jpeg) center/cover no-repeat fixed;
+}
+
+.menuFirstText {
+    color:#fff;
+    font-family:var(--Kristi);
+    font-size:1.5rem;
+    margin:5rem 0rem 0rem 0rem;
+}
+
+.menuSecondText {
+    color:#fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:2rem;
+}
+
+.discoverMenu {
+    width:100vw;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:4rem 0rem;
+}
+
+.discoverMenuFirstText {
+    color:#a3682c;
+    font-family:var(--Kristi);
+    font-size:1.5rem;
+    text-align:center;
+    margin:0rem 0rem 0rem 0rem;
+}
+
+.discoverMenuSecondText {
+    color:#000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:2.3rem;
+    text-align:center;
+    margin:2rem 0rem 0rem 0rem;
+}
+
+.discoverMenuText {
+    color:#0000006b;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1rem;
+    text-align:center;
+    line-height:1.7rem;
+    margin:3rem 1rem 0rem 1rem;
+}
+
+.breakfastMenu {
+    width:100vw;
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(#0000006b, #0000006b), url(../Images/pizzza.jpeg) center/cover no-repeat fixed;
+}
+
+.breakfastMenuFirstText {
+    color:#fff;
+    font-family:var(--Kristi);
+    font-size:1.5rem;
+    text-align:center;
+}
+
+.breakfastMenuSecondText {
+    color:#fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:3rem;
+    text-align:center;
+}
+
+.breakfastMenuItems {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:5rem 0rem 5rem 0rem;
+}
+
+.breakfastMenuItems .firstSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.breakfastMenuItems .firstSection .firstSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+    margin:0rem 0rem 2rem 0rem;
+}
+
+.header_and_price {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-between;
+    margin:0rem 0rem 0.5rem 0rem;
+}
+
+.header_text {
+    color:#000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+.price {
+    font-family:var(--Kristi);
+    font-size:1rem;
+    color:#a3682c;
+}
+
+.sub_text {
+    color:#0000006b;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1rem;
+    line-height:1.5rem;
+    margin:0rem 0rem 0.5rem 0rem;
+}
+
+.breakfastMenuItemsHr {
+    width:100%;
+    border-top:1px dashed #0000006b;
+    margin:0rem 0rem 1rem 0rem;
+}
+
+.breakfastMenuItems .secondSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.breakfastMenuItems .secondSection .secondSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+    margin:1.5rem 0rem 2rem 0rem;
+}
+
+.breakfastMenuItems .thirdSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.breakfastMenuItems .thirdSection .thirdSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+    margin:1.5rem 0rem 2rem 0rem;
+}
+
+.lunchMenu {
+    width:100vw;
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(#0000006b, #0000006b), url(../Images/Vegetable_Dumplings.png) center/cover no-repeat fixed;
+}
+
+.lunchMenuFirstText {
+    color:#fff;
+    font-family:var(--Kristi);
+    font-size:1.5rem;
+    text-align:center;
+}
+
+.lunchMenuSecondText {
+    color:#fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:3rem;
+    text-align:center;
+}
+
+.lunchMenuItems {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:5rem 0rem 5rem 0rem;
+}
+
+.lunchMenuItems .firstSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.lunchMenuItems .firstSection .firstSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/lunch.jpeg) center/cover no-repeat;
+    margin:0rem 0rem 2rem 0rem;
+}
+
+.header_and_price {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-between;
+    margin:0rem 0rem 0.5rem 0rem;
+}
+
+.header_text {
+    color:#000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+.price {
+    font-family:var(--Kristi);
+    font-size:1rem;
+    color:#a3682c;
+}
+
+.sub_text {
+    color:#0000006b;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1rem;
+    line-height:1.5rem;
+    margin:0rem 0rem 0.5rem 0rem;
+}
+
+.lunchMenuItemsHr {
+    width:100%;
+    border-top:1px dashed #0000006b;
+    margin:0rem 0rem 1rem 0rem;
+}
+
+.lunchMenuItems .secondSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.lunchMenuItems .secondSection .secondSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/lunch_1.png) center/cover no-repeat;
+    margin:1.5rem 0rem 2rem 0rem;
+}
+
+.lunchMenuItems .thirdSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.lunchMenuItems .thirdSection .thirdSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/lunch_2.jpeg) center/cover no-repeat;
+    margin:1.5rem 0rem 2rem 0rem;
+}
+
+.dinnerMenu {
+    width:100vw;
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(#0000006b, #0000006b), url(../Images/Smoky_Mushroom_Tacos.jpeg) center/cover no-repeat fixed;
+}
+
+.dinnerMenuFirstText {
+    color:#fff;
+    font-family:var(--Kristi);
+    font-size:1.5rem;
+    text-align:center;
+}
+
+.dinnerMenuSecondText {
+    color:#fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:3rem;
+    text-align:center;
+}
+
+.dinnerMenuItems {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:5rem 0rem 5rem 0rem;
+}
+
+.dinnerMenuItems .firstSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.dinnerMenuItems .firstSection .firstSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/dinner.jpeg) center/cover no-repeat;
+    margin:0rem 0rem 2rem 0rem;
+}
+
+.header_and_price {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-between;
+    margin:0rem 0rem 0.5rem 0rem;
+}
+
+.header_text {
+    color:#000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+.price {
+    font-family:var(--Kristi);
+    font-size:1rem;
+    color:#a3682c;
+}
+
+.sub_text {
+    color:#0000006b;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1rem;
+    line-height:1.5rem;
+    margin:0rem 0rem 0.5rem 0rem;
+}
+
+.dinnerMenuItemsHr {
+    width:100%;
+    border-top:1px dashed #0000006b;
+    margin:0rem 0rem 1rem 0rem;
+}
+
+.dinnerMenuItems .secondSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.dinnerMenuItems .secondSection .secondSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/dinner_1.jpeg) center/cover no-repeat;
+    margin:1.5rem 0rem 2rem 0rem;
+}
+
+.dinnerMenuItems .thirdSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.dinnerMenuItems .thirdSection .thirdSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/dinner_2.png) center/cover no-repeat;
+    margin:1.5rem 0rem 2rem 0rem;
+}
+
+.dessertMenu {
+    width:100vw;
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(#0000006b, #0000006b), url(../Images/grilled_seafood_paella.jpeg) center/cover no-repeat fixed;
+}
+
+.dessertMenuFirstText {
+    color:#fff;
+    font-family:var(--Kristi);
+    font-size:1.5rem;
+    text-align:center;
+}
+
+.dessertMenuSecondText {
+    color:#fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:3rem;
+    text-align:center;
+}
+
+.dessertMenuItems {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:5rem 0rem 0rem 0rem;
+}
+
+.dessertMenuItems .firstSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.dessertMenuItems .firstSection .firstSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/desserts.jpeg) center/cover no-repeat;
+    margin:0rem 0rem 2rem 0rem;
+}
+
+.header_and_price {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-between;
+    margin:0rem 0rem 0.5rem 0rem;
+}
+
+.header_text {
+    color:#000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+.price {
+    font-family:var(--Kristi);
+    font-size:1rem;
+    color:#a3682c;
+}
+
+.sub_text {
+    color:#0000006b;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1rem;
+    line-height:1.5rem;
+    margin:0rem 0rem 0.5rem 0rem;
+}
+
+.dessertMenuItemsHr {
+    width:100%;
+    border-top:1px dashed #0000006b;
+    margin:0rem 0rem 1rem 0rem;
+}
+
+.dessertMenuItems .secondSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.dessertMenuItems .secondSection .secondSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/desserts_1.jpeg) center/cover no-repeat;
+    margin:1.5rem 0rem 2rem 0rem;
+}
+
+.dessertMenuItems .thirdSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.dessertMenuItems .thirdSection .thirdSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/desserts_2.jpeg) center/cover no-repeat;
+    margin:1.5rem 0rem 2rem 0rem;
+}
+
+.drinkMenu {
+    width:100vw;
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(#0000006b, #0000006b), url(../Images/drink_1.jpeg) center/cover no-repeat fixed;
+}
+
+.drinkMenuFirstText {
+    color:#fff;
+    font-family:var(--Kristi);
+    font-size:1.5rem;
+    text-align:center;
+}
+
+.drinkMenuSecondText {
+    color:#fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:3rem;
+    text-align:center;
+}
+
+.drinkMenuItems {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:5rem 0rem 0rem 0rem;
+}
+
+.drinkMenuItems .firstSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.drinkMenuItems .firstSection .firstSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+    margin:0rem 0rem 2rem 0rem;
+}
+
+.header_and_price {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-between;
+    margin:0rem 0rem 0.5rem 0rem;
+}
+
+.header_text {
+    color:#000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+.price {
+    font-family:var(--Kristi);
+    font-size:1rem;
+    color:#a3682c;
+}
+
+.sub_text {
+    color:#0000006b;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1rem;
+    line-height:1.5rem;
+    margin:0rem 0rem 0.5rem 0rem;
+}
+
+.drinkMenuItemsHr {
+    width:100%;
+    border-top:1px dashed #0000006b;
+    margin:0rem 0rem 1rem 0rem;
+}
+
+.drinkMenuItems .secondSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.drinkMenuItems .secondSection .secondSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+    margin:1.5rem 0rem 2rem 0rem;
+}
+
+.drinkMenuItems .thirdSection {
+    width:90%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.drinkMenuItems .thirdSection .thirdSectionImage {
+    width:100%;
+    height:10rem;
+    background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+    margin:1.5rem 0rem 2rem 0rem;
+}
+
+.contact{
+    width:100vw;
+    min-height:10vh;
+    background:#111111;
+}
+
+.contact .address{
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:2rem 0rem 1rem 0rem;
+}
+
+.first_address_text{
+    color:#fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1.1rem;
+    text-align:center;
+    margin:0rem 0rem 0rem 0rem;
+}
+
+.second_address_text{
+    color:#ffffff71;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:0.9rem;
+    text-align:center;
+    margin:1.5rem 1rem 1.5rem 1rem;
+}
+
+.map_link{
+    color:#a3682c;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1.1rem;
+    text-align:center;
+    text-decoration:none;
+}
+
+#address_underline{
+    color:#a3682c;
+    border:1px solid #a3682c;
+    width:6.4rem;
+    margin:0rem 0rem 0rem 0rem;
+}
+
+.contact .newsletter{
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:1rem 0rem 0rem 0rem;
+}
+
+.newsletter .logo{
+    width:8rem;
+    height:3rem;
+    background:url(../Images/El-royale_Logo_BlackandWhite.png) center/cover no-repeat;
+    }
+
+.newsletter_first_text{
+    color:#ffffff71;
+    text-align:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:0.9rem;
+    line-height:1.5rem;
+    margin:1rem 2rem 1rem 2rem;
+}
+
+.newsletter_form{
+    width:100vw;
+}
+
+.newsletter_form_first_border{
+    width:15rem;
+    height:3rem;
+    margin:0rem auto 0rem auto;
+    border:1px solid #a3682c;
+}
+
+.newsletter_form_second_border{
+    display:flex;
+    align-items:center;
+    width:14.8rem;
+    height:3.25rem;
+    margin:-0.2rem auto 0rem auto;
+    border:1px solid #a3682c;
+}
+
+.newsletter_email{
+    width:12rem;
+    color:#ffffff16;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:0.7rem;
+    background:transparent;
+    border:none;
+    padding:0rem 1rem 0rem 1rem;
+}
+
+.newsletter_submit{
+     color:#fff;
+     background:transparent;
+     border:none;
+}
+
+.newsletter .social_icon_container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:10rem;
+    height:3rem;
+    margin:1rem auto 0rem auto;
+}
+
+.social_icon_container .instagram{
+    width:2rem;
+    height:2rem;
+    background:url(../Images/Social_Images/Instagram.png) center/cover no-repeat;
+    border-radius:50%;
+    margin:0rem 0.5rem 0rem 0.5rem;
+}
+
+.social_icon_container .facebook{
+    width:2rem;
+    height:2rem;
+    background:url(../Images/Social_Images/Facebook.png) center/cover no-repeat;
+    border-radius:50%;
+    margin:0rem 0.5rem 0rem 0.5rem;
+}
+
+.social_icon_container .twitter{
+    width:2rem;
+    height:2rem;
+    background:url(../Images/Social_Images/Twitter.jpeg) center/cover no-repeat;
+    border-radius:50%;
+    margin:0rem 0.5rem 0rem 0.5rem;
+}
+
+.private_dining{
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:1rem 0rem 0rem 0rem;
+}
+
+.private_dining_first_text{
+    color:white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1.1rem;
+    text-align:center;
+    margin:0rem 1.5rem 0rem 1.5rem;
+}
+
+.private_dining_email{
+    color:#ffffff71;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:0.8rem;
+    text-align:center;
+    margin:1rem 0rem 0rem 0rem;
+}
+
+.private_dining_number{
+    color:#ffffff71;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:0.8rem;
+    text-align:center;
+    margin:0.1rem 0rem 2rem 0rem;
+}
+
+.private_dining_reservations{
+    color:#a3682c;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1rem;
+    text-align:center;
+    text-decoration:none;
+}
+
+#private_dining_reservations_underline{
+    color:#a3682c;
+    border:1px solid #a3682c;
+    width:5.8rem;
+    margin:0.1rem 0rem 3rem 0rem;
+}
+
+.footer{
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:#060606;
+}
+
+.footer_ul{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding:1rem;
+}
+
+.footer_ul li{
+    color:#fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1rem;
+    font-weight:bold;
+    text-align:center;
+    padding:0.5rem;
+}
+
+.footer .copyright{
+    color:#726e6e;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:0.8rem;
+    text-align:center;
+    margin:0rem 0rem 1rem 0rem
+}
+
+.footer .copyright a{
+    color:#d55219;
+    text-decoration:none;
+}
+
+@media screen and (max-width:240px) {
+    .discoverMenu {
+        width:100vw;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:3rem 0rem;
+    }
+
+    .discoverMenuFirstText {
+        color:#a3682c;
+        font-family:var(--Kristi);
+        font-size:1.3rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuSecondText {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.5rem;
+        text-align:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuText {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        line-height:1.7rem;
+        margin:2rem 1rem 0rem 1rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content: center;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .contact{
+        width:100vw;
+        min-height:100vh;
+        background:#111111;
+    }
+
+    .contact .address{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:2rem 0rem 1rem 0rem;
+    }
+
+    .first_address_text{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .second_address_text{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .map_link{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #address_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.4rem;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .contact .newsletter{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:1rem 0rem 0rem 0rem;
+    }
+
+    .newsletter .logo{
+        width:6rem;
+        height:2.75rem;
+        background:url(../Images/El-royale_Logo_BlackandWhite.png) center/cover no-repeat;
+    }
+
+    .newsletter_first_text{
+        color:#ffffff71;
+        text-align:center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        line-height:1.5rem;
+        margin:1rem 2rem 1rem 2rem;
+    }
+
+    .newsletter_form{
+        width:100vw;
+    }
+
+    .newsletter_form_first_border{
+        width:12rem;
+        height:3rem;
+        margin:0rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_form_second_border{
+        display:flex;
+        align-items:center;
+        width:11.8rem;
+        height:3.25rem;
+        margin:-0.2rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_email{
+        width:10rem;
+        color:#ffffff16;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.7rem;
+        background:transparent;
+        border:none;
+        padding:0rem 1rem 0rem 1rem;
+    }
+
+    .newsletter_submit{
+        color:#fff;
+        background:transparent;
+        border:none;
+    }
+
+    .newsletter .social_icon_container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:10rem;
+        height:3rem;
+        margin:1rem auto 0rem auto;
+    }
+
+    .social_icon_container .instagram{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Instagram.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .facebook{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Facebook.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .twitter{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Twitter.jpeg) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .private_dining{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_first_text{
+        color:white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 1.5rem 0rem 1.5rem;
+    }
+
+    .private_dining_email{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_number{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0.1rem 0rem 2rem 0rem;
+    }
+
+    .private_dining_reservations{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #private_dining_reservations_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:5.8rem;
+        margin:0.1rem 0rem 3rem 0rem;
+    }
+
+    .footer{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background:#060606;
+    }
+
+    .footer_ul{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding:1rem;
+    }
+
+    .footer_ul li{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        font-weight:bold;
+        text-align:center;
+        padding:0.5rem;
+    }
+
+    .footer .copyright{
+        color:#726e6e;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0rem 0rem 1rem 0rem
+    }
+
+    .footer .copyright a{
+        color:#d55219;
+        text-decoration:none;
+    }
+}
+
+/* Mobile Medium */
+@media screen and (min-width:300px) {
+    .menuBanner {
+        width:100vw;
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Pizza_Hut_New_Menu.jpeg) center/cover no-repeat fixed;
+    }
+
+    .menuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        margin:5rem 0rem 0rem 0rem;
+    }
+
+    .menuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2rem;
+    }
+
+    .discoverMenu {
+        width:100vw;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:4rem 0rem;
+    }
+
+    .discoverMenuFirstText {
+        color:#a3682c;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuSecondText {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2.3rem;
+        text-align:center;
+        margin:2rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuText {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        line-height:1.7rem;
+        margin:3rem 1rem 0rem 1rem;
+    }
+
+    .breakfastMenu {
+        width:100vw;
+        height:80vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/pizzza.jpeg) center/cover no-repeat fixed;
+    }
+
+    .traditionalPancakes, .americanBrunch, .canolliCheese, .chocolateCherryCake, .smokedMeatSandwich, .salmonSandwich, .panOfFriedEggs, .breakfastSet, .painAuChocolat, .healthyBreakfast, .chickenBreast, .salmonSteak, .chickenCrispy, .grilledFillet, .salmonSteak2 {
+        width:100%;
+    }
+
+    .breakfastMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .breakfastMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .breakfastMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .breakfastMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .breakfastMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .breakfastMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .breakfastMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenu {
+        width:100vw;
+        height:80vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Vegetable_Dumplings.png) center/cover no-repeat fixed;
+    }
+
+    .lunchMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .lunchMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .lunchMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .lunchMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/lunch.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .lunchMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .lunchMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/lunch_1.png) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/lunch_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenu {
+        width:100vw;
+        height:80vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Smoky_Mushroom_Tacos.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dinnerMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .dinnerMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dinnerMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .dinnerMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/dinner.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .dinnerMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dinnerMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/dinner_1.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/dinner_2.png) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenu {
+        width:100vw;
+        height:80vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/grilled_seafood_paella.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dessertMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .dessertMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dessertMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 0rem 0rem;
+    }
+
+    .dessertMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-between;
+    }
+
+    .dessertMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/desserts.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        width:100%;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .dessertMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dessertMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/desserts_1.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/desserts_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenu {
+        width:100vw;
+        height:80vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/drink_1.jpeg) center/cover no-repeat fixed;
+    }
+
+    .drinkMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .drinkMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .drinkMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 0rem 0rem;
+    }
+
+    .drinkMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .drinkMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .drinkMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .contact{
+        width:100vw;
+        min-height:40vh;
+        background:#111111;
+    }
+
+    .contact .address{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:2rem 0rem 1rem 0rem;
+    }
+
+    .first_address_text{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .second_address_text{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .map_link{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #address_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.4rem;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .contact .newsletter{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:1rem 0rem 0rem 0rem;
+    }
+
+    .newsletter .logo{
+        width:8rem;
+        height:3rem;
+        background:url(../Images/El-royale_Logo_BlackandWhite.png) center/cover no-repeat;
+    }
+
+    .newsletter_first_text{
+        color:#ffffff71;
+        text-align:center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        line-height:1.5rem;
+        margin:1rem 2rem 1rem 2rem;
+    }
+
+    .newsletter_form{
+        width:100vw;
+    }
+
+    .newsletter_form_first_border{
+        width:15rem;
+        height:3rem;
+        margin:0rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_form_second_border{
+        display:flex;
+        align-items:center;
+        width:14.8rem;
+        height:3.25rem;
+        margin:-0.2rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_email{
+        width:12rem;
+        color:#ffffff16;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.7rem;
+        background:transparent;
+        border:none;
+        padding:0rem 1rem 0rem 1rem;
+    }
+
+    .newsletter_submit{
+        color:#fff;
+        background:transparent;
+        border:none;
+    }
+
+    .newsletter .social_icon_container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:10rem;
+        height:3rem;
+        margin:1rem auto 0rem auto;
+    }
+
+    .social_icon_container .instagram{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Instagram.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .facebook{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Facebook.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .twitter{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Twitter.jpeg) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .private_dining{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_first_text{
+        color:white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 1.5rem 0rem 1.5rem;
+    }
+
+    .private_dining_email{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_number{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0.1rem 0rem 2rem 0rem;
+    }
+
+    .private_dining_reservations{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #private_dining_reservations_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:5.8rem;
+        margin:0.1rem 0rem 3rem 0rem;
+    }
+
+    .footer{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background:#060606;
+    }
+
+    .footer_ul{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding:1rem;
+    }
+
+    .footer_ul li{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        font-weight:bold;
+        text-align:center;
+        padding:0.5rem;
+    }
+
+    .footer .copyright{
+        color:#726e6e;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0rem 0rem 1rem 0rem
+    }
+
+    .footer .copyright a{
+        color:#d55219;
+        text-decoration:none;
+    }
+}
+
+/* Mobile Large */
+@media screen and (min-width:375px) {
+    .menuBanner {
+        width:100vw;
+        height:70vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Pizza_Hut_New_Menu.jpeg) center/cover no-repeat fixed;
+    }
+
+    .menuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:2rem;
+        margin:5rem 0rem 0rem 0rem;
+    }
+
+    .menuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2.5rem;
+    }
+
+    .discoverMenu {
+        width:100vw;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:4rem 0rem;
+    }
+
+    .discoverMenuFirstText {
+        color:#a3682c;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuSecondText {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2rem;
+        text-align:center;
+        margin:1.5rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuText {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        line-height:1.7rem;
+        margin:2rem 1rem 0rem 1rem;
+    }
+
+    .breakfastMenu {
+        width:100vw;
+        height:70vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/pizzza.jpeg) center/cover no-repeat fixed;
+    }
+
+    .breakfastMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .breakfastMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .breakfastMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .breakfastMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .breakfastMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .breakfastMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .breakfastMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenu {
+        width:100vw;
+        height:70vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Vegetable_Dumplings.png) center/cover no-repeat fixed;
+    }
+
+    .lunchMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .lunchMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .lunchMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .lunchMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/lunch.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .lunchMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .lunchMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/lunch_1.png) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/lunch_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenu {
+        width:100vw;
+        height:70vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Smoky_Mushroom_Tacos.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dinnerMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .dinnerMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dinnerMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .dinnerMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/dinner.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .dinnerMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dinnerMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/dinner_1.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/dinner_2.png) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenu {
+        width:100vw;
+        height:70vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/grilled_seafood_paella.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dessertMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .dessertMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dessertMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 0rem 0rem;
+    }
+
+    .dessertMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/desserts.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .dessertMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dessertMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/desserts_1.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/desserts_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenu {
+        width:100vw;
+        height:70vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/drink_1.jpeg) center/cover no-repeat fixed;
+    }
+
+    .drinkMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .drinkMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .drinkMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 0rem 0rem;
+    }
+
+    .drinkMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .drinkMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .drinkMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:12rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .contact{
+        width:100vw;
+        min-height:40vh;
+        background:#111111;
+    }
+
+    .contact .address{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:2rem 0rem 1rem 0rem;
+    }
+
+    .first_address_text{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .second_address_text{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .map_link{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #address_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.4rem;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .contact .newsletter{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:1rem 0rem 0rem 0rem;
+    }
+
+    .newsletter .logo{
+        width:8rem;
+        height:3rem;
+        background:url(../Images/El-royale_Logo_BlackandWhite.png) center/cover no-repeat;
+    }
+
+    .newsletter_first_text{
+        color:#ffffff71;
+        text-align:center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        line-height:1.5rem;
+        margin:1rem 2rem 1rem 2rem;
+    }
+
+    .newsletter_form{
+        width:100vw;
+    }
+
+    .newsletter_form_first_border{
+        width:15rem;
+        height:3rem;
+        margin:0rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_form_second_border{
+        display:flex;
+        align-items:center;
+        width:14.8rem;
+        height:3.25rem;
+        margin:-0.2rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_email{
+        width:12rem;
+        color:#ffffff16;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.7rem;
+        background:transparent;
+        border:none;
+        padding:0rem 1rem 0rem 1rem;
+    }
+
+    .newsletter_submit{
+        color:#fff;
+        background:transparent;
+        border:none;
+    }
+
+    .newsletter .social_icon_container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:10rem;
+        height:3rem;
+        margin:1rem auto 0rem auto;
+    }
+
+    .social_icon_container .instagram{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Instagram.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .facebook{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Facebook.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .twitter{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Twitter.jpeg) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .private_dining{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_first_text{
+        color:white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 1.5rem 0rem 1.5rem;
+    }
+
+    .private_dining_email{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_number{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0.1rem 0rem 2rem 0rem;
+    }
+
+    .private_dining_reservations{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #private_dining_reservations_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:5.8rem;
+        margin:0.1rem 0rem 2rem 0rem;
+    }
+
+    .footer{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background:#060606;
+    }
+
+    .footer_ul{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding:1rem;
+    }
+
+    .footer_ul li{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        font-weight:bold;
+        text-align:center;
+        padding:0.5rem;
+    }
+
+    .footer .copyright{
+        color:#726e6e;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0rem 0rem 1rem 0rem
+    }
+
+    .footer .copyright a{
+        color:#d55219;
+        text-decoration:none;
+    }
+}
+
+/* Tablet Small */
+@media screen and (min-width:500px) {
+    .menuBanner {
+        width:100vw;
+        height:50vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Pizza_Hut_New_Menu.jpeg) center/cover no-repeat fixed;
+    }
+
+    .menuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:2rem;
+        margin:5rem 0rem 0rem 0rem;
+    }
+
+    .menuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2.5rem;
+    }
+
+    .discoverMenu {
+        width:100vw;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:5rem 0rem;
+    }
+
+    .discoverMenuFirstText {
+        color:#a3682c;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuSecondText {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2rem;
+        text-align:center;
+        margin:1.5rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuText {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        line-height:1.7rem;
+        margin:2rem 1rem 0rem 1rem;
+    }
+
+    .breakfastMenu {
+        width:100vw;
+        height:30vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/pizzza.jpeg) center/cover no-repeat fixed;
+    }
+
+    .breakfastMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .breakfastMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .breakfastMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .breakfastMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content: center;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1.2rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .breakfastMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .breakfastMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .breakfastMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenu {
+        width:100vw;
+        height:30vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Vegetable_Dumplings.png) center/cover no-repeat fixed;
+    }
+
+    .lunchMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .lunchMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .lunchMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .lunchMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/lunch.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .lunchMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/lunch_1.png) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/lunch_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenu {
+        width:100vw;
+        height:30vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Smoky_Mushroom_Tacos.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dinnerMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .dinnerMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dinnerMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .dinnerMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/dinner.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dinnerMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/dinner_1.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/dinner_2.png) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenu {
+        width:100vw;
+        height:30vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/grilled_seafood_paella.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dessertMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .dessertMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dessertMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 0rem 0rem;
+    }
+
+    .dessertMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/desserts.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dessertMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/desserts_1.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/desserts_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenu {
+        width:100vw;
+        height:30vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/drink_5.jpeg) center/cover no-repeat fixed;
+    }
+
+    .drinkMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .drinkMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .drinkMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 0rem 0rem;
+    }
+
+    .drinkMenuItems .firstSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .drinkMenuItems .secondSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItems .thirdSection {
+        width:90%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:18rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .contact{
+        width:100vw;
+        min-height:40vh;
+        background:#111111;
+    }
+
+    .contact .address{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:2rem 0rem 1rem 0rem;
+    }
+
+    .first_address_text{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .second_address_text{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .map_link{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #address_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.4rem;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .contact .newsletter{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:1rem 0rem 0rem 0rem;
+    }
+
+    .newsletter .logo{
+        width:8rem;
+        height:3rem;
+        background:url(../Images/El-royale_Logo_BlackandWhite.png) center/cover no-repeat;
+    }
+
+    .newsletter_first_text{
+        color:#ffffff71;
+        text-align:center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        line-height:1.5rem;
+        margin:1rem 2rem 1rem 2rem;
+    }
+
+    .newsletter_form{
+        width:100vw;
+    }
+
+    .newsletter_form_first_border{
+        width:15rem;
+        height:3rem;
+        margin:0rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_form_second_border{
+        display:flex;
+        align-items:center;
+        width:14.8rem;
+        height:3.25rem;
+        margin:-0.2rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_email{
+        width:12rem;
+        color:#ffffff16;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.7rem;
+        background:transparent;
+        border:none;
+        padding:0rem 1rem 0rem 1rem;
+    }
+
+    .newsletter_submit{
+        color:#fff;
+        background:transparent;
+        border:none;
+    }
+
+    .newsletter .social_icon_container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:10rem;
+        height:3rem;
+        margin:1rem auto 0rem auto;
+    }
+
+    .social_icon_container .instagram{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Instagram.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .facebook{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Facebook.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .twitter{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Twitter.jpeg) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .private_dining{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_first_text{
+        color:white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 1.5rem 0rem 1.5rem;
+    }
+
+    .private_dining_email{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_number{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0.1rem 0rem 2rem 0rem;
+    }
+
+    .private_dining_reservations{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #private_dining_reservations_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:5.8rem;
+        margin:0.1rem 0rem 3rem 0rem;
+    }
+
+    .footer{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background:#060606;
+    }
+
+    .footer_ul{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding:1rem;
+    }
+
+    .footer_ul li{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        font-weight:bold;
+        text-align:center;
+        padding:0.5rem;
+    }
+
+    .footer .copyright{
+        color:#726e6e;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0rem 0rem 1rem 0rem
+    }
+
+    .footer .copyright a{
+        color:#d55219;
+        text-decoration:none;
+    }
+}
+
+/* Tablet Large */
+@media screen and (min-width:768px) {
+    .header {
+        width:100vw;
+        height:4rem;
+        position:fixed;
+        z-index:10;
+        background:#00000081;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        padding:0.5rem 1rem 0.5rem 0.5rem;
+    }
+
+    .elroyale {
+        width:7.5rem;
+        height:3rem;
+        background:url(../Images/El-Royale_Logo_Colored.png) center/cover no-repeat;
+        margin: 0.25rem 1rem 0.25rem 1rem;
+        float:left;
+    }
+
+    .navMenu {
+        clear:both;
+        display:flex;
+        align-items:center;
+        background:none;
+        color:white;
+        text-align:center;
+        max-width:100%;
+        height:3rem;
+        overflow: hidden;
+        transform:translateX(0vw);
+        transition: none;
+    }
+
+    .header_reservation {
+        border:2px solid #fff;
+    }
+
+    .header_reservation:hover {
+        border:2px solid transparent;
+    }
+
+    .navLink {
+        display:block;
+        font-size: 1rem;
+        padding:0.5rem 1rem 0.5rem 1rem;
+        border:2px solid transparent;
+        transition: all 0.3s linear;
+    }
+
+    .navLink:hover {
+        border:2px solid #a3682c;
+    }
+
+    .hamburgerContainer {
+        display:none;
+    }
+
+    .menuBanner {
+        width:100vw;
+        height:50vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Pizza_Hut_New_Menu.jpeg) center/cover no-repeat fixed;
+    }
+
+    .menuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:2rem;
+        margin:5rem 0rem 0rem 0rem;
+    }
+
+    .menuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2.5rem;
+    }
+
+    .discoverMenu {
+       width:100vw;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:5rem 0rem;
+    }
+
+    .discoverMenuFirstText {
+        color:#a3682c;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuSecondText {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2rem;
+        text-align:center;
+        margin:1.5rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuText {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        line-height:1.7rem;
+        margin:2rem 2rem 0rem 2rem;
+    }
+
+    .breakfastMenu {
+        width:100vw;
+        height:30vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/pizzza.jpeg) center/cover no-repeat fixed;
+    }
+
+    .breakfastMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .breakfastMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .breakfastMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .breakfastMenuItems .firstSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1.2rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .breakfastMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .breakfastMenuItems .secondSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .breakfastMenuItems .thirdSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenu {
+        width:100vw;
+        height:30vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Vegetable_Dumplings.png) center/cover no-repeat fixed;
+    }
+
+    .lunchMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .lunchMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .lunchMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .lunchMenuItems .firstSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/lunch.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .lunchMenuItems .secondSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/lunch_1.png) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItems .thirdSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/lunch_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenu {
+        width:100vw;
+        height:30vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Smoky_Mushroom_Tacos.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dinnerMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .dinnerMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dinnerMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 5rem 0rem;
+    }
+
+    .dinnerMenuItems .firstSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/dinner.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dinnerMenuItems .secondSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/dinner_1.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItems .thirdSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/dinner_2.png) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenu {
+        width:100vw;
+        height:30vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/grilled_seafood_paella.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dessertMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .dessertMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dessertMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 0rem 0rem;
+    }
+
+    .dessertMenuItems .firstSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/desserts.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dessertMenuItems .secondSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/desserts_1.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItems .thirdSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/desserts_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenu {
+        width:100vw;
+        height:30vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/drink_1.jpeg) center/cover no-repeat fixed;
+    }
+
+    .drinkMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .drinkMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .drinkMenuItems {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:5rem 0rem 0rem 0rem;
+    }
+
+    .drinkMenuItems .firstSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .drinkMenuItems .secondSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItems .thirdSection {
+        width:95%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:25rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:1.5rem 0rem 2rem 0rem;
+    }
+
+    .contact{
+        width:100vw;
+        min-height:40vh;
+        background:#111111;
+    }
+
+    .contact .address{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:2rem 0rem 1rem 0rem;
+    }
+
+    .first_address_text{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .second_address_text{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .map_link{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #address_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.4rem;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .contact .newsletter{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:1rem 0rem 0rem 0rem;
+    }
+
+    .newsletter .logo{
+        width:8rem;
+        height:3rem;
+        background:url(../Images/El-royale_Logo_BlackandWhite.png) center/cover no-repeat;
+    }
+
+    .newsletter_first_text{
+        color:#ffffff71;
+        text-align:center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        line-height:1.5rem;
+        margin:1rem 2rem 1rem 2rem;
+    }
+
+    .newsletter_form{
+        width:100vw;
+    }
+
+    .newsletter_form_first_border{
+        width:15rem;
+        height:3rem;
+        margin:0rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_form_second_border{
+        display:flex;
+        align-items:center;
+        width:14.8rem;
+        height:3.25rem;
+        margin:-0.2rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_email{
+        width:12rem;
+        color:#ffffff16;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.7rem;
+        background:transparent;
+        border:none;
+        padding:0rem 1rem 0rem 1rem;
+    }
+
+    .newsletter_submit{
+        color:#fff;
+        background:transparent;
+        border:none;
+    }
+
+    .newsletter .social_icon_container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:10rem;
+        height:3rem;
+        margin:1rem auto 0rem auto;
+    }
+
+    .social_icon_container .instagram{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Instagram.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .facebook{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Facebook.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .twitter{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Twitter.jpeg) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .private_dining{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_first_text{
+        color:white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 1.5rem 0rem 1.5rem;
+    }
+
+    .private_dining_email{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_number{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0.1rem 0rem 2rem 0rem;
+    }
+
+    .private_dining_reservations{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #private_dining_reservations_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:5.8rem;
+        margin:0.1rem 0rem 3rem 0rem;
+    }
+
+    .footer{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background:#060606;
+    }
+
+    .footer_ul{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding:1rem;
+    }
+
+    .footer_ul li{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        font-weight:bold;
+        text-align:center;
+        padding:0.5rem;
+    }
+
+    .footer .copyright{
+        color:#726e6e;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0rem 0rem 1rem 0rem
+    }
+
+    .footer .copyright a{
+        color:#d55219;
+        text-decoration:none;
+    }
+}
+
+/* Laptop Small */
+@media screen and (min-width:1024px) {
+    .header_reservation {
+        border:2px solid #fff;
+        margin:0rem 2rem 0rem 0rem;
+    }
+    
+    .menuBanner {
+        width:100vw;
+        height:70vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Pizza_Hut_New_Menu.jpeg) center/cover no-repeat fixed;
+    }
+
+    .menuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:2rem;
+        margin:5rem 0rem 0rem 0rem;
+    }
+
+    .menuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2.5rem;
+    }
+
+    .discoverMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .discoverMenuFirstText {
+        color:#a3682c;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+        margin:3rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuSecondText {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2rem;
+        text-align:center;
+        margin:1.5rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuText {
+        width:30rem;
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        line-height:1.7rem;
+        margin:2rem 1rem 3rem 1rem;
+    }
+
+    .breakfastMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/pizzza.jpeg) center/cover no-repeat fixed;
+    }
+
+    .breakfastMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .breakfastMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .breakfastMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .breakfastMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .breakfastMenuItems .firstSection .firstSectionImage:hover {
+    background:linear-gradient(#0000003b, #0000003b), url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+}
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .breakfastMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .breakfastMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .breakfastMenuItems .secondSection .secondSectionImage:hover {
+    background:linear-gradient(#0000003b, #0000003b), url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+}
+
+    .breakfastMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .breakfastMenuItems .thirdSection .thirdSectionImage:hover {
+    background:linear-gradient(#0000003b, #0000003b), url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+}
+
+    .lunchMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Vegetable_Dumplings.png) center/cover no-repeat fixed;
+    }
+
+    .lunchMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .lunchMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .lunchMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .lunchMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/lunch.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+    
+    .lunchMenuItems .firstSection .firstSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/lunch.jpeg) center/cover no-repeat;
+    }
+
+    .lunchMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .lunchMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/lunch_1.png) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItems .secondSection .secondSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/lunch_1.png) center/cover no-repeat;
+    }
+
+    .lunchMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/lunch_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItems .thirdSection .thirdSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/lunch_2.jpeg) center/cover no-repeat;
+    }
+
+    .dinnerMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Smoky_Mushroom_Tacos.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dinnerMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .dinnerMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dinnerMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .dinnerMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/dinner.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItems .firstSection .firstSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/dinner.jpeg) center/cover no-repeat;
+    }
+
+    .dinnerMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dinnerMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/dinner_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItems .secondSection .secondSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/dinner_1.jpeg) center/cover no-repeat;
+    }
+
+    .dinnerMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/dinner_2.png) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItems .thirdSection .thirdSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/dinner_2.png) center/cover no-repeat;
+    }
+
+    .dessertMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/grilled_seafood_paella.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dessertMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .dessertMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dessertMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .dessertMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/desserts.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+    
+    .dessertMenuItems .firstSection .firstSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/desserts.jpeg) center/cover no-repeat;
+    }
+
+    .dessertMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dessertMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/desserts_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItems .secondSection .secondSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/desserts_1.jpeg) center/cover no-repeat;
+    }
+
+    .dessertMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/desserts_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItems .thirdSection .thirdSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/desserts_2.jpeg) center/cover no-repeat;
+    }
+
+    .drinkMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/drink_2.jpeg) center/cover no-repeat fixed;
+    }
+
+    .drinkMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .drinkMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .drinkMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .drinkMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItems .firstSection .firstSectionImage:hover {
+        width:100%;
+        height:14rem;
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .drinkMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItems .secondSection .secondSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+    }
+
+    .drinkMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItems .thirdSection .thirdSectionImage:hover {
+        background:linear-gradient(#0000003b, #0000003b), url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+    }
+
+    .contact{
+        width:100vw;
+        min-height:23rem;
+        background:#111111;
+        display:grid;
+        grid-template-columns:1fr;
+        justify-content: center;
+    }
+
+    .contact_container {
+        width:100%;
+        display:flex;
+        justify-content: center;
+        margin:0rem auto 0rem auto;
+    }
+
+    .contact .address{
+        width:18rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:5.45rem 0rem 1rem 0rem;
+    }
+
+    .first_address_text{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .second_address_text{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        line-height:1.2rem;
+        margin:1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .map_link{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #address_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.4rem;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .contact .newsletter{
+        width:28rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:2rem 0rem 0rem 0rem;
+    }
+
+    .newsletter .logo{
+        width:8rem;
+        height:3rem;
+        background:url(../Images/El-royale_Logo_BlackandWhite.png) center/cover no-repeat;
+    }
+
+    .newsletter_first_text{
+        color:#ffffff71;
+        text-align:center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        line-height:1.5rem;
+        margin:1rem 2rem 1rem 2rem;
+    }
+
+    .newsletter_form{
+        width:100vw;
+    }
+
+    .newsletter_form_first_border{
+        width:15rem;
+        height:3rem;
+        margin:0rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_form_second_border{
+        display:flex;
+        align-items:center;
+        width:14.8rem;
+        height:3.25rem;
+        margin:-0.2rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_email{
+        width:12rem;
+        color:#ffffff16;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.7rem;
+        background:transparent;
+        border:none;
+        padding:0rem 1rem 0rem 1rem;
+    }
+
+    .newsletter_submit{
+        color:#fff;
+        background:transparent;
+        border:none;
+    }
+
+    .newsletter .social_icon_container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:10rem;
+        height:3rem;
+        margin:1rem auto 0rem auto;
+    }
+
+    .social_icon_container .instagram{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Instagram.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .facebook{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Facebook.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .twitter{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Twitter.jpeg) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .private_dining{
+        width:18rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:0rem 0rem 0rem 0rem;
+        padding:6rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_first_text{
+        color:white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 1rem 0rem 1rem;
+    }
+
+    .private_dining_email{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_number{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:0.1rem 0rem 2rem 0rem;
+    }
+
+    .private_dining_reservations{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #private_dining_reservations_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.2rem;
+        margin:0rem 0rem 3rem 0rem;
+    }
+
+    .footer{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background:#060606;
+    }
+
+    .footer_ul{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding:1rem;
+    }
+
+    .footer_ul li{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        font-weight:bold;
+        text-align:center;
+        padding:0.5rem;
+    }
+
+    .footer .copyright{
+        color:#726e6e;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0rem 0rem 1rem 0rem
+    }
+
+    .footer .copyright a{
+        color:#d55219;
+        text-decoration:none;
+    }
+}
+
+/* Laptop Large */
+@media screen and (min-width:1200px) {
+    .menuBanner {
+        width:100vw;
+        height:70vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Pizza_Hut_New_Menu.jpeg) center/cover no-repeat fixed;
+    }
+
+    .menuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:2rem;
+        margin:5rem 0rem 0rem 0rem;
+    }
+
+    .menuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2.5rem;
+    }
+
+    .discoverMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .discoverMenuFirstText {
+        color:#a3682c;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+        margin:3rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuSecondText {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2rem;
+        text-align:center;
+        margin:1.5rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuText {
+        width:30rem;
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        line-height:1.7rem;
+        margin:2rem 1rem 3rem 1rem;
+    }
+
+    .breakfastMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/pizzza.jpeg) center/cover no-repeat fixed;
+    }
+
+    .breakfastMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .breakfastMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .breakfastMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .breakfastMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .breakfastMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .breakfastMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .breakfastMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Vegetable_Dumplings.png) center/cover no-repeat fixed;
+    }
+
+    .lunchMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .lunchMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .lunchMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .lunchMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/lunch.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .lunchMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/lunch_1.png) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/lunch_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Smoky_Mushroom_Tacos.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dinnerMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .dinnerMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dinnerMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .dinnerMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/dinner.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dinnerMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/dinner_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/dinner_2.png) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/grilled_seafood_paella.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dessertMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .dessertMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dessertMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .dessertMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/desserts.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dessertMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/desserts_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/desserts_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/drink_2.jpeg) center/cover no-repeat fixed;
+    }
+
+    .drinkMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .drinkMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .drinkMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .drinkMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .drinkMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .contact{
+        width:100vw;
+        min-height:23rem;
+        background:#111111;
+        display:grid;
+        grid-template-columns:1fr;
+        justify-content: center;
+    }
+
+    .contact_container {
+        width:1200px;
+        display:flex;
+        justify-content: center;
+        margin:0rem auto 0rem auto;
+    }
+
+    .contact .address{
+        width:20rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:5.45rem 0rem 1rem 0rem;
+    }
+
+    .first_address_text{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .second_address_text{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        line-height:1.2rem;
+        margin:1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .map_link{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #address_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.4rem;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .contact .newsletter{
+        width:30rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:2rem 0rem 0rem 0rem;
+    }
+
+    .newsletter .logo{
+        width:8rem;
+        height:3rem;
+        background:url(../Images/El-royale_Logo_BlackandWhite.png) center/cover no-repeat;
+    }
+
+    .newsletter_first_text{
+        color:#ffffff71;
+        text-align:center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        line-height:1.5rem;
+        margin:1rem 2rem 1rem 2rem;
+    }
+
+    .newsletter_form{
+        width:100vw;
+    }
+
+    .newsletter_form_first_border{
+        width:15rem;
+        height:3rem;
+        margin:0rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_form_second_border{
+        display:flex;
+        align-items:center;
+        width:14.8rem;
+        height:3.25rem;
+        margin:-0.2rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_email{
+        width:12rem;
+        color:#ffffff16;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.7rem;
+        background:transparent;
+        border:none;
+        padding:0rem 1rem 0rem 1rem;
+    }
+
+    .newsletter_submit{
+        color:#fff;
+        background:transparent;
+        border:none;
+    }
+
+    .newsletter .social_icon_container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:10rem;
+        height:3rem;
+        margin:1rem auto 0rem auto;
+    }
+
+    .social_icon_container .instagram{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Instagram.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .facebook{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Facebook.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .twitter{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Twitter.jpeg) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .private_dining{
+        width:20rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:0rem 0rem 0rem 0rem;
+        padding:6rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_first_text{
+        color:white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 1rem 0rem 1rem;
+    }
+
+    .private_dining_email{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_number{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:0.1rem 0rem 2rem 0rem;
+    }
+
+    .private_dining_reservations{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #private_dining_reservations_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.2rem;
+        margin:0rem 0rem 3rem 0rem;
+    }
+
+    .footer{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background:#060606;
+    }
+
+    .footer_ul{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding:1rem;
+    }
+
+    .footer_ul li{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        font-weight:bold;
+        text-align:center;
+        padding:0.5rem;
+    }
+
+    .footer .copyright{
+        color:#726e6e;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0rem 0rem 1rem 0rem
+    }
+
+    .footer .copyright a{
+        color:#d55219;
+        text-decoration:none;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width:1400px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .main {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .header {
+        width:1400px;
+        height:4rem;
+    }
+
+    .menuBanner {
+        width:100vw;
+        height:70vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Pizza_Hut_New_Menu.jpeg) center/cover no-repeat fixed;
+    }
+
+    .menuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:2rem;
+        margin:5rem 0rem 0rem 0rem;
+    }
+
+    .menuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2.5rem;
+    }
+
+    .discoverMenu {
+        width:100vw;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .discoverMenuFirstText {
+        color:#a3682c;
+        font-family:var(--Kristi);
+        font-size:1.5rem;
+        text-align:center;
+        margin:3rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuSecondText {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2rem;
+        text-align:center;
+        margin:1.5rem 0rem 0rem 0rem;
+    }
+
+    .discoverMenuText {
+        width:30rem;
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        text-align:center;
+        line-height:1.7rem;
+        margin:2rem 1rem 3rem 1rem;
+    }
+
+    .breakfastMenu {
+        width:100vw;
+        height:50vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/pizzza.jpeg) center/cover no-repeat fixed;
+    }
+
+    .breakfastMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .breakfastMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .breakfastMenuItems {
+        width:1400px;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+        align-items: start;
+        justify-content: center;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .breakfastMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .header_and_price {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: space-between;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .header_text {
+        color:#000;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-family:var(--Kristi);
+        font-size:1rem;
+        color:#a3682c;
+    }
+
+    .sub_text {
+        color:#0000006b;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1rem;
+        line-height:1.5rem;
+        margin:0rem 0rem 0.5rem 0rem;
+    }
+
+    .breakfastMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .breakfastMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .breakfastMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .breakfastMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenu {
+        width:100vw;
+        height:50vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Vegetable_Dumplings.png) center/cover no-repeat fixed;
+    }
+
+    .lunchMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .lunchMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .lunchMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .lunchMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/lunch.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .lunchMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/lunch_1.png) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .lunchMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .lunchMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/lunch_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenu {
+        width:100vw;
+        height:50vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/Smoky_Mushroom_Tacos.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dinnerMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .dinnerMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dinnerMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .dinnerMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/dinner.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dinnerMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/dinner_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dinnerMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dinnerMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/dinner_2.png) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenu {
+        width:100vw;
+        height:50vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/grilled_seafood_paella.jpeg) center/cover no-repeat fixed;
+    }
+
+    .dessertMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .dessertMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .dessertMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .dessertMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/desserts.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .dessertMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/desserts_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .dessertMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dessertMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/desserts_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenu {
+        width:100vw;
+        height:50vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(#0000006b, #0000006b), url(../Images/drink_2.jpeg) center/cover no-repeat fixed;
+    }
+
+    .drinkMenuFirstText {
+        color:#fff;
+        font-family:var(--Kristi);
+        font-size:1.7rem;
+        text-align:center;
+    }
+
+    .drinkMenuSecondText {
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .drinkMenuItems {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+        align-items: start;
+        padding:5rem 2rem 5rem 2rem;
+    }
+
+    .drinkMenuItems .firstSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .firstSection .firstSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_1.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItemsHr {
+        width:100%;
+        border-top:1px dashed #0000006b;
+        margin:0rem 0rem 1rem 0rem;
+    }
+
+    .drinkMenuItems .secondSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .secondSection .secondSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_2.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .drinkMenuItems .thirdSection {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .drinkMenuItems .thirdSection .thirdSectionImage {
+        width:100%;
+        height:14rem;
+        background:url(../Images/breakfast_3.jpeg) center/cover no-repeat;
+        margin:0rem 0rem 2rem 0rem;
+    }
+
+    .contact{
+        width:100vw;
+        min-height:23rem;
+        background:#111111;
+        display:grid;
+        grid-template-columns:1fr;
+        justify-content: center;
+    }
+
+    .contact_container {
+        width:1200px;
+        display:flex;
+        justify-content: center;
+        margin:0rem auto 0rem auto;
+    }
+
+    .contact .address{
+        width:20rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:5.45rem 0rem 1rem 0rem;
+    }
+
+    .first_address_text{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .second_address_text{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        line-height:1.2rem;
+        margin:1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .map_link{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #address_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.4rem;
+        margin:0rem 0rem 0rem 0rem;
+    }
+
+    .contact .newsletter{
+        width:30rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:2rem 0rem 0rem 0rem;
+    }
+
+    .newsletter .logo{
+        width:8rem;
+        height:3rem;
+        background:url(../Images/El-royale_Logo_BlackandWhite.png) center/cover no-repeat;
+    }
+
+    .newsletter_first_text{
+        color:#ffffff71;
+        text-align:center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        line-height:1.5rem;
+        margin:1rem 2rem 1rem 2rem;
+    }
+
+    .newsletter_form{
+        width:100vw;
+    }
+
+    .newsletter_form_first_border{
+        width:15rem;
+        height:3rem;
+        margin:0rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_form_second_border{
+        display:flex;
+        align-items:center;
+        width:14.8rem;
+        height:3.25rem;
+        margin:-0.2rem auto 0rem auto;
+        border:1px solid #a3682c;
+    }
+
+    .newsletter_email{
+        width:12rem;
+        color:#ffffff16;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.7rem;
+        background:transparent;
+        border:none;
+        padding:0rem 1rem 0rem 1rem;
+    }
+
+    .newsletter_submit{
+        color:#fff;
+        background:transparent;
+        border:none;
+    }
+
+    .newsletter .social_icon_container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:10rem;
+        height:3rem;
+        margin:1rem auto 0rem auto;
+    }
+
+    .social_icon_container .instagram{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Instagram.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .facebook{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Facebook.png) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .social_icon_container .twitter{
+        width:2rem;
+        height:2rem;
+        background:url(../Images/Social_Images/Twitter.jpeg) center/cover no-repeat;
+        border-radius:50%;
+        margin:0rem 0.5rem 0rem 0.5rem;
+    }
+
+    .private_dining{
+        width:20rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:0rem 0rem 0rem 0rem;
+        padding:6rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_first_text{
+        color:white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        margin:0rem 1rem 0rem 1rem;
+    }
+
+    .private_dining_email{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:1rem 0rem 0rem 0rem;
+    }
+
+    .private_dining_number{
+        color:#ffffff71;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        text-align:center;
+        margin:0.1rem 0rem 2rem 0rem;
+    }
+
+    .private_dining_reservations{
+        color:#a3682c;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:1.1rem;
+        text-align:center;
+        text-decoration:none;
+    }
+
+    #private_dining_reservations_underline{
+        color:#a3682c;
+        border:1px solid #a3682c;
+        width:6.2rem;
+        margin:0rem 0rem 3rem 0rem;
+    }
+
+    .footer{
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background:#060606;
+    }
+
+    .footer_ul{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding:1rem;
+    }
+
+    .footer_ul li{
+        color:#fff;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.9rem;
+        font-weight:bold;
+        text-align:center;
+        padding:0.5rem;
+    }
+
+    .footer .copyright{
+        color:#726e6e;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:0.8rem;
+        text-align:center;
+        margin:0rem 0rem 1rem 0rem
+    }
+
+    .footer .copyright a{
+        color:#d55219;
+        text-decoration:none;
+    }
+}
+
+/* Screen Height */
+@media screen and (min-height:800px) and (min-width:300px)  {
+    .menuBanner {
+        height:560px;
+    }
+
+    .discoverMenu {
+        height:320px;
+    }
+
+    .breakfastMenu {
+        height:400px;
+    }
+
+    .lunchMenu {
+        height:400px;
+    }
+
+    .dinnerMenu {
+        height:400px;
+    }
+
+    .dessertMenu {
+        height:400px;
+    }
+
+    .drinkMenu {
+        height:400px;
+    }
+}
