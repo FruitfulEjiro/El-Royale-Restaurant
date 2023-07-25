@@ -3335,10 +3335,10 @@ a{
         border:1px solid #a3682c;
     }
 
-        .smoked_meat_sandwich,
-        .salmon_sandwich,
-        .pan_of_fried_eggs,
-        .breakfast_set {
+    .smoked_meat_sandwich,
+    .salmon_sandwich,
+    .pan_of_fried_eggs,
+    .breakfast_set {
         display:flex;
         flex-direction:column;
         align-items: flex-start;
@@ -3349,15 +3349,15 @@ a{
         border-bottom:2px dashed #a3682c;
     }
 
-        .healthy_breakfast {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            width: 100%;
-            height: auto;
-            padding: 0rem 0.5rem 0.5rem 0rem;
-        }
+    .healthy_breakfast {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding: 0rem 0.5rem 0.5rem 0rem;
+    }
     .header_and_price{
         display:grid;
         grid-template-columns:4fr 1fr;
@@ -3389,9 +3389,9 @@ a{
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
 
-        .chicken_breast,
-        .salmon_steak,
-        .chicken_crispy,
+    .chicken_breast,
+    .salmon_steak,
+    .chicken_crispy,
     .grilled_fillet{
         display: flex;
         flex-direction: column;
@@ -4735,7 +4735,7 @@ a{
         flex-direction:column;
         align-items:center;
         width: 343px;
-        height:35rem;
+        height:36rem;
         border:1px solid #a3682c;
         position: relative;
         margin:0rem 0rem 0rem 0rem;
@@ -4793,7 +4793,7 @@ a{
     .header_text{
         color:#000;
         font-weight:bold;
-        font-size:1rem;
+        font-size:1.1rem;
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
 
@@ -4807,7 +4807,7 @@ a{
 
     .sub_text{
         color:#0000006b;
-        font-size:1rem;
+        font-size:1.1rem;
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
 
@@ -6141,7 +6141,7 @@ a{
         flex-direction:column;
         align-items:center;
         width: 444px;
-            height: 29rem;
+        height: 37rem;
         border:1px solid #a3682c;
         position: relative;
         margin:0rem 0rem 0rem 0rem;
@@ -6199,7 +6199,7 @@ a{
     .header_text{
         color:#000;
         font-weight:bold;
-        font-size:1rem;
+        font-size:1.2rem;
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
 
@@ -6213,7 +6213,7 @@ a{
 
     .sub_text{
         color:#0000006b;
-        font-size:1rem;
+        font-size:1.2rem;
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
 
@@ -7314,7 +7314,7 @@ a{
         grid-template-rows: auto auto;
         align-items: center;
         justify-items: center;
-        grid-gap: 2rem 1rem;
+        grid-gap: 1rem 1rem;
         padding: 1rem 0rem 1rem 0rem;
     }
 
@@ -7379,9 +7379,9 @@ a{
     .menu .menu_end_text {
         color: #0000006b;
         width: 90%;
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: center;
-        line-height: 1.3rem;
+        line-height: 1.5rem;
         word-spacing: 0.1rem;
         margin: 0rem 0rem 1rem 0rem;
     }
@@ -7390,7 +7390,7 @@ a{
         color: #000;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.1rem;
         text-align: center;
         margin: 0rem 0rem 0.2rem 0rem;
         position: relative;
@@ -7399,10 +7399,10 @@ a{
     .discover_our_story::after {
         content: "";
         position: absolute;
-        top: 1rem;
+        top: 1.2rem;
         left: 0rem;
         width: 100%;
-        height: 0.1rem;
+        height: 0.2rem;
         background: #000;
         text-align: center;
     }
@@ -7556,7 +7556,7 @@ a{
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: 35rem;
+        height: 34rem;
         border: 1px solid #a3682c;
         position: relative;
         margin: 0rem 0rem 0rem 0rem;
@@ -7572,7 +7572,7 @@ a{
         top: -0.3rem;
         width: 99%;
         height: 101.5%;
-        padding: 0.8rem 0.5rem 1rem 0rem;
+        padding: 0.8rem 0.5rem 1rem 0.5rem;
         margin: 0rem 0rem 0rem 0rem;
         border: 1px solid #a3682c;
     }
@@ -7598,7 +7598,7 @@ a{
         justify-content: center;
         width: 100%;
         height: auto;
-        padding: 0rem 0.5rem 0.5rem 0.5rem;
+        padding: 0rem 0.5rem 0.5rem 0rem;
     }
 
     .header_and_price {
@@ -7608,27 +7608,27 @@ a{
         align-items: center;
         justify-items: space-between;
         width: 100%;
-        margin: 0rem 0.5rem 0.5rem 0.5rem;
+        margin: 0rem 0.5rem 0.5rem 0rem;
     }
 
     .header_text {
         color: #000;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.3rem;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
     .price {
         color: #a3682c;
         font-family: var(--Kristi);
-        font-size: 2rem;
+        font-size: 2.5rem;
         justify-self: end;
         align-self: center;
     }
 
     .sub_text {
         color: #0000006b;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
@@ -7659,7 +7659,7 @@ a{
     .explore_food_menu {
         color: #000;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: bolder;
         text-decoration: none;
         position: relative;
@@ -7669,7 +7669,7 @@ a{
     .explore_food_menu::after {
         content: "";
         position: absolute;
-        top: 1.1rem;
+        top: 1.3rem;
         left: 0rem;
         width: 100%;
         height: 2px;
@@ -7736,7 +7736,7 @@ a{
     .testimonials_2,
     .testimonials_3 {
         width: 100%;
-        min-height: 20rem;
+        min-height: 18rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -7745,7 +7745,7 @@ a{
     }
 
     .testimonials_border_2 {
-        width: 98%;
+        width: 99%;
         height: 102.5%;
         position: absolute;
         border: 1px solid #a3682c;
@@ -7801,13 +7801,13 @@ a{
     }
 
     .events-container {
-        width: 100%;
+        width: 576px;
         height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 2rem 1rem 2rem 1rem;
+        padding: 3rem 1rem 2rem 1rem;
     }
 
     .event_first_images {
@@ -7816,20 +7816,20 @@ a{
         align-items: center;
         justify-content: space-around;
         width: 100%;
-        height: 12rem;
+        height: 20rem;
     }
 
     .first_event_img {
-        width: 8rem;
-        height: 11rem;
-        margin: 0rem 0rem 1rem 0rem;
+        width: 15rem;
+        height: 20rem;
+        margin: 0rem 0rem 2rem 0rem;
         background: url(./Images/Spaghetti.jpeg) center/cover no-repeat;
     }
 
     .second_event_img {
-        width: 8rem;
-        height: 11rem;
-        margin: 1rem 0rem 0rem 0rem;
+        width: 15rem;
+        height: 20rem;
+        margin: 2rem 0rem 0rem 0rem;
         background: url(./Images/Gaby.jpeg) center/cover no-repeat;
     }
 
@@ -7844,14 +7844,14 @@ a{
     .first_event_text {
         color: #a3682c;
         font-family: var(--Kristi);
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         text-align: center;
     }
 
     .second_event_text {
         color: #000;
         font-family: var(--Yeseva);
-        font-size: 2.5rem;
+        font-size: 3rem;
         text-align: center;
         margin: 0.5rem 0rem 0rem 0rem;
     }
@@ -7859,7 +7859,7 @@ a{
     .third_event_text {
         color: #0000006b;
         font-family: var(--Poppins);
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: center;
         line-height: 1.5rem;
         margin: 2rem 1rem 1rem 1rem;
@@ -7874,7 +7874,7 @@ a{
     .events_cta {
         color: #000;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: center;
         text-decoration: none;
         position: relative;
@@ -7883,7 +7883,7 @@ a{
     .events_cta:after {
         content: "";
         position: absolute;
-        top: 1.2rem;
+        top: 1.3rem;
         left: 0rem;
         color: #000;
         border: 1px solid #000;
@@ -7907,7 +7907,7 @@ a{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 545px;
         height: auto;
         background: #fff;
         margin: 5rem 0rem 5rem 0rem;
@@ -7923,11 +7923,11 @@ a{
         height: auto;
         background: #000;
         color: white;
-        padding: 1rem 0rem 1rem 0rem;
+        padding: 1rem 1rem 1rem 1rem;
     }
 
     .sub_section {
-        width: 90%;
+        width: 100%;
         height: 100%;
         padding: 0rem 1.3rem 0rem 1.3rem;
         border-top: 5px solid #a3682c;
@@ -7939,7 +7939,7 @@ a{
     .first_section_text_1 {
         color: #a3682c;
         font-family: var(--Kristi);
-        font-size: 2rem;
+        font-size: 3rem;
         text-align: center;
         margin: 1rem 1rem 0rem 1rem;
         position: relative;
@@ -7948,7 +7948,7 @@ a{
     .first_section_text_2 {
         color: #fff;
         font-family: var(--Yeseva);
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-align: center;
         margin: 1rem 1rem 0rem 1rem;
     }
@@ -7957,7 +7957,7 @@ a{
         width: 100%;
         height: 4rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 0rem 0rem 0.5rem 0rem;
@@ -7982,7 +7982,7 @@ a{
     .first_section_text_6 {
         color: #a3682c;
         font-family: var(--Kristi);
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-align: center;
         margin: 1.5rem 0rem 0rem 0rem;
     }
@@ -7990,7 +7990,7 @@ a{
     .first_section_text_7 {
         color: #fff;
         font-family: var(--Yeseva);
-        font-size: 1.5rem;
+        font-size: 2rem;
         text-align: center;
         margin: 1rem 0rem 1.5rem 0rem;
     }
@@ -8000,7 +8000,7 @@ a{
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 44rem;
+        height: 24rem;
         position: relative;
         border: 1px solid #a3682c;
         margin: 3rem 0rem 0rem 0rem;
@@ -8011,8 +8011,8 @@ a{
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        width: 98%;
-        height: 101%;
+        width: 99%;
+        height: 102%;
         position: absolute;
         border: 1px solid #a3682c;
         padding: 1.5rem 0.7rem 1.5rem 0.7rem;
@@ -8028,9 +8028,13 @@ a{
 
     .reservations_form {
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:auto auto auto auto;
+        gap:1rem;
         align-items: center;
+        justify-content:center;
+        padding:0rem 0rem 0rem 0rem;
     }
 
     .guests {
@@ -8041,7 +8045,7 @@ a{
         padding: 0rem 0rem 0rem 0.5rem;
         background: #f2f4f6;
         border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 2rem 0rem;
+        margin: 0rem 0rem 0rem 0rem;
     }
 
     .date {
@@ -8052,7 +8056,7 @@ a{
         padding: 0rem 0rem 0rem 0.5rem;
         background: #f2f4f6;
         border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 2rem 0rem;
+        margin: 0rem 0rem 0rem 0rem;
     }
 
     .time {
@@ -8063,7 +8067,7 @@ a{
         padding: 0rem 0rem 0rem 0.5rem;
         background: #f2f4f6;
         border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 2rem 0rem;
+        margin: 0rem 0rem 0rem 0rem;
     }
 
     .guest_name {
@@ -8074,7 +8078,7 @@ a{
         padding: 0rem 0rem 0rem 0.5rem;
         background: #f2f4f6;
         border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 2rem 0rem;
+        margin: 0rem 0rem 0rem 0rem;
     }
 
     .guest_email {
@@ -8085,7 +8089,7 @@ a{
         padding: 0rem 0rem 0rem 0.5rem;
         background: #f2f4f6;
         border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 2rem 0rem;
+        margin: 0rem 0rem 0rem 0rem;
     }
 
     .guest_phone_number {
@@ -8093,13 +8097,14 @@ a{
         height: 3rem;
         font-size: 1.1rem;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        padding: 0rem 0rem 0rem 1.3rem;
+        padding: 0rem 0rem 0rem 0.5rem;
         background: #f2f4f6;
         border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 2rem 0rem;
+        margin: 0rem 0rem 0rem 0rem;
     }
 
     .reservations_form .submit {
+        grid-area:4/1/5/3;
         width: 100%;
         height: 3rem;
         color: #fff;
