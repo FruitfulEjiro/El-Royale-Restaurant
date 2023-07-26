@@ -967,9 +967,13 @@ a{
     display:flex;
     flex-direction:column;
     align-items:center;
+    gap: 1.5rem;
 }
 
-.guests{
+.guests,
+.time,
+.date {
+    display: none;
     width:100%;
     height:3rem;
     font-size:1.1rem;
@@ -980,69 +984,147 @@ a{
     margin:0rem 0rem 2rem 0rem;
 }
 
-.date{
-    width:100%;
-    height:3rem;
-    font-size:1.1rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    padding:0rem 0rem 0rem 0.5rem;
-    background:#f2f4f6;
-    border:1px solid #f2f4f6;
-    margin:0rem 0rem 2rem 0rem;
+.guest-container,
+.time-container,
+.date-container {
+    width: 90%;
+    height: 3rem;
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 0.3rem;
+    background: #f2f4f6;
 }
 
-.time{
+.guest-input,
+.time-input,
+.date-input {
+    display: none;
+}
+
+.guest-toggler,
+.time-toggler,
+.date-toggler {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.guest-toggler::after {
+    content: "2 people";
+    position: absolute;
+    top: 35%;
+    left: 1rem;
+    font-family: var(--Yeseva);
+    font-size: 0.9rem;
+}
+
+.time-toggler::after {
+    content: "07:00pm";
+    position: absolute;
+    top: 35%;
+    left: 1rem;
+    font-family: var(--Yeseva);
+    font-size: 0.9rem;
+}
+
+.date-toggler::after {
+    content: "Mar 23 2023";
+    position: absolute;
+    top: 35%;
+    left: 1rem;
+    font-family: var(--Yeseva);
+    font-size: 0.9rem;
+}
+
+.guest-list,
+.time-list,
+.date-list {
+    position: absolute;
+    top: 3rem;
+    width: 100%;
+    height: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    overflow: hidden;
+    z-index:10;
+    border-radius: 0.3rem;
+    transition: all .3s linear;
+}
+
+.guest0 {
     width:100%;
-    height:3rem;
+    height: 2.5rem;
+    text-align: center;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    font-family: var(--Yeseva);
     font-size:1.1rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    padding:0rem 0rem 0rem 0.5rem;
-    background:#f2f4f6;
-    border:1px solid #f2f4f6;
-    margin:0rem 0rem 2rem 0rem;
+    word-spacing: 0.1rem;
+    font-weight: bolder;
+    z-index: 10;
+    transition: all .2s linear;
+}
+
+.guest0:hover {
+    background: #d7d4d4a2;
+}
+
+.guest-input:checked~.guest-list,
+.time-input:checked~.time-list,
+.date-input:checked~.date-list {
+    height: 15rem;
+    z-index: 10;
+    border: 0.5px solid #000;
 }
 
 .guest_name{
-    width:100%;
+    width: 90%;
     height:3rem;
-    font-size:1.1rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    font-family: var(--Yeseva);
     padding:0rem 0rem 0rem 0.5rem;
     background:#f2f4f6;
-    border:1px solid #f2f4f6;
-    margin:0rem 0rem 2rem 0rem;
+    border: 1px solid #000;
+    border-radius: 0.3rem;
 }
 
 .guest_email{
-    width:100%;
+    width: 90%;
     height:3rem;
-    font-size:1.1rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    font-family: var(--Yeseva);
     padding:0rem 0rem 0rem 0.5rem;
     background:#f2f4f6;
-    border:1px solid #f2f4f6;
-    margin:0rem 0rem 2rem 0rem;
+    border: 1px solid #000;
+    border-radius: 0.3rem;
 }
 
 .guest_phone_number{
-    width:100%;
+    width: 90%;
     height:3rem;
-    font-size:1.1rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    padding:0rem 0rem 0rem 1.3rem;
+    font-size: 0.9rem;
+    font-family: var(--Yeseva);
+    padding: 0rem 0rem 0rem 0.5rem;
     background:#f2f4f6;
-    border:1px solid #f2f4f6;
-    margin:0rem 0rem 2rem 0rem;
+    border: 1px solid #000;
+    border-radius: 0.3rem;
 }
 
 .reservations_form .submit{
-    width:100%;
+    width:90%;
     height:3rem;
     color:#fff;
     font-size:1.1rem;
     font-family:Georgia, 'Times New Roman', Times, serif;
     background:#000;
     border:1px solid black;
+    border-radius:0.3rem;
     margin:0rem 0rem 0rem 0rem;
 }
 
@@ -2383,83 +2465,164 @@ a{
         display:flex;
         flex-direction:column;
         align-items:center;
+        gap: 1rem;
     }
 
-    .guests{
-        width:100%;
-        height:2rem;
-        font-size:0.8rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 1rem 0rem;
+    .guests,
+    .time,
+    .date {
+        display: none;
+        width: 100%;
+        height: 2rem;
+        font-size: 1.1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 0rem 0rem 0rem 0.5rem;
+        background: #f2f4f6;
+        border: 1px solid #f2f4f6;
+        margin: 0rem 0rem 2rem 0rem;
     }
 
-    .date{
-        width:100%;
-        height:2rem;
-        font-size:0.8rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 1rem 0rem;
+    .guest-container,
+    .time-container,
+    .date-container {
+        width: 90%;
+        height: 2rem;
+        position: relative;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
+        background: #f2f4f6;
     }
 
-    .time{
+    .guest-input,
+    .time-input,
+    .date-input {
+        display: none;
+    }
+
+    .guest-toggler,
+    .time-toggler,
+    .date-toggler {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    .guest-toggler::after {
+        content: "2 people";
+        position: absolute;
+        top: 25%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .time-toggler::after {
+        content: "07:00pm";
+        position: absolute;
+        top: 25%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .date-toggler::after {
+        content: "Mar 23 2023";
+        position: absolute;
+        top: 25%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .guest-list,
+    .time-list,
+    .date-list {
+        position: absolute;
+        top: 2rem;
+        width: 100%;
+        height: 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        overflow: hidden;
+        z-index:10;
+        border-radius: 0.3rem;
+        transition: all .3s linear;
+    }
+
+    .guest0 {
         width:100%;
-        height:2rem;
-        font-size:0.8rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 1rem 0rem;
+        height: 2rem;
+        text-align: center;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+        font-family: var(--Yeseva);
+        font-size:1.1rem;
+        word-spacing: 0.1rem;
+        font-weight: bolder;
+        z-index: 10;
+        transition: all .2s linear;
+    }
+
+    .guest0:hover {
+        background: #d7d4d4a2;
+    }
+
+    .guest-input:checked~.guest-list,
+    .time-input:checked~.time-list,
+    .date-input:checked~.date-list {
+        height: 15rem;
+        z-index: 10;
+        border: 0.5px solid #000;
     }
 
     .guest_name{
-        width:100%;
+        width: 90%;
         height:2rem;
-        font-size:0.8rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
         padding:0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 1rem 0rem;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
     .guest_email{
-        width:100%;
+        width: 90%;
         height:2rem;
-        font-size:0.8rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.9rem;
+            font-family: var(--Yeseva);
         padding:0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 1rem 0rem;
+        border: 1px solid #000;
+            border-radius: 0.3rem;
     }
 
     .guest_phone_number{
-        width:100%;
+        width: 90%;
         height:2rem;
-        font-size:0.8rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
+        font-size: 0.9rem;
+            font-family: var(--Yeseva);
+            padding: 0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 1rem 0rem;
+        border: 1px solid #000;
+            border-radius: 0.3rem;
     }
 
     .reservations_form .submit{
-        width:100%;
-        height:2.5rem;
+        width:90%;
+        height:2rem;
         color:#fff;
-        font-size:0.8rem;
+        font-size:0.9rem;
         font-family:Georgia, 'Times New Roman', Times, serif;
         background:#000;
         border:1px solid black;
-        border-radius:0.2rem;
+        border-radius:0.3rem;
         margin:0rem 0rem 0rem 0rem;
     }
 
@@ -2477,7 +2640,7 @@ a{
         align-items:center;
         width:100%;
         height:auto;
-        padding:1rem 0.5rem 0rem 0.5rem;
+        padding:1rem 0.5rem 1rem 0.5rem;
     }
 
     .news_first_text{
@@ -3802,82 +3965,164 @@ a{
         display:flex;
         flex-direction:column;
         align-items:center;
+        gap: 1.5rem;
     }
 
-    .guests{
-        width:100%;
-        height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+    .guests,
+    .time,
+    .date {
+        display: none;
+        width: 100%;
+        height: 3rem;
+        font-size: 1.1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 0rem 0rem 0rem 0.5rem;
+        background: #f2f4f6;
+        border: 1px solid #f2f4f6;
+        margin: 0rem 0rem 2rem 0rem;
     }
 
-    .date{
-        width:100%;
-        height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+    .guest-container,
+    .time-container,
+    .date-container {
+        width: 90%;
+        height: 3rem;
+        position: relative;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
+        background: #f2f4f6;
     }
 
-    .time{
+    .guest-input,
+    .time-input,
+    .date-input {
+        display: none;
+    }
+
+    .guest-toggler,
+    .time-toggler,
+    .date-toggler {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    .guest-toggler::after {
+        content: "2 people";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .time-toggler::after {
+        content: "07:00pm";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .date-toggler::after {
+        content: "Mar 23 2023";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .guest-list,
+    .time-list,
+    .date-list {
+        position: absolute;
+        top: 3rem;
+        width: 100%;
+        height: 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        overflow: hidden;
+        z-index:10;
+        border-radius: 0.3rem;
+        transition: all .3s linear;
+    }
+
+    .guest0 {
         width:100%;
-        height:3rem;
+        height: 2.5rem;
+        text-align: center;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+        font-family: var(--Yeseva);
         font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        word-spacing: 0.1rem;
+        font-weight: bolder;
+        z-index: 10;
+        transition: all .2s linear;
+    }
+
+    .guest0:hover {
+        background: #d7d4d4a2;
+    }
+
+    .guest-input:checked~.guest-list,
+    .time-input:checked~.time-list,
+    .date-input:checked~.date-list {
+        height: 15rem;
+        z-index: 10;
+        border: 0.5px solid #000;
     }
 
     .guest_name{
-        width:100%;
+        width: 90%;
         height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
         padding:0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
     .guest_email{
-        width:100%;
+        width: 90%;
         height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
         padding:0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
     .guest_phone_number{
-        width:100%;
+        width: 90%;
         height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 1.3rem;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
+        padding: 0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
     .reservations_form .submit{
-        width:100%;
+        width:90%;
         height:3rem;
         color:#fff;
         font-size:1.1rem;
         font-family:Georgia, 'Times New Roman', Times, serif;
         background:#000;
         border:1px solid black;
+        border-radius:0.3rem;
         margin:0rem 0rem 0rem 0rem;
     }
 
@@ -5179,7 +5424,7 @@ a{
         justify-content:center;
         align-items:center;
         width: 100%;
-        height:44rem;
+        height:46rem;
         position:relative;
         border:1px solid #a3682c;
         margin:3rem 0rem 0rem 0rem;
@@ -5189,7 +5434,7 @@ a{
         display:flex;
         flex-direction:column;
         align-items:center;
-        gap:1rem;
+        gap:2rem;
         width:98%;
         height:101%;
         position: absolute;
@@ -5210,82 +5455,164 @@ a{
         display:flex;
         flex-direction:column;
         align-items:center;
+        gap: 2rem;
     }
 
-    .guests{
-        width:100%;
-        height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+    .guests,
+    .time,
+    .date {
+        display: none;
+        width: 100%;
+        height: 3rem;
+        font-size: 1.1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 0rem 0rem 0rem 0.5rem;
+        background: #f2f4f6;
+        border: 1px solid #f2f4f6;
+        margin: 0rem 0rem 2rem 0rem;
     }
 
-    .date{
-        width:100%;
-        height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+    .guest-container,
+    .time-container,
+    .date-container {
+        width: 90%;
+        height: 3rem;
+        position: relative;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
+        background: #f2f4f6;
     }
 
-    .time{
+    .guest-input,
+    .time-input,
+    .date-input {
+        display: none;
+    }
+
+    .guest-toggler,
+    .time-toggler,
+    .date-toggler {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    .guest-toggler::after {
+        content: "2 people";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .time-toggler::after {
+        content: "07:00pm";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .date-toggler::after {
+        content: "Mar 23 2023";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .guest-list,
+    .time-list,
+    .date-list {
+        position: absolute;
+        top: 3rem;
+        width: 100%;
+        height: 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        overflow: hidden;
+        border-radius: 0.3rem;
+        z-index:10;
+        transition: all .3s linear;
+    }
+
+    .guest0 {
         width:100%;
-        height:3rem;
+        height: 2.5rem;
+        text-align: center;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+        font-family: var(--Yeseva);
         font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        word-spacing: 0.1rem;
+        font-weight: bolder;
+        z-index: 10;
+        transition: all .2s linear;
+    }
+
+    .guest0:hover {
+        background: #d7d4d4a2;
+    }
+
+    .guest-input:checked~.guest-list,
+    .time-input:checked~.time-list,
+    .date-input:checked~.date-list {
+        height: 15rem;
+        z-index: 10;
+        border: 0.5px solid #000;
     }
 
     .guest_name{
-        width:100%;
+        width: 90%;
         height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
         padding:0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
     .guest_email{
-        width:100%;
+        width: 90%;
         height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
         padding:0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
     .guest_phone_number{
-        width:100%;
+        width: 90%;
         height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 1.3rem;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
+        padding: 0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
     .reservations_form .submit{
-        width:100%;
+        width:90%;
         height:3rem;
         color:#fff;
         font-size:1.1rem;
         font-family:Georgia, 'Times New Roman', Times, serif;
         background:#000;
         border:1px solid black;
+        border-radius:0.3rem;
         margin:0rem 0rem 0rem 0rem;
     }
 
@@ -6585,7 +6912,7 @@ a{
         justify-content:center;
         align-items:center;
         width: 100%;
-        height:44rem;
+        height:46rem;
         position:relative;
         border:1px solid #a3682c;
         margin:3rem 0rem 0rem 0rem;
@@ -6616,82 +6943,164 @@ a{
         display:flex;
         flex-direction:column;
         align-items:center;
+        gap: 2rem;
     }
 
-    .guests{
-        width:100%;
-        height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+    .guests,
+    .time,
+    .date {
+        display: none;
+        width: 100%;
+        height: 3.5rem;
+        font-size: 1.1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 0rem 0rem 0rem 0.5rem;
+        background: #f2f4f6;
+        border: 1px solid #f2f4f6;
+        margin: 0rem 0rem 2rem 0rem;
     }
 
-    .date{
-        width:100%;
-        height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+    .guest-container,
+    .time-container,
+    .date-container {
+        width: 90%;
+        height: 3.5rem;
+        position: relative;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
+        background: #f2f4f6;
     }
 
-    .time{
+    .guest-input,
+    .time-input,
+    .date-input {
+        display: none;
+    }
+
+    .guest-toggler,
+    .time-toggler,
+    .date-toggler {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    .guest-toggler::after {
+        content: "2 people";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .time-toggler::after {
+        content: "07:00pm";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .date-toggler::after {
+        content: "Mar 23 2023";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .guest-list,
+    .time-list,
+    .date-list {
+        position: absolute;
+        top: 3.5rem;
+        width: 100%;
+        height: 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        overflow: hidden;
+        border-radius: 0.3rem;
+        z-index:10;
+        transition: all .3s linear;
+    }
+
+    .guest0 {
         width:100%;
-        height:3rem;
+        height: 2.5rem;
+        text-align: center;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+        font-family: var(--Yeseva);
         font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 0.5rem;
-        background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        word-spacing: 0.1rem;
+        font-weight: bolder;
+        z-index: 10;
+        transition: all .2s linear;
+    }
+
+    .guest0:hover {
+        background: #d7d4d4a2;
+    }
+
+    .guest-input:checked~.guest-list,
+    .time-input:checked~.time-list,
+    .date-input:checked~.date-list {
+        height: 15rem;
+        z-index: 10;
+        border: 0.5px solid #000;
     }
 
     .guest_name{
-        width:100%;
-        height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        width: 90%;
+        height:3.5rem;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
         padding:0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
     .guest_email{
-        width:100%;
-        height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        width: 90%;
+        height:3.5rem;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
         padding:0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
     .guest_phone_number{
-        width:100%;
-        height:3rem;
-        font-size:1.1rem;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        padding:0rem 0rem 0rem 1.3rem;
+        width: 90%;
+        height:3.5rem;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
+        padding: 0rem 0rem 0rem 0.5rem;
         background:#f2f4f6;
-        border:1px solid #f2f4f6;
-        margin:0rem 0rem 2rem 0rem;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
     .reservations_form .submit{
-        width:100%;
-        height:3rem;
+        width:90%;
+        height:3.5rem;
         color:#fff;
         font-size:1.1rem;
         font-family:Georgia, 'Times New Roman', Times, serif;
         background:#000;
         border:1px solid black;
+        border-radius:0.3rem;
         margin:0rem 0rem 0rem 0rem;
     }
 
@@ -8000,7 +8409,7 @@ a{
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 24rem;
+        height: 25rem;
         position: relative;
         border: 1px solid #a3682c;
         margin: 3rem 0rem 0rem 0rem;
@@ -8026,94 +8435,176 @@ a{
         line-height: 1.5rem;
     }
 
-    .reservations_form {
-        width: 100%;
-        display: grid;
+    .reservations_form{
+        width:100%;
+        display:grid;
         grid-template-columns:1fr 1fr;
         grid-template-rows:auto auto auto auto;
-        gap:1rem;
-        align-items: center;
-        justify-content:center;
-        padding:0rem 0rem 0rem 0rem;
+        justify-items:center;
+        align-items:center;
+        gap: 1rem;
     }
 
-    .guests {
-        width: 100%;
-        height: 3rem;
-        font-size: 1.1rem;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        padding: 0rem 0rem 0rem 0.5rem;
-        background: #f2f4f6;
-        border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 0rem 0rem;
-    }
-
+    .guests,
+    .time,
     .date {
+        display: none;
         width: 100%;
-        height: 3rem;
+        height: 3.5rem;
         font-size: 1.1rem;
         font-family: Georgia, 'Times New Roman', Times, serif;
         padding: 0rem 0rem 0rem 0.5rem;
         background: #f2f4f6;
         border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 0rem 0rem;
+        margin: 0rem 0rem 2rem 0rem;
     }
 
-    .time {
+    .guest-container,
+    .time-container,
+    .date-container {
         width: 100%;
-        height: 3rem;
-        font-size: 1.1rem;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        padding: 0rem 0rem 0rem 0.5rem;
+        height: 3.5rem;
+        position: relative;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
         background: #f2f4f6;
-        border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 0rem 0rem;
     }
 
-    .guest_name {
+    .guest-input,
+    .time-input,
+    .date-input {
+        display: none;
+    }
+
+    .guest-toggler,
+    .time-toggler,
+    .date-toggler {
         width: 100%;
-        height: 3rem;
-        font-size: 1.1rem;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        padding: 0rem 0rem 0rem 0.5rem;
-        background: #f2f4f6;
-        border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 0rem 0rem;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     }
 
-    .guest_email {
+    .guest-toggler::after {
+        content: "2 people";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .time-toggler::after {
+        content: "07:00pm";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .date-toggler::after {
+        content: "Mar 23 2023";
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        font-family: var(--Yeseva);
+        font-size: 0.9rem;
+    }
+
+    .guest-list,
+    .time-list,
+    .date-list {
+        position: absolute;
+        top: 3.5rem;
         width: 100%;
-        height: 3rem;
-        font-size: 1.1rem;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        padding: 0rem 0rem 0rem 0.5rem;
-        background: #f2f4f6;
-        border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 0rem 0rem;
+        height: 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        overflow: hidden;
+        border-radius: 0.3rem;
+        z-index:10;
+        transition: all .3s linear;
     }
 
-    .guest_phone_number {
+    .guest0 {
+        width:100%;
+        height: 2.5rem;
+        text-align: center;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+        font-family: var(--Yeseva);
+        font-size:1.1rem;
+        word-spacing: 0.1rem;
+        font-weight: bolder;
+        z-index: 10;
+        transition: all .2s linear;
+    }
+
+    .guest0:hover {
+        background: #d7d4d4a2;
+    }
+
+    .guest-input:checked~.guest-list,
+    .time-input:checked~.time-list,
+    .date-input:checked~.date-list {
+        height: 15rem;
+        z-index: 10;
+        border: 0.5px solid #000;
+    }
+
+    .guest_name{
         width: 100%;
-        height: 3rem;
-        font-size: 1.1rem;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        padding: 0rem 0rem 0rem 0.5rem;
-        background: #f2f4f6;
-        border: 1px solid #f2f4f6;
-        margin: 0rem 0rem 0rem 0rem;
+        height:3.5rem;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
+        padding:0rem 0rem 0rem 0.5rem;
+        background:#f2f4f6;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
     }
 
-    .reservations_form .submit {
+    .guest_email{
+        width: 100%;
+        height:3.5rem;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
+        padding:0rem 0rem 0rem 0.5rem;
+        background:#f2f4f6;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
+    }
+
+    .guest_phone_number{
+        width: 100%;
+        height:3.5rem;
+        font-size: 0.9rem;
+        font-family: var(--Yeseva);
+        padding: 0rem 0rem 0rem 0.5rem;
+        background:#f2f4f6;
+        border: 1px solid #000;
+        border-radius: 0.3rem;
+    }
+
+    .reservations_form .submit{
         grid-area:4/1/5/3;
-        width: 100%;
-        height: 3rem;
-        color: #fff;
-        font-size: 1.1rem;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        background: #000;
-        border: 1px solid black;
-        margin: 0rem 0rem 0rem 0rem;
+        width:100%;
+        height:3.5rem;
+        color:#fff;
+        font-size:1.1rem;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        background:#000;
+        border:1px solid black;
+        border-radius:0.3rem;
+        margin:0rem 0rem 0rem 0rem;
     }
+
+    /* start here */
 
     .news {
         display: flex;

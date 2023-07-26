@@ -282,33 +282,76 @@
                                 minutes. We take reservations for lunch, just check the availability of your table
                             </p>
                             <form action="" class="reservations_form">
-                                <select name="guests" id="" class="guests">
-                                    <option value="noofperson" selected>No. of Persons</option>
-                                    <option value="1person">1 Person</option>
-                                    <option value="2people">2 People</option>
-                                    <option value="3people">3 People</option>
-                                    <option value="4people">4 People</option>
-                                    <option value="5people">5 People</option>
-                                </select>
-                                <input type="date" name="date" id="" class="date">
-                                <select name="time" id="" class="time">
-                                    <option value="time" selected>Time</option>
-                                    <option value="07.00">07:00</option>
-                                    <option value="08.00">08:00</option>
-                                    <option value="09.00">09:00</option>
-                                    <option value="10.00">10:00</option>
-                                    <option value="11.00">11:00</option>
-                                    <option value="12.00">12:00</option>
-                                    <option value="13.00">13:00</option>
-                                    <option value="14.00">14:00</option>
-                                    <option value="15.00">15:00</option>
-                                    <option value="16.00">16:00</option>
-                                    <option value="17.00">17:00</option>
-                                    <option value="18.00">18:00</option>
-                                    <option value="19.00">19:00</option>
-                                    <option value="20.00">20:00</option>
-                                    <option value="21.00">21:00</option>
-                                </select>
+                                <div class="guest-container">
+                                    <select name="guests" id="" class="guests">
+                                        <option value="noofperson" selected>No. of Persons</option>
+                                        <option value="2people">2 People</option>
+                                        <option value="3people">3 People</option>
+                                        <option value="4people">4 People</option>
+                                        <option value="5people">5 People</option>
+                                    </select>
+                                    <input type="checkbox" name="" id="guest-input" class="guest-input">
+                                    <label for="guest-input" class="guest-toggler"><span></span><i class="fa-solid fa-caret-right"></i></label>
+                                    <ul class="guest-list">
+                                        <li class="guest0">2 People</li>
+                                        <li class="guest0">3 People</li>
+                                        <li class="guest0">4 People</li>
+                                        <li class="guest0">5 People</li>
+                                        <li class="guest0">6 People</li>
+                                        <li class="guest0">7 People</li>
+                                    </ul>
+                                </div>
+
+                                <div class="guest-container">
+                                    <select name="date" id="" class="date">
+                                        <option value="noofperson" selected>No. of Persons</option>
+                                        <option value="2people">2 People</option>
+                                        <option value="3people">3 People</option>
+                                        <option value="4people">4 People</option>
+                                        <option value="5people">5 People</option>
+                                    </select>
+                                    <input type="checkbox" name="" id="date-input" class="date-input">
+                                    <label for="date-input" class="date-toggler"><span></span><i class="fa-solid fa-caret-right"></i></label>
+                                    <ul class="date-list">
+                                        <li class="guest0">Mar 23 2023</li>
+                                        <li class="guest0">Mar 24 2023</li>
+                                        <li class="guest0">Mar 25 2023</li>
+                                        <li class="guest0">Mar 26 2023</li>
+                                        <li class="guest0">Mar 27 2023</li>
+                                        <li class="guest0">Mar 28 2023</li>
+                                    </ul>
+                                </div>
+
+                                <div class="time-container">
+                                    <select name="time" id="" class="time">
+                                        <option value="07.00">07:00</option>
+                                        <option value="08.00">08:00</option>
+                                        <option value="09.00">09:00</option>
+                                        <option value="10.00">10:00</option>
+                                        <option value="11.00">11:00</option>
+                                        <option value="12.00">12:00</option>
+                                        <option value="13.00">13:00</option>
+                                        <option value="14.00">14:00</option>
+                                        <option value="15.00">15:00</option>
+                                        <option value="16.00">16:00</option>
+                                        <option value="17.00">17:00</option>
+                                        <option value="18.00">18:00</option>
+                                        <option value="19.00">19:00</option>
+                                        <option value="20.00">20:00</option>
+                                        <option value="21.00">21:00</option>
+                                    </select>
+                                    <input type="checkbox" name="" id="time-input" class="time-input">
+                                    <label for="time-input" class="time-toggler"><span></span><i class="fa-solid fa-caret-right"></i></label>
+                                    <ul class="time-list">
+                                        <li class="guest0">07:00</li>
+                                        <li class="guest0">08:00</li>
+                                        <li class="guest0">09:00</li>
+                                        <li class="guest0">10:00</li>
+                                        <li class="guest0">11:00</li>
+                                        <li class="guest0">12:00</li>
+                                    </ul>
+                                </div>
+                                
                                 <input type="text" name="name" id="" class="guest_name" placeholder="Full Name">
                                 <input type="email" name="email" id="" class="guest_email" placeholder="Email Address">
                                 <input type="number" name="phone_number" id="" class="guest_phone_number"
@@ -411,7 +454,8 @@
                                 <div class="newsletter_form_second_border">
                                     <input type="email" name="" id="" class="newsletter_email"
                                         placeholder="Subscribe To Our Newsletter ">
-                                    <button type="submit" class="newsletter_submit"><i class="fa-solid fa-caret-right"></i></button>
+                                    <button type="submit" class="newsletter_submit"><i
+                                            class="fa-solid fa-caret-right"></i></button>
                                 </div>
                             </div>
                         </form>
