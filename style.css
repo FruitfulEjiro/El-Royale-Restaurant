@@ -1083,6 +1083,15 @@ a{
     border: 0.5px solid #000;
 }
 
+.reservation-caret {
+    transition: all .2s linear;
+}
+
+.guest-input:checked~.guest-toggler .reservation-caret,
+.time-input:checked~.time-toggler .reservation-caret,
+.date-input:checked~.date-toggler .reservation-caret {
+    transform: rotate(90deg);
+}
 .guest_name{
     width: 90%;
     height:3rem;
@@ -1332,9 +1341,9 @@ a{
 }
 
 .newsletter .logo{
-    width:8rem;
-    height:3rem;
-    background:url(./Images/El-royale_Logo_BlackandWhite.png) center/cover no-repeat;
+    width:10rem;
+    height:7rem;
+    background:url(./Images/footer-logo.png) center/cover no-repeat;
 }
 
 .newsletter_first_text{
@@ -8649,10 +8658,10 @@ a{
 
     .news_block {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-gap: 1rem;
-        align-items: center;
+        grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-gap: 2rem 1rem;
+            align-items: start;
         justify-items: center;
         padding: 0rem 0rem 0rem 0rem;
     }
@@ -8664,13 +8673,13 @@ a{
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
-        padding: 1.5rem 0rem 0rem 0rem;
+        gap: 0.5rem;
+            padding: 0rem 0rem 0rem 0rem;
     }
 
     .news_banner {
         width: 100%;
-        height: 15rem;
+        height: 13rem;
         background: url(./Images/Marinana.png) center/cover no-repeat;
     }
 
@@ -8678,7 +8687,7 @@ a{
         display: flex;
         flex-direction: column;
         align-items: left;
-        gap: 1rem;
+        gap: 0.5rem;
         padding: 0rem 0.5rem 0rem 0.5rem;
         width: 100%;
     }
@@ -8704,7 +8713,7 @@ a{
     .news_block_header {
         color: #000;
         font-family: var(--Yeseva);
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         line-height: 1.7rem;
     }
 
@@ -8740,6 +8749,8 @@ a{
         height: 2px;
         background: #000;
     }
+
+        /* start here */
 
     .contact {
         width: 100%;
