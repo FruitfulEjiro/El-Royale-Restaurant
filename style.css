@@ -9024,6 +9024,9 @@ a{
 
 @media screen and (min-width:768px) {
     .header {
+        display:flex;
+        align-items:center;
+        justify-content:center;
         width: 100vw;
         height: 3.5rem;
         position: fixed;
@@ -9032,8 +9035,13 @@ a{
     }
 
     .header-container {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
         width: 100%;
         height: 100%;
+        padding:0rem 1rem 0rem 1rem;
     }
 
     .elroyale {
@@ -9045,23 +9053,29 @@ a{
     }
 
     .navMenu {
-        clear: both;
-        visibility: hidden;
-        background: #000000b2;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        gap:0.5rem;
+        visibility: visible;
+        background: transparent;
         color: white;
         text-align: center;
-        max-width: 100%;
-        height: 29rem;
+        max-width: auto;
+        height: 100%;
         transition: visibility 0.3s ease-out;
     }
 
     .navLink {
         transition: transform 0.3s ease-out;
-        transform: rotateY(90deg);
+        transform: rotateY(00deg);
         display: block;
-        font-size: 2rem;
-        padding: 1rem 2rem 0rem 1rem;
+        font-size: 1rem;
+        padding: 0rem 0.5rem 0rem 0.5rem;
         font-family: var(--Poppins);
+        transition:all .3s ease-in-out;
+        position: relative;
     }
 
     .menuBtn {
@@ -9070,67 +9084,50 @@ a{
     }
 
     .hamburgerContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 2rem;
-        height: 2rem;
-        float: right;
-        margin: 0.8rem 0.5rem 0rem 0rem;
-        position: relative;
+        display: none;
     }
 
-    .hamburgerLine {
-        display: block;
-        width: 1.2rem;
-        height: 3px;
-        background: #fff;
-        position: relative;
-        transition: background 0.1s linear;
+    .header_reservation .navLink{
+        border:2px solid #fff;
+        border-radius:0.2rem;
+        padding:0.4rem 0.5rem 0.4rem 0.5rem;
     }
 
-    .hamburgerLine::before {
-        content: "";
-        width: 1.5rem;
-        height: 100%;
-        background: #fff;
+    .header_home .navLink:hover::after,
+    .header_about .navLink:hover::after,
+    .header_menu .navLink:hover::after,
+    .header_gallery .navLink:hover::after ,
+    .header_blog .navLink:hover::after,
+    .header_shop .navLink:hover::after {
+        content:"";
         position: absolute;
-        top: -7px;
-        transition: all 0.2s linear;
+        bottom:0px;
+        left:6px;
+        height:2px;
+        width:80%;
+        background:#fff;
+        animation-fill-mode: forwards;
+        animation: underline .2s ease-in-out 0s 1 normal;
     }
 
-    .hamburgerLine::after {
-        content: "";
-        width: 1.8rem;
-        height: 100%;
-        background: #fff;
-        position: absolute;
-        top: 7px;
-        transition: all 0.2s linear;
+    .header_reservation .navLink:hover {
+        background:#a3682c;
+        border-radius:0.2rem;
     }
 
-    .menuBtn:checked~.navMenu {
-        visibility: visible;
-    }
+    @keyframes underline {
+        0% {
+            width:0%;
+        }
 
-    .menuBtn:checked~.navMenu li .navLink {
-        transform: rotateY(0deg);
-    }
+        50% {
+            width:40%;
+        }
 
-    .menuBtn:checked~.hamburgerContainer .hamburgerLine {
-        background: transparent;
-    }
-
-    .menuBtn:checked~.hamburgerContainer .hamburgerLine::before {
-        transform: rotate(135deg);
-        top: 0px;
-        width: 1.5rem;
-    }
-
-    .menuBtn:checked~.hamburgerContainer .hamburgerLine::after {
-        transform: rotate(-135deg);
-        top: 0px;
-        width: 1.5rem;
+        100% {
+            width:80%;
+        }
+        
     }
 
     /* END OF NAVBAR */
@@ -10551,3 +10548,5 @@ a{
         font-family: var(--Yeseva);
     }
 }
+
+/* start here */
