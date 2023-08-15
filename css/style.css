@@ -3,7 +3,6 @@
   --Poppins:"Poppins", sans-serif;
   --Kristi:"Kristi", cursive;
   --Yeseva:"Yeseva One", cursive;
-  --text-color:#f5f5f5;
   --text-small-color:#2b2a2a;
 }
 
@@ -20,6 +19,10 @@ html {
   background: none;
   box-sizing: border-box;
   font-family: var(--Poppins);
+}
+
+.navbar-brand img {
+  width: 8rem;
 }
 
 .navbar-toggler {
@@ -74,7 +77,6 @@ html {
 }
 
 .banner-button {
-  color: var(--text-color);
   display: none;
 }
 
@@ -129,7 +131,6 @@ html {
 
 .menu-end-text {
   font-size: 0.8rem;
-  color: var(--text-small-color);
 }
 
 .discover-our-story {
@@ -137,7 +138,6 @@ html {
   position: relative;
   font-size: 0.8rem;
   font-weight: bolder;
-  color: var(--text-small-color);
 }
 
 .discover-our-story::after {
@@ -148,4 +148,23 @@ html {
   width: 100%;
   height: 2px;
   background: var(--text-small-color);
+}
+
+.cta {
+  height: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.5568627451), rgba(0, 0, 0, 0.5568627451)), url(../Images/Tomato_soup.webp) center/cover no-repeat;
+}
+
+.cta-sub-text {
+  font-family: var(--Kristi);
+  font-size: 1.7rem;
+}
+
+.cta-main-text {
+  font-family: var(--Yeseva);
+  font-size: 2rem;
+}
+
+.cta-sub-text-2 {
+  font-size: 0.9rem;
 }
