@@ -1,517 +1,614 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El-Royale Restaurant</title>
-    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon" />
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/fontawesome.css" />
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.css" />
     <!-- StyleSheet -->
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<body>
-    <div class="container">
-        <header class="header navbar navbar-expand-md bg-light">
-            <nav class="container">
-                <a href="./index.html">
-                    <img src="./Images/logo-dark.png" alt="" class="navbar-brand">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#elroyaleNavbar">
-                    <span class="navbar-toggler-icon"></span>
+  <body>
+    <header
+      class="header container-fluid navbar navbar-expand-md bg-light px-0 m-0 d-flex justify-content-center fixed-top">
+      <nav class="container-xxl px-2 px-xl-4 mx-md-1">
+        <a href="./index.html" class="navbar-brand">
+          <img src="./Images/logo-dark.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul
+            class="navbar-nav ms-auto d-flex flex-column flex-md-row align-items-center gap-1">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Menu</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+            <button class="nav-item">
+              <a href="#" class="btn btn-outline-primary nav-link"
+                >Reservations</a
+              >
+            </button>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="banner container-xxl p-0">
+      <div class="carousel slide container-xx p-0" id="slider">
+        <!-- indicators -->
+        <div class="carousel-indicators">
+          <button
+            class="active"
+            data-bs-slide-to="0"
+            data-bs-target="#slider"></button>
+          <button
+            class=""
+            data-bs-slide-to="1"
+            data-bs-target="#slider"></button>
+          <button
+            class=""
+            data-bs-slide-to="2"
+            data-bs-target="#slider"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="gradient-container">
+              <img src="./Images/Marinana.jpeg" alt="" class="carouselImg" />
+            </div>
+            <div class="carousel-caption d-flex flex-column align-items-center">
+              <h1 class="carousel-main-text">Creative Chef's Fresh & Tasty Meals</h1>
+              <div class="banner-button-container d-flex flex-column gap-2">
+                <button class="text-light">
+                  <a href="" class="banner-button btn btn-primary">View More</a>
                 </button>
-                <div class="collapse navbar-collapse" id="elroyaleNavbar">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Menu</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
-                        <li class="nav-item">
-                            <button class="btn btn-outline-primary">Reservations</button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- <div class="header-container">
-                <div class="elroyale"><a href="./index.html"></a></div>
-                <input type="checkbox" id="menuBtn" class="menuBtn">
-                <label for="menuBtn" class="hamburgerContainer"><span class="hamburgerLine"></span></label>
-                <ul class="navMenu">
-                    <li class="header_home"><a href="./index.html" class="navLink">Home</a></li>
-                    <li class="header_about"><a href="#" class="navLink">About</a></li>
-                    <li class="header_menu"><a href="./menu.html" class="navLink">Menu</a></li>
-                    <li class="header_gallery"><a href="#" class="navLink">Gallery</a></li>
-                    <li class="header_blog"><a href="#" class="navLink">Blog</a></li>
-                    <li class="header_shop"><a href="./shop.html" class="navLink">Shop</a></li>
-                    <li class="header_reservation"><a href="#reservation" class="navLink">Reservation</a></li>
-                </ul>
-            </div> -->
-        </header>
-        <main class="main">
+                <button class="">
+                  <a
+                    href="#reservation"
+                    class="banner-button-2 btn btn-outline-primary text-light"
+                    >Book A Table</a
+                  >
+                </button>
+              </div>
+              <p class="sub-text">Offering the best tasting experience</p>
+            </div>
+          </div>
 
-            <div class="banner">
-                <div class="banner-container">
-                    <h1 class="main_text">Chef's Fresh & Tasty Meals</h1>
-                    <div class="banner_button_container">
-                        <button class="banner_button"><a href="">View More</a></button>
-                        <button class="banner_button_2"><a href="#reservation">Book A Table</a></button>
-                    </div>
-                    <p class="sub_text">Offering the best tasting experience</p>
+          <div class="carousel-item">
+            <div class="gradient-container">
+              <img src="./Images/Marinana.png" alt="" class="carouselImg" />
+            </div>
+            <div class="carousel-caption d-flex flex-column align-items-center">
+              <h1 class="carousel-main-text">Chef's, Fresh & Tasty Meals</h1>
+              <div class="banner-button-container d-flex flex-column gap-2">
+                <button class="text-light">
+                  <a href="" class="banner-button btn btn-primary">View More</a>
+                </button>
+                <button class="">
+                  <a
+                    href="#reservation"
+                    class="banner-button-2 btn btn-outline-primary text-light"
+                    >Book A Table</a
+                  >
+                </button>
+              </div>
+              <p class="sub-text">Tasty Meals and Creative Chefs</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="gradient-container">
+              <img src="./Images/Shop_banner.jpeg" alt="" class="carouselImg" />
+            </div>
+            <div class="carousel-caption d-flex flex-column align-items-center">
+              <h1 class="carousel-main-text">Creative Chef's Fresh & Tasty Meals</h1>
+              <div class="banner-button-container d-flex flex-column gap-2">
+                <button class="text-light">
+                  <a href="" class="banner-button btn btn-primary">View More</a>
+                </button>
+                <button class="">
+                  <a
+                    href="#reservation"
+                    class="banner-button-2 btn btn-outline-primary text-light"
+                    >Book A Table</a
+                  >
+                </button>
+              </div>
+              <p class="sub-text">Offering the best tasting experience</p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          data-bs-slide="prev"
+          data-bs-target="#slider">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          data-bs-slide="next"
+          data-bs-target="#slider">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="menu container">
+      <div class="row py-4 d-flex flex-column align-items-center">
+        <p class="menu-header lead text-primary text-center m-0">
+          Welcome to the <br />El Royale
+        </p>
+        <h1 class="menu-text text-center m-0">
+          Delicious Food, Friendly Staff, Cozy Atmosphere & Positive Emotions!
+        </h1>
+        <img
+          src="./Images/header-underline.png"
+          class="header-underline mb-4 mt-2"
+          alt="" />
+        <div class="menu-container d-flex flex-column gap-4">
+          <div
+            class="first-menu col-12 d-flex align-items-end justify-content-center">
+            <p class="first-menu-text">Start Eating Better</p>
+          </div>
+          <div
+            class="second-menu col-12 d-flex align-items-end justify-content-center">
+            <p class="second-menu-text">Quality is the Heart</p>
+          </div>
+          <div
+            class="third-menu col-12 d-flex align-items-end justify-content-center">
+            <p class="third-menu-text">Hot and Ready to Serve</p>
+          </div>
+        </div>
+        <p class="menu-end-text text-center mt-4">
+          El Royale was the first restaurant to open in Egypt, the Restaurant
+          designed with the history in mind we have created a soft industrial
+          dining room.
+        </p>
+        <a href="#" class="discover-our-story fw-bolder text-center p-0">Discover Our Story</a>
+      </div>
+    </div>
+
+    <div class="cta container">
+            <div class="row">
+                <p class="cta-sub-text">We Create Delicious Memories</p>
+                <p class="main-text">Pull Up A Chair, Take A Taste & Come Join Us</p>
+                <p class="cta-sub-text-2">We have awesome recipes and the most talented chefs in town!</p>
+                <div class="signatory-and-booking-button">
+                    <p class="signatory">John Peter</p>
+                    <button class="booking-button"><a href="#reservation"> Book A Table</a></button>
                 </div>
             </div>
+        </div>
 
-            <div class="menu">
-                <div class="menuContainer">
-                    <h1 class="menu_header">Welcome to the <br>El Royale</h1>
-                    <p class="menu_text">Delicious Food, Friendly Staff, Cozy Atmosphere & Positive Emotions!</p>
-                    <div class="icon"></div>
-                    <div class="menu_container">
-                        <div class="first_menu">
-                            <p class="first_menu_text">Start Eating Better</p>
-                        </div>
-                        <div class="second_menu">
-                            <p class="second_menu_text">Quality is the Heart</p>
-                        </div>
-                        <div class="third_menu">
-                            <p class="third_menu_text">Hot and Ready to Serve</p>
-                        </div>
-                    </div>
-                    <p class="menu_end_text">El Royale was the first restaurant to open in Egypt, the Restaurant
-                        designed
-                        with the history in mind we have created a soft industrial dining room.</p>
-                    <p class="discover_our_story">Discover Our Story</p>
-                </div>
-            </div>
-
-            <div class="cta">
-                <div class="cta-container">
-                    <p class="cta_sub_text">We Create Delicious Memories</p>
-                    <p class="main_text">Pull Up A Chair, Take A Taste & Come Join Us</p>
-                    <p class="cta_sub_text_2">We have awesome recipes and the most talented chefs in town!</p>
-                    <div class="signatory_and_booking_button">
-                        <p class="signatory">John Peter</p>
-                        <button class="booking_button"><a href="#reservation"> Book A Table</a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="food_menu">
-                <div class="food-menu-container">
-                    <p class="food_menu_sub_text">Our Favorites</p>
-                    <h1 class="food_menu_header">Discover Our Menu</h1>
-                    <div class="icon"></div>
-                    <p class="text">Since our grand opening in May, 1995, El Royale has won great awards from food
-                        critics and organizations all oveer the world.</p>
-                    <p class="meals">Meals</p>
-                    <div class="meal_menu">
-                        <div class="first_meal_menu">
-                            <div class="first_meal_menu_second_border">
-                                <div class="smoked_meat_sandwich">
-                                    <div class="header_and_price">
-                                        <h1 class="header_text">Smoked Meat Sandwich</h1>
-                                        <p class="price">$12.95</p>
-                                    </div>
-                                    <p class="sub_text">Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.</p>
+        <!--<div class="food-menu">
+            <div class="food-menu-container">
+                <p class="food-menu-sub-text">Our Favorites</p>
+                <h1 class="food-menu-header">Discover Our Menu</h1>
+                <div class="icon"></div>
+                <p class="text">Since our grand opening in May, 1995, El Royale has won great awards from food
+                    critics and organizations all oveer the world.</p>
+                <p class="meals">Meals</p>
+                <div class="meal-menu">
+                    <div class="first-meal-menu">
+                        <div class="first-meal-menu-second-border">
+                            <div class="smoked-meat-sandwich">
+                                <div class="header-and-price">
+                                    <h1 class="header-text">Smoked Meat Sandwich</h1>
+                                    <p class="price">$12.95</p>
                                 </div>
-
-                                <div class="salmon_sandwich">
-                                    <div class="header_and_price">
-                                        <h1 class="header_text">Salmon Sandwich</h1>
-                                        <p class="price">$15.95</p>
-                                    </div>
-                                    <p class="sub_text">Salmon, Butter, Lemon Juice, Onion, Garlic and Salad</p>
-                                </div>
-
-                                <div class="pan_of_fried_eggs">
-                                    <div class="header_and_price">
-                                        <h1 class="header_text">Pan of Fried Eggs</h1>
-                                        <p class="price">$92.95</p>
-                                    </div>
-                                    <p class="sub_text">Eggs, Bacon and Cherry-Tomatoes with Bread</p>
-                                </div>
-
-                                <div class="breakfast_set">
-                                    <div class="header_and_price">
-                                        <h1 class="header_text">BreakFast Set</h1>
-                                        <p class="price">$20.95</p>
-                                    </div>
-                                    <p class="sub_text">Croissants with Strawberries, Mascarpone and Honey.</p>
-                                </div>
-
-                                <div class="healthy_breakfast">
-                                    <div class="header_and_price">
-                                        <h1 class="header_text">Healthy Breakfast</h1>
-                                        <p class="price">$18.95</p>
-                                    </div>
-                                    <p class="sub_text">Oat Granola with Fresh Blueberries, Almond, Yoghourt.</p>
-                                </div>
-
+                                <p class="sub-text">Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.</p>
                             </div>
+
+                            <div class="salmon-sandwich">
+                                <div class="header-and-price">
+                                    <h1 class="header-text">Salmon Sandwich</h1>
+                                    <p class="price">$15.95</p>
+                                </div>
+                                <p class="sub-text">Salmon, Butter, Lemon Juice, Onion, Garlic and Salad</p>
+                            </div>
+
+                            <div class="pan-of-fried-eggs">
+                                <div class="header-and-price">
+                                    <h1 class="header-text">Pan of Fried Eggs</h1>
+                                    <p class="price">$92.95</p>
+                                </div>
+                                <p class="sub-text">Eggs, Bacon and Cherry-Tomatoes with Bread</p>
+                            </div>
+
+                            <div class="breakfast-set">
+                                <div class="header-and-price">
+                                    <h1 class="header-text">BreakFast Set</h1>
+                                    <p class="price">$20.95</p>
+                                </div>
+                                <p class="sub-text">Croissants with Strawberries, Mascarpone and Honey.</p>
+                            </div>
+
+                            <div class="healthy-breakfast">
+                                <div class="header-and-price">
+                                    <h1 class="header-text">Healthy Breakfast</h1>
+                                    <p class="price">$18.95</p>
+                                </div>
+                                <p class="sub-text">Oat Granola with Fresh Blueberries, Almond, Yoghourt.</p>
+                            </div>
+
                         </div>
-                        <div class="second_meal_menu">
-                            <div class="second_meal_menu_second_border">
-                                <div class="chicken_breast">
-                                    <div class="header_and_price">
-                                        <h1 class="header_text">Chicken Breast</h1>
+                        </div>
+                        <div class="second-meal-menu">
+                            <div class="second-meal-menu-second-border">
+                                <div class="chicken-breast">
+                                    <div class="header-and-price">
+                                        <h1 class="header-text">Chicken Breast</h1>
                                         <p class="price">$33.95</p>
                                     </div>
-                                    <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary Beans.</p>
+                                    <p class="sub-text">Paupiette of Chicken, Blue Cheese, Rosemary Beans.</p>
                                 </div>
 
-                                <div class="salmon_steak">
-                                    <div class="header_and_price">
-                                        <h1 class="header_text">Salmon Steak</h1>
-                                        <p class="price">$41.95</p>
-                                    </div>
-                                    <p class="sub_text">Salmon, Butter, Lemon Juice, Onion, Garlic and Salad.</p>
+                            <div class="salmon-steak">
+                                <div class="header-and-price">
+                                    <h1 class="header-text">Salmon Steak</h1>
+                                    <p class="price">$41.95</p>
                                 </div>
-
-                                <div class="chicken_crispy">
-                                    <div class="header_and_price">
-                                        <h1 class="header_text">Chicken Crispy</h1>
-                                        <p class="price">$33.95</p>
-                                    </div>
-                                    <p class="sub_text">Smoked Quail, Crispy Egg, Spelt, Girolles, Parsley.</p>
-                                </div>
-
-                                <div class="grilled_fillet">
-                                    <div class="header_and_price">
-                                        <h1 class="header_text">Grilled Fillet</h1>
-                                        <p class="price">$26.95</p>
-                                    </div>
-                                    <p class="sub_text">Pork Fillet, Ginger, Garlic, Honey, Pepper & Canola Oil.</p>
-                                </div>
-
-                                <div class="salmon_steak_2">
-                                    <div class="header_and_price">
-                                        <h1 class="header_text">Salmon Steak</h1>
-                                        <p class="price">$92.95</p>
-                                    </div>
-                                    <p class="sub_text">Salmon, Butter, Lemon Juice, Onion, Garlic and Salad.</p>
-                                </div>
-
+                                <p class="sub-text">Salmon, Butter, Lemon Juice, Onion, Garlic and Salad.</p>
                             </div>
-                        </div>
-                    </div>
-                    <p><a href="./html/menu.html" class="explore_food_menu">Explore Full Menu</a></p>
-                </div>
-            </div>
 
-            <div class="testimonials">
-                <div class="testimonials-container">
-                    <p class="testimonials_first_text">People Talk</p>
-                    <h1 class="testimonials_second_text">Our Guestbook</h1>
-                    <div class="icon"></div>
-                    <div class="testimonials_block">
-                        <div class="testimonial_background">
-                            <div class="testimonials_1">
-                                <div class="testimonials_border_2">
-                                    <p class="star_icons">⭐️⭐️⭐️⭐️⭐️</p>
-                                    <p class="testimony">"Lovely atmosphere staff were excellent, very attentive and
-                                        polite. We felt taken care of! Food came out quickly and was hot and delicious."
+                            <div class="chicken-crispy">
+                                <div class="header-and-price">
+                                    <h1 class="header-text">Chicken Crispy</h1>
+                                    <p class="price">$33.95</p>
+                                </div>
+                                <p class="sub-text">Smoked Quail, Crispy Egg, Spelt, Girolles, Parsley.</p>
+                            </div>
+
+                            <div class="grilled-fillet">
+                                <div class="header-and-price">
+                                    <h1 class="header-text">Grilled Fillet</h1>
+                                    <p class="price">$26.95</p>
+                                </div>
+                                <p class="sub-text">Pork Fillet, Ginger, Garlic, Honey, Pepper & Canola Oil.</p>
+                            </div>
+
+                            <div class="salmon-steak-2">
+                                <div class="header-and-price">
+                                    <h1 class="header-text">Salmon Steak</h1>
+                                    <p class="price">$92.95</p>
+                                </div>
+                                <p class="sub-text">Salmon, Butter, Lemon Juice, Onion, Garlic and Salad.</p>
+                            </div>
+
+                        </div>
+                        </div>
+                        </div>
+                        <p><a href="./html/menu.html" class="explore-food-menu">Explore Full Menu</a></p>
+                        </div>
+                        </div>
+
+        <div class="testimonials">
+            <div class="testimonials-container">
+                <p class="testimonials-first-text">People Talk</p>
+                <h1 class="testimonials-second-text">Our Guestbook</h1>
+                <div class="icon"></div>
+                <div class="testimonials-block">
+                    <div class="testimonial-background">
+                        <div class="testimonials-1">
+                            <div class="testimonials-border-2">
+                                <p class="star-icons">⭐️⭐️⭐️⭐️⭐️</p>
+                                <p class="testimony">"Lovely atmosphere staff were excellent, very attentive and
+                                    polite. We felt taken care of! Food came out quickly and was hot and
+                                    delicious."
                                     </p>
-                                    <div class="testifier_pic"></div>
-                                    <p class="testifier_name">John Peter</p>
-                                    <p class="testifier_title">Guest</p>
+                                    <div class="testifier-pic"></div>
+                                    <p class="testifier-name">John Peter</p>
+                                    <p class="testifier-title">Guest</p>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="testimonial-background">
+                                        <div class="testimonials-2">
+                                            <div class="testimonials-border-2">
+                                                <p class="star-icons">⭐️⭐️⭐️⭐️⭐️</p>
+                                <p class="testimony">"Been to this stunning place many times over the last
+                                    years.
+                                    Tonight i have to say it was good as it ever was. Superb food, exceedingly
+                                    good
+                                    staff."</p>
+                                <div class="testifier-pic"></div>
+                                <p class="testifier-name">Sami Wade</p>
+                                <p class="testifier-title">Guest</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="testimonial_background">
-                            <div class="testimonials_2">
-                                <div class="testimonials_border_2">
-                                    <p class="star_icons">⭐️⭐️⭐️⭐️⭐️</p>
-                                    <p class="testimony">"Been to this stunning place many times over the last years.
-                                        Tonight i have to say it was good as it ever was. Superb food, exceedingly good
-                                        staff."</p>
-                                    <div class="testifier_pic"></div>
-                                    <p class="testifier_name">Sami Wade</p>
-                                    <p class="testifier_title">Guest</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="testimonial_background">
-                            <div class="testimonials_3">
-                                <div class="testimonials_border_2">
-                                    <p class="star_icons">⭐️⭐️⭐️⭐️⭐️</p>
-                                    <p class="testimony">"Once again, i feel compelled to write about our wonderful
-                                        dining
-                                        experience. We have shared meals or conversations about our meals at your
-                                        restaurant."</p>
-                                    <div class="testifier_pic"></div>
-                                    <p class="testifier_name">Martin Hope</p>
-                                    <p class="testifier_title">ProHou</p>
                                 </div>
-                            </div>
+                                <div class="testimonial-background">
+                                    <div class="testimonials-3">
+                                        <div class="testimonials-border-2">
+                                            <p class="star-icons">⭐️⭐️⭐️⭐️⭐️</p>
+                                            <p class="testimony">"Once again, i feel compelled to write about our wonderful
+                                                dining
+                                                experience. We have shared meals or conversations about our meals at your
+                                                restaurant."</p>
+                                            <div class="testifier-pic"></div>
+                                            <p class="testifier-name">Martin Hope</p>
+                                            <p class="testifier-title">ProHou</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+
+        <div class="events">
+            <div class="events-container">
+                <div class="event-first-images">
+                    <div class="first-event-img"></div>
+                    <div class="second-event-img"></div>
+                </div>
+                <div class="event-text">
+                    <p class="first-event-text">Host Your Event</p>
+                    <h1 class="second-event-text">A Warm & Friendly Atmosphere</h1>
+                    <div class="icon"></div>
+                    <p class="third-event-text">Allow us to make your next special event extra special. We cater
+                        for
+                        all sized functions, ideal for your intimate gathering, our team can curate a menu to
+                        suit
+                        your
+                        taste</p>
+                    <p class="events-cta-paragraph"><a href="#" class="events-cta">Explore Events</a></p>
+                    </div>
+                    </div>
+                    </div>
+
+        <div class="reservations" id="reservation">
+            <div class="reservations-container">
+                <div class="first-section">
+                    <div class="sub-section">
+                        <p class="first-section-text-1">Check Availability</p>
+                        <p class="first-section-text-2">Opening Times</p>
+                        <div class="worktime">
+                            <p class="first-section-text-3">Week Days:</p>
+                            <p class="service-time">08:00am - 10:00pm</p>
                         </div>
+                        <div class="worktime">
+                            <p class="first-section-text-4">Saturdays:</p>
+                            <p class="service-time">09:00am - 08:00pm</p>
+                        </div>
+                        <div class="worktime">
+                            <p class="first-section-text-5">Sundays:</p>
+                            <p class="service-time">Day Off</p>
+                        </div>
+                        <p class="first-section-text-6">Call us Now</p>
+                        <p class="first-section-text-7">0201023456789</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="events">
-                <div class="events-container">
-                    <div class="event_first_images">
-                        <div class="first_event_img"></div>
-                        <div class="second_event_img"></div>
-                    </div>
-                    <div class="event_text">
-                        <p class="first_event_text">Host Your Event</p>
-                        <h1 class="second_event_text">A Warm & Friendly Atmosphere</h1>
-                        <div class="icon"></div>
-                        <p class="third_event_text">Allow us to make your next special event extra special. We cater for
-                            all sized functions, ideal for your intimate gathering, our team can curate a menu to suit
-                            your
-                            taste</p>
-                        <p class="events_cta_paragraph"><a href="#" class="events_cta">Explore Events</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="reservations" id="reservation">
-                <div class="reservations_container">
-                    <div class="first_section">
-                        <div class="sub_section">
-                            <p class="first_section_text_1">Check Availability</p>
-                            <p class="first_section_text_2">Opening Times</p>
-                            <div class="worktime">
-                                <p class="first_section_text_3">Week Days:</p>
-                                <p class="service-time">08:00am - 10:00pm</p>
-                            </div>
-                            <div class="worktime">
-                                <p class="first_section_text_4">Saturdays:</p>
-                                <p class="service-time">09:00am - 08:00pm</p>
-                            </div>
-                            <div class="worktime">
-                                <p class="first_section_text_5">Sundays:</p>
-                                <p class="service-time">Day Off</p>
-                            </div>
-                            <p class="first_section_text_6">Call us Now</p>
-                            <p class="first_section_text_7">0201023456789</p>
-                        </div>
-                    </div>
-                    <div class="second_section">
-                        <div class="second_section_second_border">
-                            <p class="second_section_text">You can book your table online easily in just a couple of
-                                minutes. We take reservations for lunch, just check the availability of your table
-                            </p>
-                            <form action="" class="reservations_form">
-                                <div class="guest-container">
-                                    <select name="guests" id="" class="guests">
-                                        <option value="noofperson" selected>No. of Persons</option>
-                                        <option value="2people">2 People</option>
-                                        <option value="3people">3 People</option>
-                                        <option value="4people">4 People</option>
-                                        <option value="5people">5 People</option>
-                                    </select>
-                                    <input type="checkbox" name="" id="guest-input" class="guest-input">
-                                    <label for="guest-input" class="guest-toggler"><i class="fa-solid fa-caret-right reservation-caret"></i></label>
-                                    <ul class="guest-list">
-                                        <li class="guest0">2 People</li>
-                                        <li class="guest0">3 People</li>
-                                        <li class="guest0">4 People</li>
-                                        <li class="guest0">5 People</li>
-                                        <li class="guest0">6 People</li>
-                                        <li class="guest0">7 People</li>
-                                    </ul>
+                <div class="second-section">
+                    <div class="second-section-second-border">
+                        <p class="second-section-text">You can book your table online easily in just a couple of
+                            minutes. We take reservations for lunch, just check the availability of your table
+                        </p>
+                        <form action="" class="reservations-form">
+                            <div class="guest-container">
+                                <select name="guests" id="" class="guests">
+                                    <option value="noofperson" selected>No. of Persons</option>
+                                    <option value="2people">2 People</option>
+                                    <option value="3people">3 People</option>
+                                    <option value="4people">4 People</option>
+                                    <option value="5people">5 People</option>
+                                </select>
+                                <input type="checkbox" name="" id="guest-input" class="guest-input">
+                                <label for="guest-input" class="guest-toggler"><i class="fa-solid fa-caret-right reservation-caret"></i></label>
+                                <ul class="guest-list">
+                                    <li class="guest0">2 People</li>
+                                    <li class="guest0">3 People</li>
+                                    <li class="guest0">4 People</li>
+                                    <li class="guest0">5 People</li>
+                                    <li class="guest0">6 People</li>
+                                    <li class="guest0">7 People</li>
+                                </ul>
                                 </div>
 
-                                <div class="guest-container">
-                                    <select name="date" id="" class="date">
-                                        <option value="noofperson" selected>No. of Persons</option>
-                                        <option value="2people">2 People</option>
-                                        <option value="3people">3 People</option>
-                                        <option value="4people">4 People</option>
-                                        <option value="5people">5 People</option>
-                                    </select>
-                                    <input type="checkbox" name="" id="date-input" class="date-input">
-                                    <label for="date-input" class="date-toggler"><i class="fa-solid fa-caret-right reservation-caret"></i></label>
-                                    <ul class="date-list">
-                                        <li class="guest0">Mar 23 2023</li>
-                                        <li class="guest0">Mar 24 2023</li>
-                                        <li class="guest0">Mar 25 2023</li>
-                                        <li class="guest0">Mar 26 2023</li>
-                                        <li class="guest0">Mar 27 2023</li>
-                                        <li class="guest0">Mar 28 2023</li>
-                                    </ul>
+                            <div class="guest-container">
+                                <select name="date" id="" class="date">
+                                    <option value="noofperson" selected>No. of Persons</option>
+                                    <option value="2people">2 People</option>
+                                    <option value="3people">3 People</option>
+                                    <option value="4people">4 People</option>
+                                    <option value="5people">5 People</option>
+                                </select>
+                                <input type="checkbox" name="" id="date-input" class="date-input">
+                                <label for="date-input" class="date-toggler"><i class="fa-solid fa-caret-right reservation-caret"></i></label>
+                                <ul class="date-list">
+                                    <li class="guest0">Mar 23 2023</li>
+                                    <li class="guest0">Mar 24 2023</li>
+                                    <li class="guest0">Mar 25 2023</li>
+                                    <li class="guest0">Mar 26 2023</li>
+                                    <li class="guest0">Mar 27 2023</li>
+                                    <li class="guest0">Mar 28 2023</li>
+                                </ul>
                                 </div>
 
-                                <div class="time-container">
-                                    <select name="time" id="" class="time">
-                                        <option value="07.00">07:00</option>
-                                        <option value="08.00">08:00</option>
-                                        <option value="09.00">09:00</option>
-                                        <option value="10.00">10:00</option>
-                                        <option value="11.00">11:00</option>
-                                        <option value="12.00">12:00</option>
-                                        <option value="13.00">13:00</option>
-                                        <option value="14.00">14:00</option>
-                                        <option value="15.00">15:00</option>
-                                        <option value="16.00">16:00</option>
-                                        <option value="17.00">17:00</option>
-                                        <option value="18.00">18:00</option>
-                                        <option value="19.00">19:00</option>
-                                        <option value="20.00">20:00</option>
-                                        <option value="21.00">21:00</option>
-                                    </select>
-                                    <input type="checkbox" name="" id="time-input" class="time-input">
-                                    <label for="time-input" class="time-toggler"><i class="fa-solid fa-caret-right reservation-caret"></i></label>
-                                    <ul class="time-list">
-                                        <li class="guest0">07:00</li>
-                                        <li class="guest0">08:00</li>
-                                        <li class="guest0">09:00</li>
-                                        <li class="guest0">10:00</li>
-                                        <li class="guest0">11:00</li>
-                                        <li class="guest0">12:00</li>
-                                    </ul>
+                            <div class="time-container">
+                                <select name="time" id="" class="time">
+                                    <option value="07.00">07:00</option>
+                                    <option value="08.00">08:00</option>
+                                    <option value="09.00">09:00</option>
+                                    <option value="10.00">10:00</option>
+                                    <option value="11.00">11:00</option>
+                                    <option value="12.00">12:00</option>
+                                    <option value="13.00">13:00</option>
+                                    <option value="14.00">14:00</option>
+                                    <option value="15.00">15:00</option>
+                                    <option value="16.00">16:00</option>
+                                    <option value="17.00">17:00</option>
+                                    <option value="18.00">18:00</option>
+                                    <option value="19.00">19:00</option>
+                                    <option value="20.00">20:00</option>
+                                    <option value="21.00">21:00</option>
+                                </select>
+                                <input type="checkbox" name="" id="time-input" class="time-input">
+                                <label for="time-input" class="time-toggler"><i class="fa-solid fa-caret-right reservation-caret"></i></label>
+                                <ul class="time-list">
+                                    <li class="guest0">07:00</li>
+                                    <li class="guest0">08:00</li>
+                                    <li class="guest0">09:00</li>
+                                    <li class="guest0">10:00</li>
+                                    <li class="guest0">11:00</li>
+                                    <li class="guest0">12:00</li>
+                                </ul>
                                 </div>
                                 
-                                <input type="text" name="name" id="" class="guest_name" placeholder="Full Name">
-                                <input type="email" name="email" id="" class="guest_email" placeholder="Email Address">
-                                <input type="number" name="phone_number" id="" class="guest_phone_number"
-                                    placeholder="Phone Number">
+                                <input type="text" name="name" id="" class="guest-name" placeholder="Full Name">
+                                <input type="email" name="email" id="" class="guest-email" placeholder="Email Address">
+                                <input type="number" name="phone-number" id="" class="guest-phone-number" placeholder="Phone Number">
                                 <button type="submit" class="submit">Find A Table</button>
-                            </form>
+                                </form>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+
+        <div class="news">
+            <div class="news-container">
+                <p class="news-first-text">Dont Miss</p>
+                <p class="news-second-text">Our News & Events</p>
+                <div class="icon"></div>
+                <p class="news-third-text">Since our grand opening in May 1995, El Roayle has won geat awards
+                    from
+                    food
+                    critics and organizations all over the world.</p>
+                <div class="news-block">
+                    <div class="news-block-1">
+                        <div class="news-banner"></div>
+                        <div class="news-sub-block">
+                            <div class="news-alert-container">
+                                <button class="alert-1">Food</button>
+                                <button class="alert-2">Recipe</button>
+                            </div>
+                            <h1 class="news-block-header">Healthy & Simple Recipes That Are Perfect For Spring
+                            </h1>
+                            <p class="news-block-date">Jan 20, 2020</p>
+                            <p class="news-block-text">My favorite form of cold weather exercise is
+                                snow-shoeing,
+                                but
+                                by chance i haven't been able to go this year. Busy working at the computer when
+                                fresh
+                                snow fell...</p>
+                            <p><a href="#" class="news-readmore">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="news-block-2">
+                        <div class="news-banner"></div>
+                        <div class="news-sub-block">
+                            <div class="news-alert-container">
+                                <button class="alert-1">Chef</button>
+                                <button class="alert-2">Dinner</button>
+                            </div>
+                            <h1 class="news-block-header">What Do Chef's Cook When They Have Friends Over For
+                                Dinner
+                            </h1>
+                            <p class="news-block-date">Jan 24, 2020</p>
+                            <p class="news-block-text">I began my carrer as a recipe tester for cookbooks and
+                                i
+                                did
+                                not work for years. We loved cookbooks and loved browsing for them at thrift
+                                stores...
+                            </p>
+                            <p><a href="#" class="news-readmore">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="news-block-3">
+                        <div class="news-banner"></div>
+                        <div class="news-sub-block">
+                            <div class="news-alert-container">
+                                <button class="alert-1">Chef</button>
+                                <button class="alert-2">Dinner</button>
+                            </div>
+                            <h1 class="news-block-header">Desserts With Cream Cheese Fosting Taste Of Home
+                            </h1>
+                            <p class="news-block-date">Jan 29, 2020</p>
+                            <p class="news-block-text">I've been baking cake for many years, and have
+                                experimented
+                                with making it into cupcakes, as a layer cake, serving it dusted with
+                                confectioner's
+                                sugar...</p>
+                            <p><a href="#" class="news-readmore">Read More</a></p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="news">
-                <div class="news-container">
-                    <p class="news_first_text">Dont Miss</p>
-                    <p class="news_second_text">Our News & Events</p>
-                    <div class="icon"></div>
-                    <p class="news_third_text">Since our grand opening in May 1995, El Roayle has won geat awards
-                        from
-                        food
-                        critics and organizations all over the world.</p>
-                    <div class="news_block">
-                        <div class="news_block_1">
-                            <div class="news_banner"></div>
-                            <div class="news_sub_block">
-                                <div class="news_alert_container">
-                                    <button class="alert_1">Food</button>
-                                    <button class="alert_2">Recipe</button>
-                                </div>
-                                <h1 class="news_block_header">Healthy & Simple Recipes That Are Perfect For Spring
-                                </h1>
-                                <p class="news_block_date">Jan 20, 2020</p>
-                                <p class="news_block_text">My favorite form of cold weather exercise is
-                                    snow-shoeing,
-                                    but
-                                    by chance i haven't been able to go this year. Busy working at the computer when
-                                    fresh
-                                    snow fell...</p>
-                                <p><a href="#" class="news_readmore">Read More</a></p>
+        <div class="contact">
+            <div class="contact-container">
+                <div class="address">
+                    <p class="first-address-text">Our Address</p>
+                    <p class="second-address-text">22 Alnahas Building, 2 AlBahr St, Tanta <br />Al-Gharbia
+                        Governorate, Egypt</p>
+                    <p><a href="#" class="map-link">View on Map</a></p>
+                </div>
+
+                <div class="newsletter">
+                    <div class="logo"></div>
+                    <p class="newsletter-first-text">El Royale was the first restaurant to open in Egypt, the
+                        restauraant was designed with the history in mind we have created a soft industrial
+                        dining
+                        room.
+                    </p>
+                    <form action="" class="newsletter-form">
+                        <div class="newsletter-form-first-border">
+                            <div class="newsletter-form-second-border">
+                                <input type="email" name="" id="" class="newsletter-email" placeholder="Subscribe To Our Newsletter ">
+                                <button type="submit" class="newsletter-submit"><i class="fa-solid fa-caret-right"></i></button>
                             </div>
                         </div>
-                        <div class="news_block_2">
-                            <div class="news_banner"></div>
-                            <div class="news_sub_block">
-                                <div class="news_alert_container">
-                                    <button class="alert_1">Chef</button>
-                                    <button class="alert_2">Dinner</button>
-                                </div>
-                                <h1 class="news_block_header">What Do Chef's Cook When They Have Friends Over For
-                                    Dinner
-                                </h1>
-                                <p class="news_block_date">Jan 24, 2020</p>
-                                <p class="news_block_text">I began my carrer as a recipe tester for cookbooks and
-                                    i
-                                    did
-                                    not work for years. We loved cookbooks and loved browsing for them at thrift
-                                    stores...
-                                </p>
-                                <p><a href="#" class="news_readmore">Read More</a></p>
-                            </div>
-                        </div>
-                        <div class="news_block_3">
-                            <div class="news_banner"></div>
-                            <div class="news_sub_block">
-                                <div class="news_alert_container">
-                                    <button class="alert_1">Chef</button>
-                                    <button class="alert_2">Dinner</button>
-                                </div>
-                                <h1 class="news_block_header">Desserts With Cream Cheese Fosting Taste Of Home
-                                </h1>
-                                <p class="news_block_date">Jan 29, 2020</p>
-                                <p class="news_block_text">I've been baking cake for many years, and have
-                                    experimented
-                                    with making it into cupcakes, as a layer cake, serving it dusted with
-                                    confectioner's
-                                    sugar...</p>
-                                <p><a href="#" class="news_readmore">Read More</a></p>
-                            </div>
-                        </div>
+                    </form>
+                    <div class="social-icon-container">
+                        <i class="fa-brands fa-instagram social-icon instagram"></i>
+                        <i class="fa-brands fa-facebook social-icon facebook"></i>
+                        <i class="fa-brands fa-twitter social-icon twitter"></i>
                     </div>
                 </div>
-            </div>
 
-            <div class="contact">
-                <div class="contact-container">
-                    <div class="address">
-                        <p class="first_address_text">Our Address</p>
-                        <p class="second_address_text">22 Alnahas Building, 2 AlBahr St, Tanta <br />Al-Gharbia
-                            Governorate, Egypt</p>
-                        <p><a href="#" class="map_link">View on Map</a></p>
-                    </div>
-
-                    <div class="newsletter">
-                        <div class="logo"></div>
-                        <p class="newsletter_first_text">El Royale was the first restaurant to open in Egypt, the
-                            restauraant was designed with the history in mind we have created a soft industrial
-                            dining
-                            room.
-                        </p>
-                        <form action="" class="newsletter_form">
-                            <div class="newsletter_form_first_border">
-                                <div class="newsletter_form_second_border">
-                                    <input type="email" name="" id="" class="newsletter_email"
-                                        placeholder="Subscribe To Our Newsletter ">
-                                    <button type="submit" class="newsletter_submit"><i
-                                            class="fa-solid fa-caret-right"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="social_icon_container">
-                            <i class="fa-brands fa-instagram social_icon instagram"></i>
-                            <i class="fa-brands fa-facebook social_icon facebook"></i>
-                            <i class="fa-brands fa-twitter social_icon twitter"></i>
-                        </div>
-                    </div>
-
-                    <div class="private_dining">
-                        <p class="private_dining_first_text">Private Dining</p>
-                        <p class="private_dining_email">Main Email: Elroyale@gmail.com</p>
-                        <p class="private_dining_number">Phone: +27 08303891</p>
-                        <p><a href="#reservation" class="private_dining_reservations">Reservations</a></p>
-                    </div>
+                <div class="private-dining">
+                    <p class="private-dining-first-text">Private Dining</p>
+                    <p class="private-dining-email">Main Email: Elroyale@gmail.com</p>
+                    <p class="private-dining-number">Phone: +27 08303891</p>
+                    <p><a href="#reservation" class="private-dining-reservations">Reservations</a></p>
                 </div>
-            </div>
+                </div>
+                </div>
 
-        </main>
+    </main>
 
-        <footer class="footer">
-            <div class="footer-container">
-                <ul class="footer_ul">
-                    <li class="footer_home"><a href="./index.html">Home</a></li>
-                    <li class="footer_menu"><a href="./menu.html">Menu</a></li>
-                    <li class="footer_gallery">Gallery</li>
-                    <li class="footer_blog">Blog</li>
-                    <li class="footer_shop"><a href="./shop.html">Shop</a></li>
-                </ul>
-                <p class="copyright">&copy; by <a href="#">Fruitful</a> </p>
-            </div>
-        </footer>
-    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <ul class="footer-ul">
+                <li class="footer-home"><a href="./index.html">Home</a></li>
+                <li class="footer-menu"><a href="./menu.html">Menu</a></li>
+                <li class="footer-gallery">Gallery</li>
+                <li class="footer-blog">Blog</li>
+                <li class="footer-shop"><a href="./shop.html">Shop</a></li>
+            </ul>
+            <p class="copyright">&copy; by <a href="#">Fruitful</a> </p>
+        </div>
+    </footer>-->
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>
