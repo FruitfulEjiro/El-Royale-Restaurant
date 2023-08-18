@@ -1,11 +1,5 @@
+/** @format */
 @import url("https://fonts.googleapis.com/css2?family=Kristi&family=Poppins&family=Yeseva+One&display=swap");
-:root {
-  --Poppins:"Poppins", sans-serif;
-  --Kristi:"Kristi", cursive;
-  --Yeseva:"Yeseva One", cursive;
-  --text-small-color:#2b2a2a;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -18,7 +12,7 @@ html {
   text-decoration: none;
   background: none;
   box-sizing: border-box;
-  font-family: var(--Poppins);
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar-brand img {
@@ -65,14 +59,14 @@ html {
   left: 0px;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.2549019608), rgba(0, 0, 0, 0.2549019608));
+  background: linear-gradient(rgba(0, 0, 0, 0.5568627451), rgba(0, 0, 0, 0.5568627451));
 }
 
 .carousel-main-text {
   color: #ffffff;
   text-align: center;
   font-size: 3.5rem;
-  font-family: var(--Yeseva);
+  font-family: "Yeseva One", cursive;
   margin: 0rem 0rem 1.5rem 0rem;
 }
 
@@ -84,11 +78,11 @@ html {
   color: #ffffff;
   text-align: center;
   font-size: 2rem;
-  font-family: var(--Kristi);
+  font-family: "Kristi", cursive;
 }
 
 .menu-header {
-  font-family: var(--Kristi);
+  font-family: "Kristi", cursive;
   font-size: 2rem;
 }
 
@@ -101,7 +95,7 @@ html {
 }
 
 .menu-text {
-  font-family: var(--Yeseva);
+  font-family: "Yeseva One", cursive;
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -113,7 +107,7 @@ html {
 
 .second-menu {
   height: 20rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.3725490196), rgba(0, 0, 0, 0.3725490196)), url(../Images/Shop_banner_5.jpeg) center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3725490196), rgba(0, 0, 0, 0.3725490196)), url(../Images/Shop_banner_2.jpeg) center/cover no-repeat;
 }
 
 .third-menu {
@@ -126,7 +120,7 @@ html {
 .third-menu-text {
   color: whitesmoke;
   font-size: 2.2rem;
-  font-family: var(--Kristi);
+  font-family: "Kristi", cursive;
 }
 
 .menu-end-text {
@@ -147,7 +141,7 @@ html {
   left: 0rem;
   width: 100%;
   height: 2px;
-  background: var(--text-small-color);
+  background: #2b2a2a;
 }
 
 .cta {
@@ -156,15 +150,53 @@ html {
 }
 
 .cta-sub-text {
-  font-family: var(--Kristi);
+  font-family: "Kristi", cursive;
   font-size: 1.7rem;
 }
 
 .cta-main-text {
-  font-family: var(--Yeseva);
+  font-family: "Yeseva One", cursive;
   font-size: 2rem;
 }
 
 .cta-sub-text-2 {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+}
+
+.signatory {
+  font-family: "Kristi", cursive;
+  font-size: 2rem;
+}
+
+.food-menu-sub-text {
+  font-family: "Kristi", cursive;
+  font-size: 2rem;
+}
+
+.food-menu-header {
+  font-family: "Yeseva One", cursive;
+  font-size: 1.6rem;
+}
+
+.food-menu-container .text {
+  font-size: 0.8rem;
+}
+
+.meals {
+  position: relative;
+}
+
+.meals::after {
+  position: absolute;
+  content: "";
+  top: 1.2rem;
+  right: 7.25rem;
+  width: 3rem;
+  height: 2px;
+  background: #2b2a2a;
+}
+
+.first-meal-menu {
+  width: 100%;
+  border: 1px solid #d69846;
 }

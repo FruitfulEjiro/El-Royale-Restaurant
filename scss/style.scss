@@ -1,173 +1,216 @@
-@import url('https://fonts.googleapis.com/css2?family=Kristi&family=Poppins&family=Yeseva+One&display=swap');
+/** @format */
 
-$border-width:0px;
+@import url("https://fonts.googleapis.com/css2?family=Kristi&family=Poppins&family=Yeseva+One&display=swap");
 
-:root {
-    --Poppins:'Poppins', sans-serif;
-    --Kristi:'Kristi', cursive;
-    --Yeseva:'Yeseva One', cursive;
-    --text-small-color:#2b2a2a;
-}
+$border-width: 0px;
+
+$Poppins: "Poppins", sans-serif;
+$Kristi: "Kristi", cursive;
+$Yeseva: "Yeseva One", cursive;
+$Text-color: #2b2a2a;
+$primary: #d69846;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    list-style: none;
-    text-decoration: none;
-    background: none;
-    box-sizing: border-box;
-    font-family:var(--Poppins);
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  list-style: none;
+  text-decoration: none;
+  background: none;
+  box-sizing: border-box;
+  font-family: $Poppins;
 }
 
 .navbar-brand img {
-    width:8rem;
+  width: 8rem;
 }
 
 .navbar-toggler {
-    border:$border-width;
-    width:50px;
+  border: $border-width;
+  width: 50px;
 }
 
 .banner {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content: center;
-    width:100vw;
-    height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .carousel,
 .carousel-inner,
 .carousel-item {
-    width:100%;
-    height:100%;
+  width: 100%;
+  height: 100%;
 }
 
 .gradient-container {
-    width:100%;
-    height:100%;
+  width: 100%;
+  height: 100%;
 }
 
 .carouselImg {
-    object-fit: cover;
-    width:100%;
-    height:100%;
-    position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.gradient-container::after{
-    content: "yoooo";
-    position: absolute;
-    top:100x;
-    left:0px;
-    width:100%;
-    height:100%;
-    background: linear-gradient(#00000041, #00000041);
+.gradient-container::after {
+  content: "yoooo";
+  position: absolute;
+  top: 100x;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#0000008e, #0000008e);
 }
 
 .carousel-main-text {
-     color: #ffffff;
-     text-align: center;
-     font-size: 3.5rem;
-     font-family:var(--Yeseva);
-     margin:0rem 0rem 1.5rem 0rem;
+  color: #ffffff;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: $Yeseva;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 
 .banner-button {
-    display:none;
+  display: none;
 }
 
 .sub-text {
-     color: #ffffff;
-     text-align: center;
-     font-size: 2rem;
-     font-family:var(--Kristi);
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  font-family: $Kristi;
 }
 
 .menu-header {
-    font-family:var(--Kristi);
-    font-size:2rem;
+  font-family: $Kristi;
+  font-size: 2rem;
 }
 
 .menu-header br {
-    display:none;
+  display: none;
 }
 
 .header-underline {
-    width:4rem;
+  width: 4rem;
 }
 
 .menu-text {
-    font-family:var(--Yeseva);
-    font-size:1.5rem;
-    line-height:2rem;
+  font-family: $Yeseva;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .first-menu {
-    height:20rem;
-    background:linear-gradient(#0000005f, #0000005f), url(../Images/Marinana.png) center/cover no-repeat;
+  height: 20rem;
+  background: linear-gradient(#0000005f, #0000005f),
+    url(../Images/Marinana.png) center/cover no-repeat;
 }
 
 .second-menu {
-    height:20rem;
-    background:linear-gradient(#0000005f, #0000005f), url(../Images/Shop_banner_5.jpeg) center/cover no-repeat;
+  height: 20rem;
+  background: linear-gradient(#0000005f, #0000005f),
+    url(../Images/Shop_banner_2.jpeg) center/cover no-repeat;
 }
 
 .third-menu {
-    height:20rem;
-    background:linear-gradient(#0000005f, #0000005f), url(../Images/Shop_banner_4.jpeg) center/cover no-repeat;
+  height: 20rem;
+  background: linear-gradient(#0000005f, #0000005f),
+    url(../Images/Shop_banner_4.jpeg) center/cover no-repeat;
 }
 
 .first-menu-text,
 .second-menu-text,
 .third-menu-text {
-    color:whitesmoke;
-    font-size:2.2rem;
-    font-family:var(--Kristi);
+  color: whitesmoke;
+  font-size: 2.2rem;
+  font-family: $Kristi;
 }
 
 .menu-end-text {
-    font-size:0.8rem;
+  font-size: 0.8rem;
 }
 
 .discover-our-story {
-    width:7.5rem;
-    position: relative;
-    font-size:0.8rem;
-    font-weight:bolder;
+  width: 7.5rem;
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: bolder;
 }
 
 .discover-our-story::after {
-    position: absolute;
-    content:"";
-    top:1.1rem;
-    left:0rem;
-    width:100%;
-    height:2px;
-    background:var(--text-small-color);
+  position: absolute;
+  content: "";
+  top: 1.1rem;
+  left: 0rem;
+  width: 100%;
+  height: 2px;
+  background: $Text-color;
 }
 
 .cta {
-    height:auto;
-    background:linear-gradient(#0000008e, #0000008e), url(../Images/Tomato_soup.webp) center/cover no-repeat;
+  height: auto;
+  background: linear-gradient(#0000008e, #0000008e),
+    url(../Images/Tomato_soup.webp) center/cover no-repeat;
 }
 
 .cta-sub-text {
-    font-family:var(--Kristi);
-    font-size:1.7rem;
+  font-family: $Kristi;
+  font-size: 1.7rem;
 }
 
 .cta-main-text {
-    font-family:var(--Yeseva);
-    font-size:2rem;
+  font-family: $Yeseva;
+  font-size: 2rem;
 }
 
 .cta-sub-text-2 {
-    font-size:0.9rem;
+  font-size: 0.8rem;
+}
+
+.signatory {
+  font-family: $Kristi;
+  font-size: 2rem;
+}
+
+.food-menu-sub-text {
+  font-family: $Kristi;
+  font-size: 2rem;
+}
+
+.food-menu-header {
+  font-family: $Yeseva;
+  font-size: 1.6rem;
+}
+
+.food-menu-container .text {
+  font-size: 0.8rem;
+}
+
+.meals {
+  position: relative;
+}
+
+.meals::after {
+  position: absolute;
+  content: "";
+  top: 1.2rem;
+  right: 7.25rem;
+  width: 3rem;
+  height: 2px;
+  background: $Text-color;
+}
+
+.first-meal-menu {
+  width: 100%;
+  border: 1px solid $primary;
 }
