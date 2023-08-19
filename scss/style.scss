@@ -1,6 +1,6 @@
 /** @format */
 
-@import url("https://fonts.googleapis.com/css2?family=Kristi&family=Poppins&family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kristi&family=Poppins:wght@400;600&family=Yeseva+One&display=swap");
 
 $border-width: 0px;
 
@@ -31,7 +31,7 @@ html {
 
 .navbar-toggler {
   border: $border-width;
-  width: 50px;
+  width: 40px;
 }
 
 .banner {
@@ -84,7 +84,7 @@ html {
   display: none;
 }
 
-.sub-text {
+.banner-sub-text {
   color: #ffffff;
   text-align: center;
   font-size: 2rem;
@@ -160,7 +160,7 @@ html {
 .cta {
   height: auto;
   background: linear-gradient(#0000008e, #0000008e),
-    url(../Images/Tomato_soup.webp) center/cover no-repeat;
+    url(../Images/Tomato_soup.webp) center/cover no-repeat fixed;
 }
 
 .cta-sub-text {
@@ -200,17 +200,87 @@ html {
   position: relative;
 }
 
-.meals::after {
+.meals::before {
   position: absolute;
   content: "";
-  top: 1.2rem;
-  right: 7.25rem;
+  top: 1.3rem;
+  margin: 0px auto;
   width: 3rem;
   height: 2px;
   background: $Text-color;
 }
 
-.first-meal-menu {
+.first-meal-menu,
+.second-meal-menu {
   width: 100%;
   border: 1px solid $primary;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-meal-menu::after,
+.second-meal-menu::after {
+  position: absolute;
+  content: "";
+  width: 98.5%;
+  height: 101%;
+  border: 1px solid $primary;
+}
+
+.header-text {
+  font-family: $Poppins;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-family: $Kristi;
+  font-size: 2rem;
+}
+
+.menu-sub-text {
+  font-size: 0.8rem;
+  border-bottom: 2px dotted #000;
+}
+
+.explore-food-menu {
+  position: relative;
+  font-family: $Poppins;
+  font-size: 0.8rem;
+}
+
+.explore-food-menu::before {
+  position: absolute;
+  content: "";
+  top: 1.3rem;
+  margin: 0px auto;
+  width: 7rem;
+  height: 2px;
+  background: $Text-color;
+}
+
+.testimonials {
+    background:linear-gradient(#0000008e, #0000008e), url(../Images/Muffins.jpeg) center/cover no-repeat fixed;
+}
+
+.testimonials-first-text {
+    font-family:$Kristi;
+    font-size:2rem;
+}
+
+.testimonials-second-text {
+    font-family:$Yeseva;
+    font-size:2rem;
+}
+
+.star-icons .fa-star {
+    color:#ffd700;
+}
+
+.first-event-text {
+     font-family:$Kristi;
+     font-size:2rem;
 }
