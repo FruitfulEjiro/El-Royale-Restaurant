@@ -266,7 +266,123 @@ html {
   color: #ffd700;
 }
 
+.first-event-img {
+  background: url(../Images/Gaby.jpeg) center/cover no-repeat;
+  width: 6rem;
+  height: 8rem;
+}
+
+.second-event-img {
+  background: url(../Images/Spaghetti.jpeg) center/cover no-repeat;
+  width: 6rem;
+  height: 8rem;
+}
+
 .first-event-text {
   font-family: "Kristi", cursive;
   font-size: 2rem;
+}
+
+.second-event-text {
+  font-family: "Yeseva One", cursive;
+  font-size: 1.5rem;
+}
+
+.event-text .header-underline {
+  width: 3rem;
+}
+
+.third-event-text {
+  font-size: 0.8rem;
+}
+
+.events-cta-paragraph {
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.events-cta-paragraph::before {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  left: 0rem;
+  width: 100%;
+  height: 2px;
+  background: #2b2a2a;
+}
+
+.reservations {
+  background: url(../Images/Chile-Spiked-Beans.jpeg) center/cover no-repeat;
+}
+
+.reservations-container {
+  width: 100%;
+}
+
+.sub-section {
+  border: 1px solid #d69846;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sub-section::after {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 102%;
+  border: 1px solid #d69846;
+}
+
+.first-section-text-1 {
+  font-family: "Kristi", cursive;
+  font-size: 1.5rem;
+}
+
+.first-section-text-2 {
+  font-family: "Yeseva One", cursive;
+  font-size: 1.5rem;
+}
+
+.worktime {
+  border-bottom: 2px dotted #fff;
+  width: 80%;
+}
+
+.worktime .first-section-text,
+.worktime .service-time {
+  font-size: 0.8rem;
+}
+
+.call-us-now {
+  font-size: 1.7rem;
+  font-family: "Kristi", cursive;
+}
+
+.call-number {
+  font-size: 1.5rem;
+  font-family: "Yeseva One", cursive;
+}
+
+.second-section {
+  border: 1px solid #d69846;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-section:after {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 101%;
+  border: 1px solid #d69846;
+}
+
+.second-section-text {
+  font-size: 0.8rem;
 }

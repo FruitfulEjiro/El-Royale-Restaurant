@@ -481,135 +481,178 @@
     <div class="events container">
       <div class="events-container row py-5">
         <div
-          class="event-first-images d-flex flex-row align-items-center justify-content-center gap-3">
-          <div class="first-event-img"></div>
-          <div class="second-event-img"></div>
+          class="event-first-images d-flex flex-row align-items-center justify-content-center gap-4">
+          <div class="first-event-img mb-3"></div>
+          <div class="second-event-img mt-3"></div>
         </div>
         <div class="event-text d-flex flex-column align-items-center">
           <p class="first-event-text text-primary m-0">Host Your Event</p>
-          <h1 class="second-event-text text-center m-0">A Warm & Friendly Atmosphere</h1>
-          <img src="./Images/header-underline.png" alt="" class="header-underline mt-2 mb-4">
+          <h1 class="second-event-text text-center m-0">
+            A Warm & Friendly Atmosphere
+          </h1>
+          <img
+            src="./Images/header-underline.png"
+            alt=""
+            class="header-underline mt-2 mb-4 mx-auto" />
           <p class="third-event-text text-secondary text-center m-0">
             Allow us to make your next special event extra special. We cater for
             all sized functions, ideal for your intimate gathering, our team can
             curate a menu to suit your taste
           </p>
-          <p class="events-cta-paragraph">
-            <a href="#" class="events-cta">Explore Events</a>
+          <p class="events-cta-paragraph mt-4 mb-0">
+            <a href="#" class="events-cta text-black fw-semibold"
+              >Explore Events</a
+            >
           </p>
         </div>
       </div>
     </div>
 
-    <!--<div class="reservations" id="reservation">
-            <div class="reservations-container">
-                <div class="first-section">
-                    <div class="sub-section">
-                        <p class="first-section-text-1">Check Availability</p>
-                        <p class="first-section-text-2">Opening Times</p>
-                        <div class="worktime">
-                            <p class="first-section-text-3">Week Days:</p>
-                            <p class="service-time">08:00am - 10:00pm</p>
-                        </div>
-                        <div class="worktime">
-                            <p class="first-section-text-4">Saturdays:</p>
-                            <p class="service-time">09:00am - 08:00pm</p>
-                        </div>
-                        <div class="worktime">
-                            <p class="first-section-text-5">Sundays:</p>
-                            <p class="service-time">Day Off</p>
-                        </div>
-                        <p class="first-section-text-6">Call us Now</p>
-                        <p class="first-section-text-7">0201023456789</p>
-                    </div>
-                </div>
-                <div class="second-section">
-                    <div class="second-section-second-border">
-                        <p class="second-section-text">You can book your table online easily in just a couple of
-                            minutes. We take reservations for lunch, just check the availability of your table
-                        </p>
-                        <form action="" class="reservations-form">
-                            <div class="guest-container">
-                                <select name="guests" id="" class="guests">
-                                    <option value="noofperson" selected>No. of Persons</option>
-                                    <option value="2people">2 People</option>
-                                    <option value="3people">3 People</option>
-                                    <option value="4people">4 People</option>
-                                    <option value="5people">5 People</option>
-                                </select>
-                                <input type="checkbox" name="" id="guest-input" class="guest-input">
-                                <label for="guest-input" class="guest-toggler"><i class="fa-solid fa-caret-right reservation-caret"></i></label>
-                                <ul class="guest-list">
-                                    <li class="guest0">2 People</li>
-                                    <li class="guest0">3 People</li>
-                                    <li class="guest0">4 People</li>
-                                    <li class="guest0">5 People</li>
-                                    <li class="guest0">6 People</li>
-                                    <li class="guest0">7 People</li>
-                                </ul>
-                                </div>
+    <div
+      class="reservations container d-flex justify-content-center py-5 px-2"
+      id="reservation">
+      <div
+        class="reservations-container row d-flex flex-column align-items-center justify-content-center px-2 py-3 bg-white">
+        <div class="first-section bg-black col-12 py-3 mb-5">
+          <div class="sub-section text-center">
+            <p class="first-section-text-1 text-primary m-0 mt-3">
+              Check Availability
+            </p>
+            <p class="first-section-text-2 text-light m-0">Opening Times</p>
+            <div class="worktime pb-2 mt-3">
+              <p class="first-section-text text-light m-0">Week Days:</p>
+              <p class="service-time text-light m-0">08:00am - 10:00pm</p>
+            </div>
+            <div class="worktime pb-2 mt-3">
+              <p class="first-section-text text-light m-0">Saturdays:</p>
+              <p class="service-time text-light m-0">09:00am - 08:00pm</p>
+            </div>
+            <div class="worktime pb-2 mt-3">
+              <p class="first-section-text text-light m-0">Sundays:</p>
+              <p class="service-time text-light m-0">Day Off</p>
+            </div>
+            <p class="call-us-now text-primary m-0 mt-4">Call us Now</p>
+            <p class="call-number text-light m-0 mb-3">0201023456789</p>
+          </div>
+        </div>
+        <div class="second-section">
+          <div class="second-section-second-border py-3">
+            <p class="second-section-text">
+              You can book your table online easily in just a couple of minutes.
+              We take reservations for lunch, just check the availability of
+              your table
+            </p>
 
-                            <div class="guest-container">
-                                <select name="date" id="" class="date">
-                                    <option value="noofperson" selected>No. of Persons</option>
-                                    <option value="2people">2 People</option>
-                                    <option value="3people">3 People</option>
-                                    <option value="4people">4 People</option>
-                                    <option value="5people">5 People</option>
-                                </select>
-                                <input type="checkbox" name="" id="date-input" class="date-input">
-                                <label for="date-input" class="date-toggler"><i class="fa-solid fa-caret-right reservation-caret"></i></label>
-                                <ul class="date-list">
-                                    <li class="guest0">Mar 23 2023</li>
-                                    <li class="guest0">Mar 24 2023</li>
-                                    <li class="guest0">Mar 25 2023</li>
-                                    <li class="guest0">Mar 26 2023</li>
-                                    <li class="guest0">Mar 27 2023</li>
-                                    <li class="guest0">Mar 28 2023</li>
-                                </ul>
-                                </div>
+            <div class="dropdown z-3">
+              <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                No of People
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">2 People</a></li>
+                <li><a href="#" class="dropdown-item">3 People</a></li>
+                <li><a href="#" class="dropdown-item">4 People</a></li>
+                <li><a href="#" class="dropdown-item">5 People</a></li>
+              </ul>
+            </div>
+            <!-- <form action="" class="reservations-form">
+              <div class="guest-container">
+                <select name="guests" id="" class="guests">
+                  <option value="noofperson" selected>No. of Persons</option>
+                  <option value="2people">2 People</option>
+                  <option value="3people">3 People</option>
+                  <option value="4people">4 People</option>
+                  <option value="5people">5 People</option>
+                </select>
+              </div>
 
-                            <div class="time-container">
-                                <select name="time" id="" class="time">
-                                    <option value="07.00">07:00</option>
-                                    <option value="08.00">08:00</option>
-                                    <option value="09.00">09:00</option>
-                                    <option value="10.00">10:00</option>
-                                    <option value="11.00">11:00</option>
-                                    <option value="12.00">12:00</option>
-                                    <option value="13.00">13:00</option>
-                                    <option value="14.00">14:00</option>
-                                    <option value="15.00">15:00</option>
-                                    <option value="16.00">16:00</option>
-                                    <option value="17.00">17:00</option>
-                                    <option value="18.00">18:00</option>
-                                    <option value="19.00">19:00</option>
-                                    <option value="20.00">20:00</option>
-                                    <option value="21.00">21:00</option>
-                                </select>
-                                <input type="checkbox" name="" id="time-input" class="time-input">
-                                <label for="time-input" class="time-toggler"><i class="fa-solid fa-caret-right reservation-caret"></i></label>
-                                <ul class="time-list">
-                                    <li class="guest0">07:00</li>
-                                    <li class="guest0">08:00</li>
-                                    <li class="guest0">09:00</li>
-                                    <li class="guest0">10:00</li>
-                                    <li class="guest0">11:00</li>
-                                    <li class="guest0">12:00</li>
-                                </ul>
-                                </div>
-                                
-                                <input type="text" name="name" id="" class="guest-name" placeholder="Full Name">
-                                <input type="email" name="email" id="" class="guest-email" placeholder="Email Address">
-                                <input type="number" name="phone-number" id="" class="guest-phone-number" placeholder="Phone Number">
-                                <button type="submit" class="submit">Find A Table</button>
-                                </form>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
+              <div class="guest-container">
+                <select name="date" id="" class="date">
+                  <option value="noofperson" selected>No. of Persons</option>
+                  <option value="2people">2 People</option>
+                  <option value="3people">3 People</option>
+                  <option value="4people">4 People</option>
+                  <option value="5people">5 People</option>
+                </select>
+                <input
+                  type="checkbox"
+                  name=""
+                  id="date-input"
+                  class="date-input" />
+                <label for="date-input" class="date-toggler"
+                  ><i class="fa-solid fa-caret-right reservation-caret"></i
+                ></label>
+                <ul class="date-list">
+                  <li class="guest0">Mar 23 2023</li>
+                  <li class="guest0">Mar 24 2023</li>
+                  <li class="guest0">Mar 25 2023</li>
+                  <li class="guest0">Mar 26 2023</li>
+                  <li class="guest0">Mar 27 2023</li>
+                  <li class="guest0">Mar 28 2023</li>
+                </ul>
+              </div>
 
-        <div class="news">
+              <div class="time-container">
+                <select name="time" id="" class="time">
+                  <option value="07.00">07:00</option>
+                  <option value="08.00">08:00</option>
+                  <option value="09.00">09:00</option>
+                  <option value="10.00">10:00</option>
+                  <option value="11.00">11:00</option>
+                  <option value="12.00">12:00</option>
+                  <option value="13.00">13:00</option>
+                  <option value="14.00">14:00</option>
+                  <option value="15.00">15:00</option>
+                  <option value="16.00">16:00</option>
+                  <option value="17.00">17:00</option>
+                  <option value="18.00">18:00</option>
+                  <option value="19.00">19:00</option>
+                  <option value="20.00">20:00</option>
+                  <option value="21.00">21:00</option>
+                </select>
+                <input
+                  type="checkbox"
+                  name=""
+                  id="time-input"
+                  class="time-input" />
+                <label for="time-input" class="time-toggler"
+                  ><i class="fa-solid fa-caret-right reservation-caret"></i
+                ></label>
+                <ul class="time-list">
+                  <li class="guest0">07:00</li>
+                  <li class="guest0">08:00</li>
+                  <li class="guest0">09:00</li>
+                  <li class="guest0">10:00</li>
+                  <li class="guest0">11:00</li>
+                  <li class="guest0">12:00</li>
+                </ul>
+              </div>
+
+              <input
+                type="text"
+                name="name"
+                id=""
+                class="guest-name"
+                placeholder="Full Name" />
+              <input
+                type="email"
+                name="email"
+                id=""
+                class="guest-email"
+                placeholder="Email Address" />
+              <input
+                type="number"
+                name="phone-number"
+                id=""
+                class="guest-phone-number"
+                placeholder="Phone Number" />
+              <button type="submit" class="submit">Find A Table</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!--<div class="news">
             <div class="news-container">
                 <p class="news-first-text">Dont Miss</p>
                 <p class="news-second-text">Our News & Events</p>

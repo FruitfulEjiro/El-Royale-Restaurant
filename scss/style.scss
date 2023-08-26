@@ -1,5 +1,4 @@
 /** @format */
-
 @import url("https://fonts.googleapis.com/css2?family=Kristi&family=Poppins:wght@400;600&family=Yeseva+One&display=swap");
 
 $border-width: 0px;
@@ -263,24 +262,141 @@ html {
 }
 
 .testimonials {
-    background:linear-gradient(#0000008e, #0000008e), url(../Images/Muffins.jpeg) center/cover no-repeat fixed;
+  background: linear-gradient(#0000008e, #0000008e),
+    url(../Images/Muffins.jpeg) center/cover no-repeat fixed;
 }
 
 .testimonials-first-text {
-    font-family:$Kristi;
-    font-size:2rem;
+  font-family: $Kristi;
+  font-size: 2rem;
 }
 
 .testimonials-second-text {
-    font-family:$Yeseva;
-    font-size:2rem;
+  font-family: $Yeseva;
+  font-size: 2rem;
 }
 
 .star-icons .fa-star {
-    color:#ffd700;
+  color: #ffd700;
+}
+
+.first-event-img {
+  background: url(../Images/Gaby.jpeg) center/cover no-repeat;
+  width: 6rem;
+  height: 8rem;
+}
+
+.second-event-img {
+  background: url(../Images/Spaghetti.jpeg) center/cover no-repeat;
+  width: 6rem;
+  height: 8rem;
 }
 
 .first-event-text {
-     font-family:$Kristi;
-     font-size:2rem;
+  font-family: $Kristi;
+  font-size: 2rem;
+}
+
+.second-event-text {
+  font-family: $Yeseva;
+  font-size: 1.5rem;
+}
+
+.event-text .header-underline {
+  width: 3rem;
+}
+
+.third-event-text {
+  font-size: 0.8rem;
+}
+
+.events-cta-paragraph {
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.events-cta-paragraph::before {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  left: 0rem;
+  width: 100%;
+  height: 2px;
+  background: $Text-color;
+}
+
+.reservations {
+  background: url(../Images/Chile-Spiked-Beans.jpeg) center/cover no-repeat;
+}
+
+.reservations-container {
+  width: 100%;
+}
+
+.sub-section {
+  border: 1px solid $primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sub-section::after {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 102%;
+  border: 1px solid $primary;
+}
+
+.first-section-text-1 {
+  font-family: $Kristi;
+  font-size: 1.5rem;
+}
+
+.first-section-text-2 {
+  font-family: $Yeseva;
+  font-size: 1.5rem;
+}
+
+.worktime {
+  border-bottom: 2px dotted #fff;
+  width: 80%;
+}
+
+.worktime .first-section-text,
+.worktime .service-time {
+  font-size: 0.8rem;
+}
+
+.call-us-now {
+  font-size: 1.7rem;
+  font-family: $Kristi;
+}
+
+.call-number {
+  font-size: 1.5rem;
+  font-family: $Yeseva;
+}
+
+.second-section {
+  border: 1px solid $primary;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-section:after {
+     content:"";
+     position: absolute;
+     width:98%;
+     height:101%;
+     border:1px solid $primary;
+}
+
+.second-section-text {
+     font-size:0.8rem;
 }
