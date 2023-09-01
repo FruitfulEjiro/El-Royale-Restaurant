@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kristi&family=Poppins:wght@400;600&family=Yeseva+One&display=swap");
 
 $border-width: 0px;
-
 $Poppins: "Poppins", sans-serif;
 $Kristi: "Kristi", cursive;
 $Yeseva: "Yeseva One", cursive;
@@ -83,7 +82,7 @@ html {
   display: none;
 }
 
-.banner-sub-text {
+.banner .sub-text {
   color: #ffffff;
   text-align: center;
   font-size: 2rem;
@@ -280,6 +279,18 @@ html {
   color: #ffd700;
 }
 
+.testimonial-block {
+  width: 100%;
+  height: 30rem;
+  border: 1px solid $primary;
+}
+
+.testimonial-background {
+  background: #f5f5f5;
+}
+
+// USE SCROLL SNAP FOR TESTIMONY
+
 .first-event-img {
   background: url(../Images/Gaby.jpeg) center/cover no-repeat;
   width: 6rem;
@@ -387,16 +398,30 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .second-section:after {
-     content:"";
-     position: absolute;
-     width:98%;
-     height:101%;
-     border:1px solid $primary;
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 101%;
+  border: 1px solid $primary;
 }
 
 .second-section-text {
-     font-size:0.8rem;
+  font-size: 0.8rem;
 }
+
+.accordion-body {
+     height:auto!important;
+}
+
+.guest-list {
+     border-bottom:1px solid $Text-color;
+}
+
+
+
+// REMEMBER TO CHANGE THE NAVIGATION COLOR AND ADD COLOR ON SCROLL
+// USE JAVASCRIPT FOR NAVIGATION MENU
