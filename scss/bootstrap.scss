@@ -1,13 +1,27 @@
-$primary:#d69846;
-$secondary:#9b9b9b;
-$light:#f5f5f5;
-$navbar-toggler-focus-width:0px;
-$input-btn-border-width:3px;
-$link-decoration:none;
-$accordion-button-bg:transparent;
-$accordion-button-active-bg:transparent;
-$accordion-button-focus-box-shadow:0px 0px 0px #fff;
-$accordion-button-active-color:#000;
+/** @format */
+$primary: #d69846;
+$secondary: #9b9b9b;
+$success: #fff;
+$info: #b2b1b1;
+$warning: yellow;
+$danger: red;
+$light: #f8f9fa;
+$dark: #1a1a1a;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "light": $light,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "dark": $dark,
+);
+
+$navbar-toggler-focus-width: 0px;
+$input-btn-border-width: 3px;
+$link-decoration: none;
 
 // containers
 $container-max-widths: (
@@ -15,17 +29,18 @@ $container-max-widths: (
   md: 740px,
   lg: 970px,
   xl: 1014px,
-  xxl: 1360px
+  xxl: 1360px,
 );
 
+$zindex-levels: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+);
 
-
-
-
-
-
-
-
-
-
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
