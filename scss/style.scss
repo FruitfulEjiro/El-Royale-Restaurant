@@ -70,10 +70,19 @@ html {
   background: linear-gradient(#0000008e, #0000008e);
 }
 
+.captions {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .carousel-main-text {
   color: #ffffff;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 1.8rem;
   font-family: $Yeseva;
   margin: 0rem 0rem 1.5rem 0rem;
 }
@@ -85,7 +94,7 @@ html {
 .banner .sub-text {
   color: #ffffff;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family: $Kristi;
 }
 
@@ -281,12 +290,13 @@ html {
 
 .testimonial-block {
   width: 100%;
-  height: 30rem;
-  border: 1px solid $primary;
+  height: 20rem;
 }
 
 .testimonial-background {
   background: #f5f5f5;
+  width:100%;
+  height:90%;
 }
 
 // USE SCROLL SNAP FOR TESTIMONY
@@ -466,22 +476,22 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
-  align-items:center;
-  justify-items:center;
+  align-items: center;
+  justify-items: center;
 }
 
 .news-block-1,
 .news-block-2,
 .news-block-3 {
   height: auto;
-  border:none;
+  border: none;
 }
 
 .news-block-1 img,
 .news-block-2 img,
 .news-block-3 img {
-     height:11rem;
-     object-fit: cover;
+  height: 11rem;
+  object-fit: cover;
 }
 
 .alert-1,
@@ -507,112 +517,120 @@ html {
 }
 
 .news-readmore::after {
-     content: "";
-     position: absolute;
-     top:1rem;
-     left:0rem;
-     width:100%;
-     height:2px;
-     background:$Text-color;
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 0rem;
+  width: 100%;
+  height: 2px;
+  background: $Text-color;
 }
 
 .contact {
-     background:#242221;
+  background: #242221;
 }
 
 .contact-container {
-     display:grid;
-     grid-template-columns:1fr;
-     grid-template-rows:auto auto auto;
-     justify-items:center;
-     align-items:center;
-     gap:1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .first-address-text {
-     font-size:0.9rem;
+  font-size: 0.9rem;
 }
 
 .second-address-text {
-     font-size:0.8rem;
+  font-size: 0.8rem;
 }
 
 .map-link {
-     font-size:0.8rem;
-     position: relative;
+  font-size: 0.8rem;
+  position: relative;
 }
 
 .map-link::after {
-     content:"";
-     position: absolute;
-     top:1.3rem;
-     left:0rem;
-     width:100%;
-     height:2px;
-     background:$primary;
+  content: "";
+  position: absolute;
+  top: 1.3rem;
+  left: 0rem;
+  width: 100%;
+  height: 2px;
+  background: $primary;
 }
 
 .footer-logo {
-     width:7rem;
-     height:4.5rem;
+  width: 7rem;
+  height: 4.5rem;
 }
 
 .newsletter {
-     grid-area: 1/1/2/2;
+  grid-area: 1/1/2/2;
 }
 
 .newsletter-first-text {
-     font-size:0.8rem;
+  font-size: 0.8rem;
 }
 
 .newsletter-form {
-     border:1px solid $primary;
-     width:100%;
-     height:2.5rem;
-     position: relative;
+  border: 1px solid $primary;
+  width: 100%;
+  height: 2.5rem;
+  position: relative;
 }
 
 .newsletter-form::after {
-     content:"";
-     position: absolute;
-     width:99%;
-     height:2.9rem;
-     border:1px solid $primary;
+  content: "";
+  position: absolute;
+  width: 99%;
+  height: 2.9rem;
+  border: 1px solid $primary;
 }
 
 .newsletter-email {
-     width:80%;
-     height:100%;
-     font-size:0.7rem;
+  width: 80%;
+  height: 100%;
+  font-size: 0.7rem;
 }
 
 .newsletter-submit {
-     width:20%;
-     height:100%;
-     font-size:0.8rem;
+  width: 20%;
+  height: 100%;
+  font-size: 0.8rem;
 }
 
 .social-icon {
-     font-size:1.1rem;
+  font-size: 1.1rem;
 }
 
 .private-dining h5 {
-     font-size:0.9rem;
+  font-size: 0.9rem;
 }
 
 .private-dining p {
-     font-size:0.8rem;
-     position: relative;
+  font-size: 0.8rem;
+  position: relative;
 }
 
 .private-dining-reservations::after {
-     content:"";
-     position: absolute;
-     top:1.3rem;
-     left:0rem;
-     width:100%;
-     height:2px;
-     background:$primary;
+  content: "";
+  position: absolute;
+  top: 1.3rem;
+  left: 0rem;
+  width: 100%;
+  height: 2px;
+  background: $primary;
+}
+
+.footer li {
+  font-size: 0.8rem;
+}
+
+.copyright {
+  font-size: 0.7rem;
 }
 
 // REMEMBER TO CHANGE THE NAVIGATION COLOR AND ADD COLOR ON SCROLL
