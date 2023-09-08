@@ -80,10 +80,7 @@
               data-bs-target="#slider"></button>
           </div>
           <div class="carousel-inner">
-            
-            
-            
-             <div class="carousel-item active">
+            <div class="carousel-item active">
               <div class="gradient-container">
                 <img src="./Images/Marinana.jpeg" alt="" class="carouselImg" />
               </div>
@@ -109,9 +106,6 @@
                 </div>
               </div>
             </div>
-
-
-
 
             <!-- implement changes on second and third carousel items -->
             <div class="carousel-item">
@@ -171,7 +165,6 @@
                     >
                   </button>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -425,61 +418,78 @@
             class="header-underline mt-2 mb-4" />
           <div
             class="testimonial-block row overflow-x-hidden overflow-y-scroll">
-            <div class="testimonial-background bg-white d-flex flex-column align-items-center justify-content-center">
-                <div class="star-icons">
+            <div
+              class="testimonial-background py-3 border-none bg-white d-flex align-items-center justify-content-center">
+              <div
+                class="testimony-border p-2 position-relative d-flex flex-column align-items-center justify-content-center h-auto">
+                <div class="star-icons mb-2">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                 </div>
-                <p class="testimony">
+                <p class="testimony text-center text-secondary">
                   "Lovely atmosphere staff were excellent, very attentive and
                   polite. We felt taken care of! Food came out quickly and was
                   hot and delicious."
                 </p>
-                <div class="testifier-pic"></div>
-                <p class="testifier-name">John Peter</p>
-                <p class="testifier-title">Guest</p>
+                <img
+                  src="./Images/PEDRI:ANSU.jpeg"
+                  alt=""
+                  class="testifier-pic rounded-circle mb-2" />
+                <p class="testifier-name m-0 fw-bold">John Peter</p>
+                <p class="testifier-title m-0 text-secondary">Guest</p>
+              </div>
             </div>
 
-            <div class="testimonial-background bg-white d-flex flex-column align-items-center justify-content-center">
-              <div class="testimonials-2">
-                <div class="star-icons">
+            <div
+              class="testimonial-background py-3 bg-white d-flex align-items-center justify-content-center">
+              <div
+                class="testimony-border p-2 position-relative d-flex flex-column align-items-center justify-content-center h-auto">
+                <div class="star-icons mb-2">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                 </div>
-                <p class="testimony">
+                <p class="testimony text-center text-secondary">
                   "Been to this stunning place many times over the last years.
                   Tonight i have to say it was good as it ever was. Superb food,
                   exceedingly good staff."
                 </p>
-                <div class="testifier-pic"></div>
-                <p class="testifier-name">Sami Wade</p>
-                <p class="testifier-title">Guest</p>
+                <img
+                  src="./Images/PEDRI:ANSU.jpeg"
+                  alt=""
+                  class="testifier-pic rounded-circle mb-2" />
+                <p class="testifier-name m-0 fw-bold">Sami Wade</p>
+                <p class="testifier-title m-0 text-secondary">Guest</p>
               </div>
             </div>
 
-            <div class="testimonial-background bg-white d-flex flex-column align-items-center justify-content-center">
-              <div class="testimonials-3">
-                <div class="star-icons">
+            <div
+              class="testimonial-background py-3 bg-white d-flex align-items-center justify-content-center">
+              <div
+                class="testimony-border p-2 position-relative d-flex flex-column align-items-center justify-content-center h-auto">
+                <div class="star-icons mb-2">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                 </div>
-                <p class="testimony">
+                <p class="testimony text-center text-secondary">
                   "Once again, i feel compelled to write about our wonderful
                   dining experience. We have shared meals or conversations about
                   our meals at your restaurant."
                 </p>
-                <div class="testifier-pic"></div>
-                <p class="testifier-name">Martin Hope</p>
-                <p class="testifier-title">ProHou</p>
+                <img
+                  src="./Images/PEDRI:ANSU.jpeg"
+                  alt=""
+                  class="testifier-pic rounded-circle mb-2" />
+                <p class="testifier-name m-0 fw-bold">Martin Hope</p>
+                <p class="testifier-title m-0 text-secondary">ProHou</p>
               </div>
             </div>
           </div>
@@ -559,20 +569,21 @@
                   <option value="4people">4 People</option>
                   <option value="5people">5 People</option>
                 </select>
-                <div class="dropdown z-5 d-grid w-100 my-3 guests">
+                <div class="z-5 d-grid w-100 my-3 guests">
                   <button
-                    class="btn dropdown-toggle border-1 col-12 px-0"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <span class="me-5 guest-text">2 People</span>
+                    class="btn border-1 col-12 px-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#gully">
+                    toggle content
                   </button>
-                  <ul class="dropdown-menu w-100 col-12 z-5">
-                    <li class="dropdown-item">2 People</li>
-                    <li class="dropdown-item">3 People</li>
-                    <li class="dropdown-item">4 People</li>
-                    <li class="dropdown-item">5 People</li>
-                    <li class="dropdown-item">6 People</li>
+                </div>
+                <div class="collapse z-5" id="gully">
+                  <ul class="w-100 col-12 z-5">
+                    <li class="">2 People</li>
+                    <li class="">3 People</li>
+                    <li class="">4 People</li>
+                    <li class="">5 People</li>
+                    <li class="">6 People</li>
                   </ul>
                 </div>
               </div>
@@ -828,10 +839,10 @@
                 type="email"
                 name=""
                 id=""
-                class="newsletter-email z-6 justify-self-start border-none px-2"
+                class="newsletter-email form-control z-6 justify-self-start border-none px-2"
                 placeholder="Subscribe To Our Newsletter " />
               <button type="submit" class="newsletter-submit z-6">
-                <i class="fa-solid fa-arrow-right text-success"></i>
+                <i class="fa-solid fa-arrow-right text-primary"></i>
               </button>
             </form>
             <div class="social-icon-container mt-4 z-6">

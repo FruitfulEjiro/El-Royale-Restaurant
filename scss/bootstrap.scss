@@ -23,11 +23,23 @@ $navbar-toggler-focus-width: 0px;
 $input-btn-border-width: 3px;
 $link-decoration: none;
 
+// breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 900px,
+  xlg:1024px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
 // containers
 $container-max-widths: (
   sm: 560px,
   md: 740px,
-  lg: 970px,
+  lg: 870px,
+  xlg:992px,
   xl: 1014px,
   xxl: 1360px,
 );
