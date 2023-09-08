@@ -453,6 +453,7 @@ html {
   border: 1px solid #2b2a2a;
   font-size: 0.8rem;
   height: 2.5rem;
+  color: #000;
 }
 
 .guest-name:focus,
@@ -461,7 +462,7 @@ html {
   border: 1px solid #2b2a2a;
   box-shadow: none;
   height: 2.5rem;
-  color: #fff;
+  color: #000;
 }
 
 .reservation-submit {
