@@ -12,13 +12,56 @@
     <link rel="stylesheet" href="./css/font-awesome.css" />
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.css" />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <!-- StyleSheet -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
+    <header class="header py-2 fixed-top z-6 container-fluid">
+      <nav class="navBar">
+        <a href="./index.html">
+          <img src="./Images/logo-light.png" class="navLogo" alt="" />
+        </a>
+        <button class="toggler d-flex flex-column">
+          <i class="bi bi-dash-lg toggler"></i>
+          <i class="bi bi-dash-lg toggler"></i>
+          <i class="bi bi-dash-lg toggler"></i>
+        </button>
+        <ul
+          class="bg-transparent px-0 ms-auto d-flex flex-column flex-md-row align-items-center gap-1">
+          <li class="">
+            <a href="./index.html" class="text-white">Home</a>
+          </li>
+          <li class="">
+            <a href="#" class="text-white">About</a>
+          </li>
+          <li class="">
+            <a href="#" class="text-white">Menu</a>
+          </li>
+          <li class="">
+            <a href="#" class="text-white">Gallery</a>
+          </li>
+          <li class="">
+            <a href="#" class="text-white">Blog</a>
+          </li>
+          <li class="">
+            <a href="#" class="text-white">Shop</a>
+          </li>
+          <button class="">
+            <a href="#" class="btn btn-outline-success rounded-0 text-white"
+              >Reservations</a
+            >
+          </button>
+        </ul>
+      </nav>
+    </header>
+
     <header
-      class="header container-fluid navbar navbar-expand-md bg-light px-0 m-0 py-1 d-flex justify-content-center align-items-center fixed-top">
+      class="header container-fluid d-none navbar navbar-expand-md bg-light px-0 m-0 py-1 d-flex justify-content-center align-items-center fixed-top">
       <nav class="container-xxl px-2 px-xl-4 mx-md-1">
         <a href="./index.html" class="navbar-brand">
           <img src="./Images/logo-dark.png" alt="" />
@@ -86,20 +129,22 @@
               </div>
               <div
                 class="carousel-caption captions d-flex flex-column align-items-center justify-content-center">
-                <h1 class="carousel-main-text text-light m-0">
+                <h1 class="carousel-main-text text-white m-0">
                   Creative Chef's Fresh & Tasty Meals
                 </h1>
                 <p class="sub-text m-0">Offering the best tasting experience</p>
                 <div class="banner-button-container d-flex flex-column gap-2">
-                  <button class="text-light">
-                    <a href="" class="banner-button btn btn-primary text-light"
+                  <button class="text-white">
+                    <a
+                      href="#food-menu"
+                      class="banner-button btn btn-primary text-white"
                       >View More</a
                     >
                   </button>
                   <button class="">
                     <a
                       href="#reservation"
-                      class="banner-button-2 btn btn-outline-primary text-light"
+                      class="banner-button-2 btn btn-outline-success rounded-0 text-white"
                       >Book A Table</a
                     >
                   </button>
@@ -107,7 +152,6 @@
               </div>
             </div>
 
-            <!-- implement changes on second and third carousel items -->
             <div class="carousel-item">
               <div class="gradient-container">
                 <img
@@ -117,20 +161,22 @@
               </div>
               <div
                 class="carousel-caption captions d-flex flex-column align-items-center">
-                <h1 class="carousel-main-text text-light m-0">
+                <h1 class="carousel-main-text text-white m-0">
                   Chef's Fresh Dishes & Tasty Meals
                 </h1>
                 <p class="sub-text m-0">Offering the best tasting experience</p>
                 <div class="banner-button-container d-flex flex-column gap-2">
-                  <button class="text-light">
-                    <a href="" class="banner-button btn btn-primary text-light"
+                  <button class="text-white">
+                    <a
+                      href="#food-menu"
+                      class="banner-button btn btn-primary text-white"
                       >View More</a
                     >
                   </button>
                   <button class="">
                     <a
                       href="#reservation"
-                      class="banner-button-2 btn btn-outline-primary text-light"
+                      class="banner-button-2 btn btn-outline-success rounded-0 text-white"
                       >Book A Table</a
                     >
                   </button>
@@ -147,20 +193,22 @@
               </div>
               <div
                 class="carousel-caption captions d-flex flex-column align-items-center">
-                <h1 class="carousel-main-text text-light m-0">
+                <h1 class="carousel-main-text text-white m-0">
                   Creative Chef's Fresh & Tasty Meals
                 </h1>
                 <p class="sub-text m-0">Offering the best tasting experience</p>
                 <div class="banner-button-container d-flex flex-column gap-2">
-                  <button class="text-light">
-                    <a href="" class="banner-button btn btn-primary text-light"
+                  <button class="text-white">
+                    <a
+                      href="#food-menu"
+                      class="banner-button btn btn-primary text-white"
                       >View More</a
                     >
                   </button>
                   <button class="">
                     <a
                       href="#reservation"
-                      class="banner-button-2 btn btn-outline-primary text-light"
+                      class="banner-button-2 btn btn-outline-success rounded-0 text-white"
                       >Book A Table</a
                     >
                   </button>
@@ -200,15 +248,15 @@
           <div class="menu-container d-flex flex-column gap-4">
             <div
               class="first-menu col-12 d-flex align-items-end justify-content-center">
-              <p class="first-menu-text text-light">Start Eating Better</p>
+              <p class="first-menu-text text-white">Start Eating Better</p>
             </div>
             <div
               class="second-menu col-12 d-flex align-items-end justify-content-center">
-              <p class="second-menu-text text-light">Quality is the Heart</p>
+              <p class="second-menu-text text-white">Quality is the Heart</p>
             </div>
             <div
               class="third-menu col-12 d-flex align-items-end justify-content-center">
-              <p class="third-menu-text text-light">Hot and Ready to Serve</p>
+              <p class="third-menu-text text-white">Hot and Ready to Serve</p>
             </div>
           </div>
           <p class="menu-end-text text-center text-secondary mt-4">
@@ -226,20 +274,20 @@
 
       <section class="cta container">
         <div class="row d-flex flex-column align-items-center py-4">
-          <p class="cta-sub-text m-0 text-center text-light">
+          <p class="cta-sub-text m-0 text-center text-white">
             We Create Delicious Memories
           </p>
-          <p class="cta-main-text m-0 lh-sm text-center text-light">
+          <p class="cta-main-text m-0 lh-sm text-center text-white">
             Pull Up A Chair, Take A Taste & Come Join Us
           </p>
-          <p class="cta-sub-text-2 m-0 text-center text-light my-2">
+          <p class="cta-sub-text-2 m-0 text-center text-white my-2">
             We have awesome recipes and the most talented chefs in town!
           </p>
           <div
             class="signatory-and-booking-button m-0 d-flex flex-column align-items-center gap-2">
-            <p class="signatory btn m-0 text-light">John Peter</p>
+            <p class="signatory btn m-0 text-white">John Peter</p>
             <button class="booking-button m-0">
-              <a href="#reservation" class="btn btn-outline-light">
+              <a href="#reservation" class="btn btn-outline-success rounded-0">
                 Book A Table</a
               >
             </button>
@@ -247,7 +295,7 @@
         </div>
       </section>
 
-      <section class="food-menu container">
+      <section id="food-menu" class="food-menu container">
         <div
           class="food-menu-container row d-flex flex-column align-items-center py-5">
           <p class="food-menu-sub-text col-12 text-primary text-center m-0">
@@ -409,7 +457,7 @@
           <p class="testimonials-first-text text-primary m-0 text-center">
             People Talk
           </p>
-          <h1 class="testimonials-second-text text-light m-0 text-center">
+          <h1 class="testimonials-second-text text-white m-0 text-center">
             Our Guestbook
           </h1>
           <img
@@ -419,8 +467,9 @@
           <div
             class="testimonial-block row overflow-x-hidden overflow-y-scroll">
             <div
-              class="testimonial-background py-3 border-none bg-white d-flex align-items-center justify-content-center">
-              <div class="testimony-border p-2 position-relative d-flex flex-column align-items-center justify-content-center h-auto">
+              class="testimonial-background py-1 border-none bg-white d-flex align-items-center justify-content-center">
+              <div
+                class="testimony-border p-2 position-relative d-flex flex-column align-items-center justify-content-center h-auto">
                 <div class="star-icons mb-2">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
@@ -433,15 +482,19 @@
                   polite. We felt taken care of! Food came out quickly and was
                   hot and delicious."
                 </p>
-                <img src="./Images/PEDRI:ANSU.jpeg" alt="" class="testifier-pic rounded-circle mb-2">
+                <img
+                  src="./Images/PEDRI:ANSU.jpeg"
+                  alt=""
+                  class="testifier-pic rounded-circle mb-2" />
                 <p class="testifier-name m-0 fw-bold">John Peter</p>
                 <p class="testifier-title m-0 text-secondary">Guest</p>
               </div>
             </div>
 
             <div
-              class="testimonial-background py-3 bg-white d-flex align-items-center justify-content-center">
-              <div class="testimony-border p-2 position-relative d-flex flex-column align-items-center justify-content-center h-auto">
+              class="testimonial-background py-1 bg-white d-flex align-items-center justify-content-center">
+              <div
+                class="testimony-border p-2 position-relative d-flex flex-column align-items-center justify-content-center h-auto">
                 <div class="star-icons mb-2">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
@@ -454,15 +507,19 @@
                   Tonight i have to say it was good as it ever was. Superb food,
                   exceedingly good staff."
                 </p>
-                <img src="./Images/PEDRI:ANSU.jpeg" alt="" class="testifier-pic rounded-circle mb-2">
+                <img
+                  src="./Images/PEDRI:ANSU.jpeg"
+                  alt=""
+                  class="testifier-pic rounded-circle mb-2" />
                 <p class="testifier-name m-0 fw-bold">Sami Wade</p>
                 <p class="testifier-title m-0 text-secondary">Guest</p>
               </div>
             </div>
 
             <div
-              class="testimonial-background py-3 bg-white d-flex align-items-center justify-content-center">
-              <div class="testimony-border p-2 position-relative d-flex flex-column align-items-center justify-content-center h-auto">
+              class="testimonial-background py-1 bg-white d-flex align-items-center justify-content-center">
+              <div
+                class="testimony-border p-2 position-relative d-flex flex-column align-items-center justify-content-center h-auto">
                 <div class="star-icons mb-2">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
@@ -475,7 +532,10 @@
                   dining experience. We have shared meals or conversations about
                   our meals at your restaurant."
                 </p>
-                <img src="./Images/PEDRI:ANSU.jpeg" alt="" class="testifier-pic rounded-circle mb-2">
+                <img
+                  src="./Images/PEDRI:ANSU.jpeg"
+                  alt=""
+                  class="testifier-pic rounded-circle mb-2" />
                 <p class="testifier-name m-0 fw-bold">Martin Hope</p>
                 <p class="testifier-title m-0 text-secondary">ProHou</p>
               </div>
@@ -515,8 +575,7 @@
       </section>
 
       <section
-        class="reservations container d-flex justify-content-center py-5 px-2"
-        id="reservation">
+        class="reservations container d-flex justify-content-center py-5 px-2">
         <div
           class="reservations-container row d-flex flex-column align-items-center justify-content-center px-2 py-3 bg-white">
           <div class="first-section bg-black col-12 py-3 mb-5">
@@ -524,24 +583,25 @@
               <p class="first-section-text-1 text-primary m-0 mt-3">
                 Check Availability
               </p>
-              <p class="first-section-text-2 text-light m-0">Opening Times</p>
+              <p class="first-section-text-2 text-white m-0">Opening Times</p>
               <div class="worktime pb-2 mt-3">
-                <p class="first-section-text text-light m-0">Week Days:</p>
-                <p class="service-time text-light m-0">08:00am - 10:00pm</p>
+                <p class="first-section-text text-white m-0">Week Days:</p>
+                <p class="service-time text-white m-0">08:00am - 10:00pm</p>
               </div>
               <div class="worktime pb-2 mt-3">
-                <p class="first-section-text text-light m-0">Saturdays:</p>
-                <p class="service-time text-light m-0">09:00am - 08:00pm</p>
+                <p class="first-section-text text-white m-0">Saturdays:</p>
+                <p class="service-time text-white m-0">09:00am - 08:00pm</p>
               </div>
               <div class="worktime pb-2 mt-3">
-                <p class="first-section-text text-light m-0">Sundays:</p>
-                <p class="service-time text-light m-0">Day Off</p>
+                <p class="first-section-text text-white m-0">Sundays:</p>
+                <p class="service-time text-white m-0">Day Off</p>
               </div>
               <p class="call-us-now text-primary m-0 mt-4">Call us Now</p>
-              <p class="call-number text-light m-0 mb-3">0201023456789</p>
+              <p class="call-number text-white m-0 mb-3">0201023456789</p>
             </div>
           </div>
           <div
+            id="reservation"
             class="second-section py-3 d-flex flex-column align-items-center justify-content-center">
             <p class="second-section-text">
               You can book your table online easily in just a couple of minutes.
@@ -549,7 +609,7 @@
               your table
             </p>
             <form action="" class="reservations-form d-grid w-100 z-3">
-              <div class="guest-section">
+              <div class="guest-section my-2">
                 <select name="guests" id="" class="d-none">
                   <option value="noofperson" selected>No. of Persons</option>
                   <option value="2people">2 People</option>
@@ -557,74 +617,96 @@
                   <option value="4people">4 People</option>
                   <option value="5people">5 People</option>
                 </select>
-                <div class="dropdown z-5 d-grid w-100 my-3 guests">
-                  <button
-                    class="btn dropdown-toggle border-1 col-12 px-0"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <span class="me-5 guest-text">2 People</span>
-                  </button>
-                  <ul class="dropdown-menu w-100 col-12 z-5">
-                    <li class="dropdown-item">2 People</li>
-                    <li class="dropdown-item">3 People</li>
-                    <li class="dropdown-item">4 People</li>
-                    <li class="dropdown-item">5 People</li>
-                    <li class="dropdown-item">6 People</li>
+                <div
+                  class="guest-menu position-relative z-6 px-2 d-flex flex-row align-items-center justify-content-between"
+                  onclick="guest()">
+                  <span class="guest-inputfield">No. of People</span>
+                  <i class="fa fa-caret-right toggler"></i>
+                  <ul
+                    class="w-100 col-12 p-0 px-2 vstack gap-2 guest-list position-absolute">
+                    <li class="guest-item-1 item mt-2" onclick="guest1()">
+                      2 People
+                    </li>
+                    <li class="guest-item-2 item" onclick="guest2()">
+                      3 People
+                    </li>
+                    <li class="guest-item-3 item" onclick="guest3()">
+                      4 People
+                    </li>
+                    <li class="guest-item-4 item" onclick="guest4()">
+                      5 People
+                    </li>
+                    <li class="guest-item-5 item" onclick="guest5()">
+                      6 People
+                    </li>
                   </ul>
                 </div>
               </div>
 
-              <div class="date-section">
+              <div class="date-section my-2">
                 <select name="date" id="" class="d-none">
-                  <option value="noofperson" selected>Mar 23</option>
-                  <option value="2people">Mar 23</option>
-                  <option value="3people">Mar 24</option>
-                  <option value="4people">Mar 25</option>
-                  <option value="5people">Mar 26</option>
+                  <option value="Mar23 noofperson" selected>
+                    Mar 23, 2020
+                  </option>
+                  <option value="Mar24">Mar 24, 2020</option>
+                  <option value="Mar25">Mar 25, 2020</option>
+                  <option value="Mar26">Mar 26, 2020</option>
+                  <option value="Mar27">Mar 27, 2020</option>
+                  <option value="Mar28">Mar 28, 2020</option>
                 </select>
-                <div class="dropdown z-4 d-grid w-100 my-3 date">
-                  <button
-                    class="btn dropdown-toggle border-1 col-12 px-0"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <span class="me-5 guest-text">Mar 23</span>
-                  </button>
-                  <ul class="dropdown-menu w-100 col-12">
-                    <li class="dropdown-item">Mar 23</li>
-                    <li class="dropdown-item">Mar 24</li>
-                    <li class="dropdown-item">Mar 25</li>
-                    <li class="dropdown-item">Mar 26</li>
-                    <li class="dropdown-item">Mar 27</li>
+                <div
+                  class="date-menu position-relative z-5 px-2 d-flex flex-row align-items-center justify-content-between"
+                  onclick="date()">
+                  <span class="date-inputfield">Mar 23, 2020</span>
+                  <i class="fa fa-caret-right datetoggler"></i>
+                  <ul
+                    class="w-100 col-12 p-0 px-2 vstack gap-2 date-list position-absolute">
+                    <li class="date-item-1 item mt-2" onclick="date1()">
+                      Mar 23, 2020
+                    </li>
+                    <li class="date-item-2 item" onclick="date2()">
+                      Mar 24, 2020
+                    </li>
+                    <li class="date-item-3 item" onclick="date3()">
+                      Mar 25, 2020
+                    </li>
+                    <li class="date-item-4 item" onclick="date4()">
+                      Mar 26, 2020
+                    </li>
+                    <li class="date-item-5 item" onclick="date5()">
+                      Mar 27, 2020
+                    </li>
+                    <li class="date-item-6 item" onclick="date6()">
+                      Mar 28, 2020
+                    </li>
                   </ul>
                 </div>
               </div>
 
-              <div class="time-section">
+              <div class="time-section my-2">
                 <select name="time" id="" class="d-none">
-                  <option value="16.00">16:00</option>
-                  <option value="17.00">17:00</option>
-                  <option value="18.00">18:00</option>
-                  <option value="19.00">19:00</option>
-                  <option value="20.00">20:00</option>
-                  <option value="21.00">21:00</option>
+                  <option value="06.00PM">6.00 PM</option>
+                  <option value="07.00PM">7.00 PM</option>
+                  <option value="08.00PM">8.00 PM</option>
+                  <option value="09.00PM">9.00 PM</option>
+                  <option value="10.00PM">10.00 PM</option>
+                  <option value="12.00PM">11.00 PM</option>
                 </select>
-                <div class="dropdown z-3 d-grid w-100 d-grid my-3 time">
-                  <button
-                    class="btn dropdown-toggle border-1 col-12 px-0"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <span class="me-5 guest-text">07:00</span>
-                  </button>
-                  <ul class="dropdown-menu w-100 col-12">
-                    <li class="dropdown-item">16:00</li>
-                    <li class="dropdown-item">17:00</li>
-                    <li class="dropdown-item">18:00</li>
-                    <li class="dropdown-item">19:00</li>
-                    <li class="dropdown-item">20:00</li>
-                    <li class="dropdown-item">21:00</li>
+                <div
+                  class="time-menu position-relative z-4 px-2 d-flex flex-row align-items-center justify-content-between"
+                  onclick="time()">
+                  <span class="time-inputfield">8.00 PM</span>
+                  <i class="fa fa-caret-right timetoggler"></i>
+                  <ul
+                    class="w-100 col-12 p-0 px-2 vstack gap-2 time-list position-absolute">
+                    <li class="time-item-1 item mt-2" onclick="time1()">
+                      6.00 PM
+                    </li>
+                    <li class="time-item-2 item" onclick="time2()">7.00 PM</li>
+                    <li class="time-item-3 item" onclick="time3()">8.00 PM</li>
+                    <li class="time-item-4 item" onclick="time4()">9.00 PM</li>
+                    <li class="time-item-5 item" onclick="time5()">10.00 PM</li>
+                    <li class="time-item-6 item" onclick="time6()">11.00 PM</li>
                   </ul>
                 </div>
               </div>
@@ -649,7 +731,7 @@
                 placeholder="Phone Number" />
               <button
                 type="submit"
-                class="reservation-submit btn btn-dark fw-bold col-12 rounded-1">
+                class="reservation-submit btn btn-dark fw-bold col-12 rounded-1 d-none">
                 Find A Table
               </button>
             </form>

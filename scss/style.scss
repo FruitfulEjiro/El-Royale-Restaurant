@@ -7,6 +7,7 @@ $Kristi: "Kristi", cursive;
 $Yeseva: "Yeseva One", cursive;
 $Text-color: #2b2a2a;
 $primary: #d69846;
+$btn-active-bg:none;
 
 html {
   scroll-behavior: smooth;
@@ -21,6 +22,10 @@ html {
   background: none;
   box-sizing: border-box;
   font-family: $Poppins;
+}
+
+.header {
+     box-shadow:0px 0.1px 3px #fff;
 }
 
 .navbar-brand img {
@@ -89,6 +94,10 @@ html {
 
 .banner-button {
   display: none;
+}
+
+.banner-button-2:hover {
+     background:$btn-active-bg;
 }
 
 .banner .sub-text {
@@ -291,45 +300,46 @@ html {
 .testimonial-block {
   width: 100%;
   height: 22rem;
+  border-radius: 0.5rem;
 }
 
 .testimonial-background {
   background: #f5f5f5;
   width: 100%;
   height: 90%;
-  border-radius:0.5rem;
 }
 
 .testimony-border {
-     border:1px solid $primary;
+  border: 1px solid $primary;
 }
 
 .testimony-border::after {
-     content:"";
-     position: absolute;
-     width:98%;
-     height:103%;
-     border:1px solid $primary;
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 103%;
+  border: 1px solid $primary;
+  z-index: 0;
 }
 
 .testimony {
-  font-size: 0.9rem !important;
+  font-size: 0.8rem !important;
 }
 
 .testifier-pic {
-     width:2.5rem;
-     height:2.5rem;
-     object-fit: cover;
-     object-position: bottom;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .testifier-name {
-     font-size:0.9rem;
+  font-size: 0.9rem;
 }
 
 .testifier-title {
   font-family: $Kristi;
-  font-size:1.5rem;
+  font-size: 1.5rem;
 }
 
 // USE SCROLL SNAP FOR TESTIMONY
@@ -450,6 +460,7 @@ html {
   width: 98.7%;
   height: 101.5%;
   border: 1px solid $primary;
+  z-index: -0;
 }
 
 .second-section-text {
@@ -462,22 +473,70 @@ html {
   border: 1px solid $Text-color;
 }
 
+.guest-menu,
+.date-menu,
+.time-menu {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #dbdbdb;
+  background: #f6f6f6;
+}
+
+.guest-menu:focus-within,
+.date-menu:focus-within,
+.time-menu:focus-within {
+     border:1px solid $primary;
+}
+
+.guest-list,
+.date-list,
+.time-list {
+  background: #fff;
+  top: 2.5rem;
+  left: 0rem;
+  height: 0rem;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.guest-inputfield,
+.date-inputfield,
+.time-inputfield {
+  font-size: 0.8rem;
+  color: #8a8888;
+}
+
+.toggler,
+.datetoggler,
+.timetoggler {
+  transition: all 0.2s ease-in-out;
+  color: #959292;
+  font-size:0.8rem;
+}
+
+.item {
+     font-size:0.8rem;
+}
+
 .guest-name,
 .guest-email,
 .guest-phone-number {
   border: 1px solid $Text-color;
   font-size: 0.8rem;
   height: 2.5rem;
-  color:#000;
+  color: #bebcbc;
+  border: 1px solid #dbdbdb;
+  background: #f6f6f6;
 }
 
 .guest-name:focus,
 .guest-email:focus,
 .guest-phone-number:focus {
-  border: 1px solid $Text-color;
+  border: 1px solid $primary;
   box-shadow: none;
+  background: #f6f6f6;
   height: 2.5rem;
-  color: #000;
 }
 
 .reservation-submit {
@@ -624,17 +683,17 @@ html {
   width: 80%;
   height: 100%;
   font-size: 0.7rem;
-  background:none;
-  border:none;
-  color:white;
+  background: none;
+  border: none;
+  color: white;
 }
 
 .newsletter-email:focus {
-    color: white;
-    background: none;
-    border-color:none;
-    outline: 0;
-    box-shadow: none;
+  color: white;
+  background: none;
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 .newsletter-submit {

@@ -15,6 +15,10 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+.header {
+  box-shadow: 0px 0.1px 3px #fff;
+}
+
 .navbar-brand img {
   width: 8rem;
 }
@@ -81,6 +85,10 @@ html {
 
 .banner-button {
   display: none;
+}
+
+.banner-button-2:hover {
+  background: none;
 }
 
 .banner .sub-text {
@@ -278,13 +286,13 @@ html {
 .testimonial-block {
   width: 100%;
   height: 22rem;
+  border-radius: 0.5rem;
 }
 
 .testimonial-background {
   background: #f5f5f5;
   width: 100%;
   height: 90%;
-  border-radius: 0.5rem;
 }
 
 .testimony-border {
@@ -297,10 +305,11 @@ html {
   width: 98%;
   height: 103%;
   border: 1px solid #d69846;
+  z-index: 0;
 }
 
 .testimony {
-  font-size: 0.9rem !important;
+  font-size: 0.8rem !important;
 }
 
 .testifier-pic {
@@ -435,6 +444,7 @@ html {
   width: 98.7%;
   height: 101.5%;
   border: 1px solid #d69846;
+  z-index: 0;
 }
 
 .second-section-text {
@@ -447,22 +457,70 @@ html {
   border: 1px solid #2b2a2a;
 }
 
+.guest-menu,
+.date-menu,
+.time-menu {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #dbdbdb;
+  background: #f6f6f6;
+}
+
+.guest-menu:focus-within,
+.date-menu:focus-within,
+.time-menu:focus-within {
+  border: 1px solid #d69846;
+}
+
+.guest-list,
+.date-list,
+.time-list {
+  background: #fff;
+  top: 2.5rem;
+  left: 0rem;
+  height: 0rem;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.guest-inputfield,
+.date-inputfield,
+.time-inputfield {
+  font-size: 0.8rem;
+  color: #8a8888;
+}
+
+.toggler,
+.datetoggler,
+.timetoggler {
+  transition: all 0.2s ease-in-out;
+  color: #959292;
+  font-size: 0.8rem;
+}
+
+.item {
+  font-size: 0.8rem;
+}
+
 .guest-name,
 .guest-email,
 .guest-phone-number {
   border: 1px solid #2b2a2a;
   font-size: 0.8rem;
   height: 2.5rem;
-  color: #000;
+  color: #bebcbc;
+  border: 1px solid #dbdbdb;
+  background: #f6f6f6;
 }
 
 .guest-name:focus,
 .guest-email:focus,
 .guest-phone-number:focus {
-  border: 1px solid #2b2a2a;
+  border: 1px solid #d69846;
   box-shadow: none;
+  background: #f6f6f6;
   height: 2.5rem;
-  color: #000;
 }
 
 .reservation-submit {
