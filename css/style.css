@@ -17,6 +17,37 @@ html {
 
 .header {
   box-shadow: 0px 0.1px 3px #fff;
+  height: 3.5rem;
+}
+
+.navLogo {
+  width: 8rem;
+}
+
+.navbar-menu {
+  top: 4rem;
+}
+
+.toggler {
+  border: 1px solid gold;
+  width: 2rem;
+  height: 2rem;
+}
+
+.toggler-icon1,
+.toggler-icon2,
+.toggler-icon3 {
+  font-size: 2.3rem;
+  height: 8px !important;
+  color: #fff;
+}
+
+.toggler-icon1 {
+  top: -8px;
+}
+
+.toggler-icon3 {
+  top: 7px;
 }
 
 .navbar-brand img {
