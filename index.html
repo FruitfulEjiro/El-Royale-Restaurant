@@ -16,28 +16,28 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body class="overflow-x-hidden position-relative">
-    <header class="header py-2 px-0 overflow-x-hidden fixed-top z-6 container-fluid">
+  <body class="overflow-x-hidden">
+    <header
+      class="header py-2 px-0 fixed-top z-6 container-fluid">
       <nav
-        class="navBar container-xl px-0 h-100 w-100 position-relative d-flex flex-row align-items-center justify-content-between">
+        class="nav-bar container-xl px-0 h-100 position-relative d-flex flex-row align-items-center justify-content-between">
         <a href="./index.html" class="ms-2">
           <img src="./Images/logo-light.png" class="navLogo" alt="" />
         </a>
         <button
-          class="side-menu-toggle me-2 d-flex flex-column position-relative">
+          class="side-menu-toggle me-2 d-flex flex-column position-absolute"
+          onclick="sideMenu()">
           <i class="fas fa-minus toggle-1 position-absolute"></i>
           <i class="fas fa-minus toggle-2 position-absolute"></i>
           <i class="fas fa-minus toggle-3 position-absolute"></i>
         </button>
-        <button
-          class="toggler me-2 d-flex flex-column position-relative"
-          onclick="toggle()">
+        <button class="toggler me-0 d-flex flex-column position-absolute" onclick="toggle()">
           <i class="fas fa-minus toggler-icon1 position-absolute"></i>
           <i class="fas fa-minus toggler-icon2 position-absolute"></i>
           <i class="fas fa-minus toggler-icon3 position-absolute"></i>
         </button>
         <ul
-          class="navbar-menu overflow-hidden px-0 py-3 ms-auto position-absolute d-flex flex-column flex-md-row align-items-center gap-3">
+          class="navbar-menu overflow-hidden px-0 py-3 z-6 ms-auto d-flex flex-column flex-md-row align-items-center gap-3 position-absolute">
           <li class="">
             <a href="./index.html" class="menu-item text-white">Home</a>
           </li>
@@ -58,7 +58,7 @@
           </li>
           <button class="">
             <a
-              href="#"
+              href="#reservation"
               class="menu-item btn btn-outline-success rounded-0 text-white"
               >Reservations</a
             >
@@ -67,32 +67,46 @@
       </nav>
     </header>
 
-    <aside class="side-menu bg-dark px-3 pt-5 pb-4 z-7 d-flex flex-column align-items-start justify-content-between position-fixed">
-      <div class="side-menu-1 col-12 position-relative d-flex flex-column align-items-center justify-content-center">
-          <!-- place the arrow icon in the same place as the side menu hamburger -->
-        <i class="fas fa-arrow-right d-block toggle-arrow text-success z-7 mt-3 position-absolute"></i>
-        <img src="./Images/footer-logo.png" alt="" class="side-menu-logo" />
-        <p class="side-menu-text text-success text-center m-0 mt-3">
-          El Royale was the first Restaurant to open in Egypt, the restaurant
-          was designed with the history in mind we have created a soft
-          industrial dining room.
-        </p>
-        <div class="social-icon-container mt-2">
-          <i class="fa-brands fa-instagram social-icon mx-1"></i>
-          <i class="fa-brands fa-facebook social-icon mx-1"></i>
-          <i class="fa-brands fa-twitter social-icon mx-1"></i>
-          <i class="fa-brands fa-linkedin social-icon mx-1"></i>
-        </div>
-      </div>
-      <div class="side-menu2 d-grid">
-        <p class="side-menu-email text-success m-0">Main Email:ElRoyale@7oroof.com</p>
-        <p class="side-menu-number text-success m-0 mb-2">Phone: 02 010123456789</p>
-        <button class="side-menu-button btn col-12 btn-primary fw-semibold text-success rounded-0">
-          Make A Reservation
-        </button>
-      </div>
-    </aside>
     <main class="main">
+      <aside
+        class="side-menu bg-dark px-3 pt-2 pb-4 z-7 d-flex flex-column align-items-start justify-content-between position-fixed">
+        <div
+          class="side-menu-1 col-12 position-relative d-flex flex-column align-items-center justify-content-center">
+          <!-- place the arrow icon in the same place as the side menu hamburger -->
+          <div
+            class="side-icon mb-5 w-100 d-flex flex-row justify-content-end px-3">
+            <i
+              class="fas fa-arrow-right text-primary d-block toggle-arrow text-success z-7 mt-3"
+              onclick="sideMenu()"></i>
+          </div>
+          <img src="./Images/footer-logo.png" alt="" class="side-menu-logo" />
+          <p class="side-menu-text text-success text-center m-0 mt-3">
+            El Royale was the first Restaurant to open in Egypt, the restaurant
+            was designed with the history in mind we have created a soft
+            industrial dining room.
+          </p>
+
+          <div class="social-icon-container mt-2">
+            <i class="fa-brands fa-instagram social-icon mx-1"></i>
+            <i class="fa-brands fa-facebook social-icon mx-1"></i>
+            <i class="fa-brands fa-twitter social-icon mx-1"></i>
+            <i class="fa-brands fa-linkedin social-icon mx-1"></i>
+          </div>
+        </div>
+        <div class="side-menu2 d-grid">
+          <p class="side-menu-email text-success m-0">
+            Main Email:ElRoyale@7oroof.com
+          </p>
+          <p class="side-menu-number text-success m-0 mb-2">
+            Phone: 02 010123456789
+          </p>
+          <button
+            class="side-menu-button btn col-12 btn-primary fw-semibold text-success rounded-0">
+            Make A Reservation
+          </button>
+        </div>
+      </aside>
+
       <section class="banner container-xxl p-0">
         <div class="carousel slide container-xx p-0" id="slider">
           <!-- indicators -->

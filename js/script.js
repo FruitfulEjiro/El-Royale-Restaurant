@@ -1,41 +1,66 @@
 /** @format */
-// Hamburger Menu
-let close = true; // Flag to track if the guest list is open
+("use strict");
+let close = true; // Flag to track toggle states
 
-const toggler = document.querySelector(".navbar-menu");
-const icon1 = document.querySelector(".toggler-icon1");
-const icon2 = document.querySelector(".toggler-icon2");
-const icon3 = document.querySelector(".toggler-icon3");
+// Hamburger Menu
+const toggler1 = document.querySelector(".toggler-icon1");
+const toggler2 = document.querySelector(".toggler-icon2");
+const toggler3 = document.querySelector(".toggler-icon3");
+const navBar = document.querySelector(".navbar-menu");
 
 const toggle = () => {
   if (close) {
-    toggler.style.transform = "translateX(0%)";
-    toggler.style.backgroundColor = "#000000e1";
+    navBar.style.transform = "translateX(0%)";
     document.querySelector(".header").style.backgroundColor = "#000000e1";
-    icon1.style.top = "0px";
-    icon1.style.left = "0.6rem";
-    icon1.style.transform = "rotateZ(45deg)";
-    icon2.style.visibility = "hidden";
-    icon3.style.top = "0px";
-    icon3.style.left = "-0.6rem";
-    icon3.style.transform = "rotateZ(-45deg)";
+    toggler1.style.position = "relative";
+    toggler1.style.top = "-1px";
+    toggler1.style.transform = "rotateZ(45deg)";
+    toggler2.style.visibility = "hidden";
+    toggler3.style.position = "relative";
+    toggler3.style.top = "0px";
+    toggler3.style.transform = "rotateZ(-45deg)";
   } else {
-    toggler.style.transform = "translateX(100%)";
-    toggler.style.backgroundColor = "transparent";
+    navBar.style.transform = "translateX(100%)";
     document.querySelector(".header").style.backgroundColor = "transparent";
-    icon1.style.top = "-11px";
-    icon1.style.left = "0%";
-    icon1.style.transform = "rotateZ(0deg)";
-    icon2.style.visibility = "visible";
-    icon3.style.top = "4px";
-    icon3.style.left = "0%";
-    icon3.style.transform = "rotateZ(0deg)";
+    toggler1.style.position = "relative";
+    toggler1.style.top = "-11px";
+    toggler1.style.transform = "rotateZ(0deg)";
+    toggler2.style.visibility = "visible";
+    toggler3.style.position = "relative";
+    toggler3.style.top = "4px";
+    toggler3.style.transform = "rotateZ(0deg)";
   }
-
   close = !close;
 };
 
-("use strict");
+// Header
+
+const userScroll = () => {
+  const header = document.querySelector(".header");
+  window.addEventListener("scroll", () => {
+    if (window.addEventListener("scroll") > 50) {
+      header.classList.add("bg-primary");
+    } else {
+      header.classList.remove("bg-primary");
+    }
+  });
+};
+document.addEventListener("DOMContentLoaded", userScroll);
+
+// Side Menu
+const sidemenu = document.querySelector(".side-menu");
+const sidearrow = document.querySelector(".toggle-arrow");
+const sideMenu = () => {
+  if (close) {
+    sidemenu.style.transform = "translateX(0%)";
+  } else {
+    sidemenu.style.transform = "translateX(100%)";
+  }
+  close = !close;
+};
+
+// Reservation Form
+
 const guestList = document.querySelector(".guest-list");
 const dateList = document.querySelector(".date-list");
 const timeList = document.querySelector(".time-list");
