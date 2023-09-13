@@ -16,40 +16,50 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body>
-    <header class="header py-2 px-0 fixed-top z-6 container-fluid">
+  <body class="overflow-x-hidden position-relative">
+    <header class="header py-2 px-0 overflow-x-hidden fixed-top z-6 container-fluid">
       <nav
         class="navBar container-xl px-0 h-100 w-100 position-relative d-flex flex-row align-items-center justify-content-between">
         <a href="./index.html" class="ms-2">
           <img src="./Images/logo-light.png" class="navLogo" alt="" />
         </a>
-        <button class="toggler me-2 d-flex flex-column position-relative">
+        <button
+          class="side-menu-toggle me-2 d-flex flex-column position-relative">
+          <i class="fas fa-minus toggle-1 position-absolute"></i>
+          <i class="fas fa-minus toggle-2 position-absolute"></i>
+          <i class="fas fa-minus toggle-3 position-absolute"></i>
+        </button>
+        <button
+          class="toggler me-2 d-flex flex-column position-relative"
+          onclick="toggle()">
           <i class="fas fa-minus toggler-icon1 position-absolute"></i>
           <i class="fas fa-minus toggler-icon2 position-absolute"></i>
           <i class="fas fa-minus toggler-icon3 position-absolute"></i>
         </button>
         <ul
-          class="navbar-menu bg-transparent px-0 ms-auto position-absolute d-flex flex-column flex-md-row align-items-center gap-1">
+          class="navbar-menu overflow-hidden px-0 py-3 ms-auto position-absolute d-flex flex-column flex-md-row align-items-center gap-3">
           <li class="">
-            <a href="./index.html" class="text-white">Home</a>
+            <a href="./index.html" class="menu-item text-white">Home</a>
           </li>
           <li class="">
-            <a href="#" class="text-white">About</a>
+            <a href="#" class="menu-item text-white">About</a>
           </li>
           <li class="">
-            <a href="#" class="text-white">Menu</a>
+            <a href="#" class="menu-item text-white">Menu</a>
           </li>
           <li class="">
-            <a href="#" class="text-white">Gallery</a>
+            <a href="#" class="menu-item text-white">Gallery</a>
           </li>
           <li class="">
-            <a href="#" class="text-white">Blog</a>
+            <a href="#" class="menu-item text-white">Blog</a>
           </li>
           <li class="">
-            <a href="#" class="text-white">Shop</a>
+            <a href="#" class="menu-item text-white">Shop</a>
           </li>
           <button class="">
-            <a href="#" class="btn btn-outline-success rounded-0 text-white"
+            <a
+              href="#"
+              class="menu-item btn btn-outline-success rounded-0 text-white"
               >Reservations</a
             >
           </button>
@@ -57,50 +67,31 @@
       </nav>
     </header>
 
-    <header
-      class="header container-fluid d-none navbar navbar-expand-md bg-light px-0 m-0 py-1 d-flex justify-content-center align-items-center fixed-top">
-      <nav class="container-xxl px-2 px-xl-4 mx-md-1">
-        <a href="./index.html" class="navbar-brand">
-          <img src="./Images/logo-dark.png" alt="" />
-        </a>
-        <button
-          class="navbar-toggler px-1"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul
-            class="navbar-nav ms-auto d-flex flex-column flex-md-row align-items-center gap-1">
-            <li class="nav-item">
-              <a href="./index.html" class="nav-link text-secondary">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link text-secondary">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link text-secondary">Menu</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link text-secondary">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link text-secondary">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link text-secondary">Shop</a>
-            </li>
-            <button class="nav-item">
-              <a href="#" class="btn btn-outline-primary text-secondary"
-                >Reservations</a
-              >
-            </button>
-          </ul>
+    <aside class="side-menu bg-dark px-3 pt-5 pb-4 z-7 d-flex flex-column align-items-start justify-content-between position-fixed">
+      <div class="side-menu-1 col-12 position-relative d-flex flex-column align-items-center justify-content-center">
+          <!-- place the arrow icon in the same place as the side menu hamburger -->
+        <i class="fas fa-arrow-right d-block toggle-arrow text-success z-7 mt-3 position-absolute"></i>
+        <img src="./Images/footer-logo.png" alt="" class="side-menu-logo" />
+        <p class="side-menu-text text-success text-center m-0 mt-3">
+          El Royale was the first Restaurant to open in Egypt, the restaurant
+          was designed with the history in mind we have created a soft
+          industrial dining room.
+        </p>
+        <div class="social-icon-container mt-2">
+          <i class="fa-brands fa-instagram social-icon mx-1"></i>
+          <i class="fa-brands fa-facebook social-icon mx-1"></i>
+          <i class="fa-brands fa-twitter social-icon mx-1"></i>
+          <i class="fa-brands fa-linkedin social-icon mx-1"></i>
         </div>
-      </nav>
-    </header>
-
+      </div>
+      <div class="side-menu2 d-grid">
+        <p class="side-menu-email text-success m-0">Main Email:ElRoyale@7oroof.com</p>
+        <p class="side-menu-number text-success m-0 mb-2">Phone: 02 010123456789</p>
+        <button class="side-menu-button btn col-12 btn-primary fw-semibold text-success rounded-0">
+          Make A Reservation
+        </button>
+      </div>
+    </aside>
     <main class="main">
       <section class="banner container-xxl p-0">
         <div class="carousel slide container-xx p-0" id="slider">
@@ -618,7 +609,7 @@
                   class="guest-menu position-relative z-6 px-2 d-flex flex-row align-items-center justify-content-between"
                   onclick="guest()">
                   <span class="guest-inputfield">No. of People</span>
-                  <i class="fa fa-caret-right toggler"></i>
+                  <i class="fa fa-caret-right guesttoggler"></i>
                   <ul
                     class="w-100 col-12 p-0 px-2 vstack gap-2 guest-list position-absolute">
                     <li class="guest-item-1 item mt-2" onclick="guest1()">
@@ -642,9 +633,7 @@
 
               <div class="date-section my-2">
                 <select name="date" id="" class="d-none">
-                  <option value="Mar23 noofperson" selected>
-                    Mar 23, 2020
-                  </option>
+                  <option value="Mar23" selected>Mar 23, 2020</option>
                   <option value="Mar24">Mar 24, 2020</option>
                   <option value="Mar25">Mar 25, 2020</option>
                   <option value="Mar26">Mar 26, 2020</option>
@@ -896,20 +885,17 @@
                 type="email"
                 name=""
                 id=""
-                class="newsletter-email form-control z-6 justify-self-start border-none px-2"
+                class="newsletter-email z-6 justify-self-start border-none px-2 text-success"
                 placeholder="Subscribe To Our Newsletter " />
               <button type="submit" class="newsletter-submit z-6">
                 <i class="fa-solid fa-arrow-right text-primary"></i>
               </button>
             </form>
             <div class="social-icon-container mt-4 z-6">
-              <i
-                class="fa-brands fa-instagram social-icon text-success mx-1"></i>
-              <i
-                class="fa-brands fa-facebook social-icon text-success mx-1"></i>
-              <i class="fa-brands fa-twitter social-icon text-success mx-1"></i>
-              <i
-                class="fa-brands fa-linkedin social-icon text-success mx-1"></i>
+              <i class="fa-brands fa-instagram social-icon mx-1"></i>
+              <i class="fa-brands fa-facebook social-icon mx-1"></i>
+              <i class="fa-brands fa-twitter social-icon mx-1"></i>
+              <i class="fa-brands fa-linkedin social-icon mx-1"></i>
             </div>
           </div>
 

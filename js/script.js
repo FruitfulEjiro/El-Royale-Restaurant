@@ -1,22 +1,55 @@
 /** @format */
+// Hamburger Menu
+let close = true; // Flag to track if the guest list is open
 
-"use strict";
+const toggler = document.querySelector(".navbar-menu");
+const icon1 = document.querySelector(".toggler-icon1");
+const icon2 = document.querySelector(".toggler-icon2");
+const icon3 = document.querySelector(".toggler-icon3");
+
+const toggle = () => {
+  if (close) {
+    toggler.style.transform = "translateX(0%)";
+    toggler.style.backgroundColor = "#000000e1";
+    document.querySelector(".header").style.backgroundColor = "#000000e1";
+    icon1.style.top = "0px";
+    icon1.style.left = "0.6rem";
+    icon1.style.transform = "rotateZ(45deg)";
+    icon2.style.visibility = "hidden";
+    icon3.style.top = "0px";
+    icon3.style.left = "-0.6rem";
+    icon3.style.transform = "rotateZ(-45deg)";
+  } else {
+    toggler.style.transform = "translateX(100%)";
+    toggler.style.backgroundColor = "transparent";
+    document.querySelector(".header").style.backgroundColor = "transparent";
+    icon1.style.top = "-11px";
+    icon1.style.left = "0%";
+    icon1.style.transform = "rotateZ(0deg)";
+    icon2.style.visibility = "visible";
+    icon3.style.top = "4px";
+    icon3.style.left = "0%";
+    icon3.style.transform = "rotateZ(0deg)";
+  }
+
+  close = !close;
+};
+
+("use strict");
 const guestList = document.querySelector(".guest-list");
 const dateList = document.querySelector(".date-list");
 const timeList = document.querySelector(".time-list");
-
-let close = true; // Flag to track if the guest list is open
 
 // Guest Toggle Function
 const guest = () => {
   if (close) {
     // If it's closed, open it
     guestList.style.height = "9rem";
-    document.querySelector(".toggler").style.transform = "rotate(90deg)";
+    document.querySelector(".guesttoggler").style.transform = "rotate(90deg)";
   } else {
     // If it's open, close it and reset styles
     guestList.style.height = "0";
-    document.querySelector(".toggler").style.transform = "rotate(0deg)";
+    document.querySelector(".guesttoggler").style.transform = "rotate(0deg)";
   }
   close = !close; // Toggle the flag
 };

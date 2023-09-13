@@ -18,6 +18,7 @@ html {
 .header {
   box-shadow: 0px 0.1px 3px #fff;
   height: 3.5rem;
+  transition: all 0.5s ease-in-out;
 }
 
 .navLogo {
@@ -25,38 +26,99 @@ html {
 }
 
 .navbar-menu {
-  top: 4rem;
+  top: 3rem;
+  height: 22rem;
+  width: 100%;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.8823529412);
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.side-menu-toggle {
+  left: 2.5rem;
+  width: 1.1rem;
+  height: 1rem;
+}
+
+.toggle-1,
+.toggle-2,
+.toggle-3 {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.toggle-1 {
+  top: -5px;
+}
+
+.toggle-2 {
+  top: 0px;
+}
+
+.toggle-3 {
+  top: 4px;
 }
 
 .toggler {
-  border: 1px solid gold;
-  width: 2rem;
-  height: 2rem;
+  width: 2.1rem;
+  height: 1.8rem;
 }
 
 .toggler-icon1,
 .toggler-icon2,
 .toggler-icon3 {
-  font-size: 2.3rem;
-  height: 8px !important;
+  font-size: 2rem;
   color: #fff;
 }
 
 .toggler-icon1 {
-  top: -8px;
+  top: -12px;
+  transform: rotateZ(0deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.toggler-icon2 {
+  top: -4px;
+  transform: rotateZ(0deg);
+  transition: all 0.2s ease-in-out;
 }
 
 .toggler-icon3 {
-  top: 7px;
+  top: 4px;
+  transform: rotateZ(0deg);
+  transition: all 0.2s ease-in-out;
 }
 
-.navbar-brand img {
-  width: 8rem;
+.menu-item {
+  font-size: 1.2rem;
+  transition: padding 0.3s ease-in-out;
+  padding: 0rem 0.6rem 0rem 0.6rem;
 }
 
-.navbar-toggler {
-  border: 0px;
-  width: 40px;
+.menu-item:hover {
+  border: 1px solid #d69846;
+}
+
+.side-menu {
+  height: 100vh;
+  width: 80vw;
+  right: 0rem;
+}
+
+.toggle-arrow {
+  top: 0rem;
+  left: 0rem;
+}
+
+.side-menu-text,
+.side-menu-button {
+  font-size: 0.8rem;
+}
+
+.side-menu-email,
+.side-menu-number {
+  font-size: 0.7rem;
 }
 
 .banner {
@@ -167,7 +229,7 @@ html {
 .second-menu-text,
 .third-menu-text {
   color: whitesmoke;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: "Kristi", cursive;
 }
 
@@ -513,6 +575,7 @@ html {
   overflow: hidden;
   transition: all 0.2s ease-in-out;
   z-index: 10;
+  box-shadow: 0px 1px 5px #000;
 }
 
 .guest-inputfield,
@@ -522,7 +585,7 @@ html {
   color: #8a8888;
 }
 
-.toggler,
+.guesttoggler,
 .datetoggler,
 .timetoggler {
   transition: all 0.2s ease-in-out;
@@ -719,6 +782,7 @@ html {
 
 .social-icon {
   font-size: 1.1rem;
+  color: #fff;
 }
 
 .private-dining h5 {
