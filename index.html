@@ -613,7 +613,7 @@
             <form action="" class="reservations-form d-grid w-100 z-3">
               <div class="guest-section my-2">
                 <select name="guests" id="" class="d-none">
-                  <option value="noofperson" selected>No. of Persons</option>
+                  <option value="0" selected>No. of Persons</option>
                   <option value="2people">2 People</option>
                   <option value="3people">3 People</option>
                   <option value="4people">4 People</option>
@@ -626,10 +626,7 @@
                   <i class="fa fa-caret-right guesttoggler"></i>
                   <ul
                     class="w-100 col-12 p-0 px-2 vstack gap-2 guest-list position-absolute">
-                    <li class="guest-item-1 item mt-2" onclick="guest1()">
-                      2 People
-                    </li>
-                    <li class="guest-item-2 item" onclick="guest2()">
+                    <li class="guest-item-2 mt-2 item" onclick="guest2()">
                       3 People
                     </li>
                     <li class="guest-item-3 item" onclick="guest3()">
@@ -690,7 +687,7 @@
                   <option value="08.00PM">8.00 PM</option>
                   <option value="09.00PM">9.00 PM</option>
                   <option value="10.00PM">10.00 PM</option>
-                  <option value="12.00PM">11.00 PM</option>
+                  <option value="11.00PM">11.00 PM</option>
                 </select>
                 <div
                   class="time-menu position-relative z-4 px-2 d-flex flex-row align-items-center justify-content-between"

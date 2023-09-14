@@ -63,7 +63,7 @@ html {
 }
 
 .toggle-1 {
-  top: -6px;
+  top: -4px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -845,7 +845,21 @@ html {
   font-size: 0.7rem;
 }
 
-// placeholder for newletter email not showing
+@media screen and (min-width:320px) {
+     .menu-end-text {
+          font-size:0.9rem;
+     }
+
+     .cta-sub-text {
+          font-size:2rem;
+     }
+
+     .cta-sub-text-2 {
+          font-size:0.9rem;
+     }
+}
+
+
+
 // REMEMBER TO CHANGE THE NAVIGATION COLOR AND ADD COLOR ON SCROLL
-// USE JAVASCRIPT FOR NAVIGATION MENU
-// CHECK THE SELECTED MENU AND OPTIMIZE THE OPTION VALUE SECTION
+// ADD DROPDOWN TO THTE NAVIGATION MENU

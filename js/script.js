@@ -78,11 +78,6 @@ const guest = () => {
   }
   close = !close; // Toggle the flag
 };
-
-const guest1 = () => {
-  const text = document.querySelector(".guest-item-1").textContent;
-  document.querySelector(".guest-inputfield").textContent = text;
-};
 const guest2 = () => {
   const text = document.querySelector(".guest-item-2").textContent;
   document.querySelector(".guest-inputfield").textContent = text;
