@@ -831,12 +831,231 @@ html {
 
 @media screen and (min-width: 320px) {
   .menu-end-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+  .discover-our-story {
+    width: 9.5rem;
+    font-size: 1rem;
   }
   .cta-sub-text {
     font-size: 2.5rem;
   }
   .cta-sub-text-2 {
+    font-size: 1rem;
+  }
+  .food-menu-sub-text {
+    font-size: 3rem;
+  }
+  .food-menu-header {
+    font-size: 2.3rem;
+  }
+  .food-menu .text {
+    font-size: 0.95rem;
+  }
+  .header-text {
     font-size: 0.9rem;
+  }
+  .menu-sub-text {
+    font-size: 0.9rem;
+  }
+  .explore-food-menu {
+    font-size: 1rem;
+  }
+  .explore-food-menu::before {
+    width: 8.8rem;
+  }
+  .testimony {
+    font-size: 0.9rem !important;
+  }
+  .testifier-name {
+    font-size: 1rem;
+  }
+  .first-event-img,
+  .second-event-img {
+    width: 8rem;
+    height: 11rem;
+  }
+  .first-event-text {
+    font-size: 2.3rem;
+  }
+  .second-event-text {
+    font-size: 1.7rem;
+  }
+  .third-event-text {
+    font-size: 0.9rem;
+  }
+  .first-section-text-1 {
+    font-size: 2rem;
+  }
+  .first-section-text-2 {
+    font-size: 1.8rem;
+  }
+  .worktime .first-section-text,
+  .worktime .service-time {
+    font-size: 1rem;
+  }
+  .call-us-now {
+    font-size: 2rem;
+  }
+  .second-section-text {
+    font-size: 0.9rem;
+  }
+  .guest-inputfield,
+  .date-inputfield,
+  .time-inputfield {
+    font-size: 0.9rem;
+  }
+  .news-second-text {
+    font-size: 1.8rem;
+  }
+  .news-third-text {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 375px) {
+  .side-menu-text {
+    font-size: 1rem;
+  }
+  .social-icon {
+    font-size: 1.3rem;
+  }
+  .side-menu-email,
+  .side-menu-number,
+  .side-menu-button {
+    font-size: 1rem;
+  }
+  .carousel-main-text {
+    font-size: 3rem;
+  }
+  .banner .sub-text {
+    font-size: 2rem;
+  }
+  .menu-header {
+    font-size: 2.3rem;
+  }
+  .menu-text {
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+  }
+  .first-menu-text,
+  .second-menu-text,
+  .third-menu-text {
+    font-size: 2.5rem;
+  }
+  .discover-our-story::after {
+    top: 1.5rem;
+  }
+  .cta-main-text {
+    font-size: 2.3rem;
+  }
+  .signatory {
+    font-size: 2.3rem;
+  }
+  .header-text {
+    font-size: 1rem;
+  }
+  .price {
+    font-size: 2.5rem;
+  }
+  .menu-sub-text {
+    font-size: 1rem;
+  }
+  .testimonials-first-text {
+    font-size: 2.5rem;
+  }
+  .testimonials-second-text {
+    font-size: 2.5rem;
+  }
+  .star-icons .fa-star {
+    color: #ffd700;
+    font-size: 1.1rem;
+  }
+  .testimony {
+    font-size: 1rem !important;
+  }
+  .testifier-title {
+    font-size: 2rem;
+  }
+  .first-event-text {
+    font-size: 2.7rem;
+  }
+  .second-event-text {
+    font-size: 2rem;
+  }
+  .third-event-text {
+    font-size: 1rem;
+  }
+  .events-cta {
+    font-size: 1rem;
+  }
+  .events-cta-paragraph::before {
+    top: 1.3rem;
+  }
+  .second-section-text {
+    font-size: 1rem;
+  }
+  .guest-inputfield,
+  .date-inputfield,
+  .time-inputfield {
+    font-size: 1rem;
+  }
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    font-size: 1rem;
+  }
+  .news-third-text {
+    font-size: 1rem;
+  }
+  .news-block-1 img,
+  .news-block-2 img,
+  .news-block-3 img {
+    height: 15rem;
+  }
+  .alert-1,
+  .alert-2 {
+    font-size: 0.8rem;
+  }
+  .news-block-header {
+    font-size: 1rem;
+  }
+  .news-block-date {
+    font-size: 0.8rem;
+  }
+  .news-block-text {
+    font-size: 0.9rem;
+  }
+  .news-readmore {
+    font-size: 0.9rem;
+  }
+  .news-readmore::after {
+    top: 1.2rem;
+  }
+  .newsletter-first-text {
+    font-size: 1rem;
+  }
+  .newsletter-email {
+    font-size: 0.9rem;
+  }
+  .first-address-text {
+    font-size: 1.2em;
+  }
+  .second-address-text {
+    font-size: 1rem;
+  }
+  .map-link {
+    font-size: 1rem;
+  }
+  .private-dining h5 {
+    font-size: 1.2rem;
+  }
+  .private-dining p {
+    font-size: 1rem;
+  }
+  .footer li {
+    font-size: 1rem;
+  }
+  .copyright {
+    font-size: 0.8rem;
   }
 }

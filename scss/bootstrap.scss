@@ -7,7 +7,7 @@ $warning: yellow;
 $danger: red;
 $light: #f8f9fa;
 $dark: #1a1a1a;
-$transparent:#000000e1;
+$transparent: #000000e1;
 
 $theme-colors: (
   "primary": $primary,
@@ -18,7 +18,7 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
   "dark": $dark,
-  "transparent":$transparent,
+  "transparent": $transparent,
 );
 
 $navbar-toggler-focus-width: 0px;
@@ -28,6 +28,9 @@ $link-decoration: none;
 // breakpoints
 $grid-breakpoints: (
   xs: 0,
+  xxs: 320px,
+  xsm: 375px,
+  xm: 475px,
   sm: 576px,
   md: 768px,
   lg: 900px,
@@ -38,6 +41,10 @@ $grid-breakpoints: (
 
 // containers
 $container-max-widths: (
+  xs: 100%,
+  xxs: 100%,
+  xsm: 100%,
+  xm: 100%,
   sm: 560px,
   md: 740px,
   lg: 870px,

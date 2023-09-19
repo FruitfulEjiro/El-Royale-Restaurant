@@ -34,14 +34,14 @@ const toggle = () => {
 };
 
 // Header
-
+// work on this
 const userScroll = () => {
   const header = document.querySelector(".header");
-  window.addEventListener("scroll", () => {
-    if (window.addEventListener("scroll") > 50) {
-      header.classList.add("bg-primary");
+  window.addEventListener("scrollY", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("bg-success");
     } else {
-      header.classList.remove("bg-primary");
+      header.classList.remove("bg-success");
     }
   });
 };
@@ -69,7 +69,7 @@ const timeList = document.querySelector(".time-list");
 const guest = () => {
   if (close) {
     // If it's closed, open it
-    guestList.style.height = "9rem";
+    guestList.style.height = "7rem";
     document.querySelector(".guesttoggler").style.transform = "rotate(90deg)";
   } else {
     // If it's open, close it and reset styles
