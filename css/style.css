@@ -16,9 +16,10 @@ html {
 }
 
 .header {
-  box-shadow: 0px 0.1px 3px #fff;
-  height: 3.5rem;
+  box-shadow: 0px 0.1px 3px #000;
+  height: 4rem;
   transition: all 0.5s ease-in-out;
+  background: #fff;
 }
 
 .nav-bar {
@@ -30,7 +31,7 @@ html {
 }
 
 .navbar-menu {
-  top: 3rem;
+  top: 4rem;
   left: 0rem;
   height: 22rem;
   width: 100%;
@@ -49,7 +50,7 @@ html {
 .toggle-2,
 .toggle-3 {
   font-size: 1rem;
-  color: #fff;
+  color: #000;
   transition: all 0.3s ease-in-out;
 }
 
@@ -69,17 +70,17 @@ html {
 }
 
 .toggler {
-  width: 1.9rem;
-  height: 1.7rem;
+  width: auto;
+  height: auto;
   right: 0.5rem;
-  top: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.toggler-icon1,
-.toggler-icon2,
-.toggler-icon3 {
+.hamburger-icon {
   font-size: 2rem;
-  color: #fff;
+  color: #000;
+  transition: all 0.3s ease-in-out;
 }
 
 .toggler-icon1 {
@@ -190,10 +191,6 @@ html {
   font-size: 1.8rem;
   font-family: "Yeseva One", cursive;
   margin: 0rem 0rem 1.5rem 0rem;
-}
-
-.banner-button {
-  display: none;
 }
 
 .banner-button-2:hover,
@@ -402,7 +399,7 @@ html {
 .testimonial-background {
   background: #f5f5f5;
   width: 100%;
-  height: 90%;
+  height: auto;
 }
 
 .testimony-border {
@@ -576,6 +573,12 @@ html {
   background: #f6f6f6;
 }
 
+.guest-list,
+.date-list,
+.time-list {
+  width: 100%;
+}
+
 .guest-menu:focus-within,
 .date-menu:focus-within,
 .time-menu:focus-within {
@@ -671,9 +674,7 @@ html {
   border: none;
 }
 
-.news-block-1 img,
-.news-block-2 img,
-.news-block-3 img {
+.news-img {
   height: 11rem;
   object-fit: cover;
 }
@@ -831,11 +832,11 @@ html {
 
 @media screen and (min-width: 320px) {
   .menu-end-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .discover-our-story {
-    width: 9.5rem;
-    font-size: 1rem;
+    width: 8.5rem;
+    font-size: 0.9rem;
   }
   .cta-sub-text {
     font-size: 2.5rem;
@@ -914,7 +915,7 @@ html {
 }
 @media screen and (min-width: 375px) {
   .side-menu-text {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   .social-icon {
     font-size: 1.3rem;
@@ -950,6 +951,9 @@ html {
   }
   .signatory {
     font-size: 2.3rem;
+  }
+  .food-menu .text {
+    font-size: 1rem;
   }
   .header-text {
     font-size: 1rem;
@@ -997,19 +1001,17 @@ html {
   .guest-inputfield,
   .date-inputfield,
   .time-inputfield {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .guest-name,
   .guest-email,
   .guest-phone-number {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .news-third-text {
     font-size: 1rem;
   }
-  .news-block-1 img,
-  .news-block-2 img,
-  .news-block-3 img {
+  .news-img {
     height: 15rem;
   }
   .alert-1,
@@ -1032,16 +1034,16 @@ html {
     top: 1.2rem;
   }
   .newsletter-first-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .newsletter-email {
     font-size: 0.9rem;
   }
   .first-address-text {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
   .second-address-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .map-link {
     font-size: 1rem;
@@ -1050,12 +1052,226 @@ html {
     font-size: 1.2rem;
   }
   .private-dining p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .footer li {
     font-size: 1rem;
   }
   .copyright {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 475px) {
+  .first-event-img,
+  .second-event-img {
+    width: 10rem;
+    height: 14rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  .side-menu-toggle {
+    right: 3rem;
+  }
+  .banner-button,
+  .banner-button-2 {
+    width: 8.5rem;
+    height: 2.5rem;
+  }
+  .first-meal-menu::after,
+  .second-meal-menu::after {
+    width: 99%;
+    height: 101.5%;
+  }
+  .price {
+    font-size: 1.8rem;
+  }
+  .testimony-border::after {
+    width: 99%;
+  }
+  .first-event-img,
+  .second-event-img {
+    width: 14rem;
+    height: 19rem;
+  }
+  .second-event-text {
+    font-size: 2.5rem;
+  }
+  .reservations-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1rem;
+  }
+  .second-section::after {
+    width: 99%;
+  }
+  .guest-menu,
+  .date-menu,
+  .time-menu {
+    height: 3rem;
+    width: 13.5rem !important;
+  }
+  .guest-inputfield,
+  .date-inputfield,
+  .time-inputfield {
+    font-size: 0.9rem;
+  }
+  .reservation-submit {
+    grid-area: 4/1/5/3;
+    height: 3rem;
+  }
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    font-size: 0.9rem;
+    height: 3rem;
+    width: 13.5rem !important;
+  }
+  .reservation-submit {
+    width: 29.5rem;
+  }
+  .news-img {
+    height: 20rem;
+  }
+  .news-block-header {
+    font-size: 1.3rem;
+  }
+  .alert-1,
+  .alert-2 {
+    font-size: 1rem;
+  }
+  .news-block-date {
+    font-size: 1rem;
+  }
+  .news-block-text {
+    font-size: 0.95rem;
+  }
+  .newsletter-form {
+    height: 3rem;
+  }
+  .newsletter-form::after {
+    content: "";
+    position: absolute;
+    width: 99%;
+    height: 3.3rem;
+    border: 1px solid #d69846;
+  }
+}
+@media screen and (min-width: 768px) {
+  .carousel-main-text {
+    font-size: 2.2rem;
+  }
+  .header {
+    height: 5rem;
+  }
+  .navLogo {
+    width: 11rem;
+  }
+  .side-menu {
+    width: 23rem;
+  }
+  .first-menu,
+  .second-menu,
+  .third-menu {
+    height: 20rem;
+    width: 14.6rem;
+  }
+  .first-menu-text,
+  .second-menu-text,
+  .third-menu-text {
+    font-size: 2.2rem;
+  }
+  .testimonial-block {
+    height: auto;
+  }
+  .testimonial-background {
+    width: 14.2rem;
+    height: auto;
+  }
+  .testimony-border {
+    height: 19rem !important;
+    background: #fff;
+  }
+  .star-icons .fa-star {
+    font-size: 1rem;
+  }
+  .testimony {
+    font-size: 0.8rem !important;
+  }
+  .second-section:after {
+    width: 99%;
+    height: 102%;
+  }
+  .guest-menu,
+  .date-menu,
+  .time-menu {
+    width: 17rem !important;
+  }
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    width: 17rem !important;
+  }
+  .reservation-submit {
+    width: 36.4rem;
+  }
+  .first-event-img,
+  .second-event-img {
+    width: 9rem;
+    height: 12rem;
+  }
+  .first-event-text {
+    font-size: 2.5rem;
+  }
+  .second-event-text {
+    font-size: 2.5rem;
+  }
+  .third-event-text {
+    font-size: 0.9rem;
+  }
+  .news-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-items: center;
+  }
+  .news-img {
+    height: 13rem;
+  }
+  .alert-1,
+  .alert-2 {
+    font-size: 0.8rem;
+  }
+  .news-block-header {
+    font-size: 1rem;
+  }
+  .news-block-date {
+    font-size: 0.8rem;
+  }
+  .news-block-text {
+    font-size: 0.9rem;
+  }
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .newsletter {
+    grid-area: 1/2/2/3;
+  }
+  .second-address-text {
+    font-size: 0.8rem;
+  }
+  .newsletter-first-text {
+    font-size: 0.8rem;
+  }
+  .newsletter-email {
+    font-size: 0.7rem;
+  }
+  .private-dining p {
     font-size: 0.8rem;
   }
 }

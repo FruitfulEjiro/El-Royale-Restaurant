@@ -3,6 +3,7 @@
 let close = true; // Flag to track toggle states
 
 // Hamburger Menu
+const hamburger = document.querySelector(".hamburger-icon");
 const toggler1 = document.querySelector(".toggler-icon1");
 const toggler2 = document.querySelector(".toggler-icon2");
 const toggler3 = document.querySelector(".toggler-icon3");
@@ -11,41 +12,32 @@ const navBar = document.querySelector(".navbar-menu");
 const toggle = () => {
   if (close) {
     navBar.style.transform = "translateX(0%)";
-    document.querySelector(".header").style.backgroundColor = "#000000e1";
-    toggler1.style.position = "relative";
-    toggler1.style.top = "-1px";
-    toggler1.style.transform = "rotateZ(45deg)";
-    toggler2.style.visibility = "hidden";
-    toggler3.style.position = "relative";
-    toggler3.style.top = "0px";
-    toggler3.style.transform = "rotateZ(-45deg)";
+    hamburger.classList.remove("fa-bars");
+    hamburger.classList.add("fa-xmark");
+    hamburger.style.opacity = "1";
   } else {
     navBar.style.transform = "translateX(100%)";
-    document.querySelector(".header").style.backgroundColor = "transparent";
-    toggler1.style.position = "relative";
-    toggler1.style.top = "-11px";
-    toggler1.style.transform = "rotateZ(0deg)";
-    toggler2.style.visibility = "visible";
-    toggler3.style.position = "relative";
-    toggler3.style.top = "4px";
-    toggler3.style.transform = "rotateZ(0deg)";
+    hamburger.classList.add("fa-bars");
+    hamburger.classList.remove("fa-xmark");
+    hamburger.style.opacity = "1";
   }
   close = !close;
 };
 
-// Header
-// work on this
-const userScroll = () => {
-  const header = document.querySelector(".header");
-  window.addEventListener("scrollY", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("bg-success");
-    } else {
-      header.classList.remove("bg-success");
-    }
-  });
-};
-document.addEventListener("DOMContentLoaded", userScroll);
+// us this from 900 apx screen
+// const header = document.getElementById("header");
+// const navItem = document.querySelectorAll(".menu-item");
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > 100) {
+//        header.classList.add("header-scroll");
+//        navItem.style.color = "#000000!important"
+//   } else {
+//        header.classList.remove("header-scroll");
+//        navItem.style.color = "#fff";
+//   }
+// });
+
+// // document.addEventListener("DOMContentLoaded", userScroll);
 
 // Side Menu
 const sidemenu = document.querySelector(".side-menu");
