@@ -839,8 +839,12 @@ html {
 }
 
 @media screen and (min-width: 320px) {
+  .navbar-menu {
+    top: 4rem;
+  }
+
   .menu-end-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .discover-our-story {
@@ -853,7 +857,7 @@ html {
   }
 
   .cta-sub-text-2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .food-menu-sub-text {
@@ -865,7 +869,7 @@ html {
   }
 
   .food-menu .text {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
 
   .header-text {
@@ -873,7 +877,7 @@ html {
   }
 
   .menu-sub-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .explore-food-menu {
@@ -907,7 +911,7 @@ html {
   }
 
   .third-event-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .first-section-text-1 {
@@ -928,13 +932,13 @@ html {
   }
 
   .second-section-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .guest-inputfield,
   .date-inputfield,
   .time-inputfield {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .news-second-text {
@@ -942,7 +946,7 @@ html {
   }
 
   .news-third-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1272,6 +1276,10 @@ html {
     width: 11rem;
   }
 
+  .navbar-menu {
+    top: 5rem;
+  }
+
   .side-menu {
     width: 23rem;
   }
@@ -1422,6 +1430,10 @@ html {
     transition: all 0.5s ease-in-out;
   }
 
+  .menu-item {
+    font-size: 1rem;
+  }
+
   .side-menu-toggle {
     right: 0rem;
   }
@@ -1456,8 +1468,12 @@ html {
     width: 16.5rem;
   }
 
+  .reservations-container {
+    width: auto;
+  }
+
   .first-section {
-    width: 43%;
+    width: 21rem;
     height: 100%;
   }
 
@@ -1471,20 +1487,21 @@ html {
   }
 
   .second-section {
-    width: 53%;
+    width: 25rem;
     height: 100%;
+  }
+
+  .second-section-text {
+    font-size: 0.9rem;
   }
 
   .guest-menu,
   .date-menu,
-  .time-menu {
-    width: 10.8rem !important;
-  }
-
+  .time-menu,
   .guest-name,
   .guest-email,
   .guest-phone-number {
-    width: 10.8rem !important;
+    width: 11rem !important;
   }
 
   .reservation-submit {
@@ -1495,7 +1512,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    align-items: center;
+    align-items: start;
     justify-items: center;
   }
 }
@@ -1504,8 +1521,77 @@ html {
   .carousel-main-text {
     font-size: 4rem;
   }
+
+  .side-menu-toggle {
+    right: 1rem;
+  }
+
+  .navbar-menu {
+    right: 1.5rem;
+  }
+
+  .testimonial-block {
+    width: 55rem;
+  }
+
+  .first-event-img,
+  .second-event-img {
+    width: 13rem;
+    height: 18rem;
+  }
+
+  .reservations-container {
+    width: auto;
+  }
+
+  .first-section {
+    width: 25rem;
+  }
+
+  .second-section {
+    width: 30rem;
+  }
+
+  .guest-menu,
+  .date-menu,
+  .time-menu,
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    width: 12.5rem !important;
+  }
+
+  .reservation-submit {
+    width: 27rem;
+  }
 }
 
-// continue from here
+@media screen and (min-width: 1200px) {
+  .menu-item {
+    font-size: 1.1rem;
+  }
+
+  .second-address-text,
+  .newsletter-first-text {
+    font-size: 1rem;
+  }
+
+  .newsletter-email {
+    font-size: 0.9rem;
+  }
+
+  .private-dining p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .banner {
+    height: 800px;
+  }
+}
+
+// FIX THE SIDE MENU FOR SCREEN WITH HEIGHT OF 500 AND BELOW
+// FIX THE LOGO ON MOBILE TO SHOW LOGO DARK
 // REMEMBER TO CHANGE THE NAVIGATION COLOR AND ADD COLOR ON SCROLL @768px screen
 // ADD DROPDOWN TO THE NAVIGATION MENU
