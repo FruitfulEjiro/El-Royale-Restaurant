@@ -24,7 +24,20 @@ const toggle = () => {
   close = !close;
 };
 
-// us this from 900 apx screen
+const logo = document.querySelector(".navLogo");
+
+const logon = (matches) => {
+  logo.src = "./Images/logo-light.png";
+};
+
+const check = window.matchMedia("(min-width:900px)");
+logon(check.matches);
+
+check.addEventListener("change", (event) => {
+  logon(event.matches);
+});
+
+// use this from 900px screen
 // const header = document.getElementById("header");
 // const navItem = document.querySelectorAll(".menu-item");
 // window.addEventListener("scroll", () => {

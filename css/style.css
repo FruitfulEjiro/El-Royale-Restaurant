@@ -31,9 +31,9 @@ html {
 }
 
 .navbar-menu {
-  top: 4rem;
+  top: 5rem;
   left: 0rem;
-  height: 22rem;
+  height: 21rem;
   width: 100%;
   background: rgba(0, 0, 0, 0.8823529412);
   transform: translateX(100%);
@@ -54,19 +54,8 @@ html {
   transition: all 0.3s ease-in-out;
 }
 
-.toggle-1 {
-  top: -4px;
-  transition: all 0.3s ease-in-out;
-}
-
-.toggle-2 {
-  top: 0px;
-  transition: all 0.3s ease-in-out;
-}
-
-.toggle-3 {
-  top: 4px;
-  transition: all 0.3s ease-in-out;
+.toggle1 {
+  font-size: 1rem;
 }
 
 .toggler {
@@ -105,6 +94,10 @@ html {
   font-size: 1.2rem;
   transition: padding 0.3s ease-in-out;
   padding: 0rem 0.6rem 0rem 0.6rem;
+}
+
+#reservation-link {
+  border: 3px solid #fff;
 }
 
 .menu-item:hover {
@@ -1273,5 +1266,86 @@ html {
   }
   .private-dining p {
     font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .header {
+    box-shadow: 0px 0.1px 3px #fff;
+    height: 5rem;
+    transition: all 0.5s ease-in-out;
+    background: transparent;
+  }
+  .navbar-menu {
+    height: 100%;
+    top: 0px;
+    background: transparent;
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+  }
+  .side-menu-toggle {
+    right: 0rem;
+  }
+  .toggle1 {
+    color: #fff;
+  }
+  .menu-end-text {
+    font-size: 1.1rem;
+  }
+  .discover-our-story {
+    width: 10rem;
+    font-size: 1rem;
+  }
+  .cta-main-text {
+    font-size: 3rem;
+  }
+  .first-meal-menu,
+  .second-meal-menu {
+    width: 49%;
+  }
+  .menu-sub-text {
+    font-size: 0.9rem;
+  }
+  .testimonial-background {
+    width: 16.5rem;
+  }
+  .first-section {
+    width: 43%;
+    height: 100%;
+  }
+  .sub-section {
+    height: 100%;
+  }
+  .worktime .first-section-text,
+  .worktime .service-time {
+    font-size: 0.8rem;
+  }
+  .second-section {
+    width: 53%;
+    height: 100%;
+  }
+  .guest-menu,
+  .date-menu,
+  .time-menu {
+    width: 10.8rem !important;
+  }
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    width: 10.8rem !important;
+  }
+  .reservation-submit {
+    width: 23rem;
+  }
+  .news-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carousel-main-text {
+    font-size: 4rem;
   }
 }
