@@ -28,7 +28,7 @@ html {
 .header {
   box-shadow: 0px 0.1px 3px #000;
   height: 4rem;
-  transition: all 0.5s ease-in-out;
+  transition: all 0s ease-in-out;
   background: #fff;
 }
 
@@ -838,6 +838,20 @@ html {
   font-size: 0.7rem;
 }
 
+.scrolled {
+  background-color: #fff !important;
+  box-shadow: 0px 0.1px 3px #000!important;
+}
+
+.scrolled-color {
+  color: #000 !important;
+}
+
+.scrolled-button {
+  color: #000 !important;
+  border: 3px solid #000 !important;
+}
+
 @media screen and (min-width: 320px) {
   .navbar-menu {
     top: 4rem;
@@ -1567,6 +1581,10 @@ html {
 }
 
 @media screen and (min-width: 1200px) {
+  .nav-bar {
+    width: 1000px;
+  }
+
   .menu-item {
     font-size: 1.1rem;
   }
@@ -1593,5 +1611,4 @@ html {
 
 // FIX THE SIDE MENU FOR SCREEN WITH HEIGHT OF 500 AND BELOW
 // FIX THE LOGO ON MOBILE TO SHOW LOGO DARK
-// REMEMBER TO CHANGE THE NAVIGATION COLOR AND ADD COLOR ON SCROLL @768px screen
-// ADD DROPDOWN TO THE NAVIGATION MENU
+// ADD DROPDOWN AND HOVER EFFECTS TO THE NAVIGATION MENU

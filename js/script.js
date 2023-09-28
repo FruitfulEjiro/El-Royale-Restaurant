@@ -4,9 +4,6 @@ let close = true; // Flag to track toggle states
 
 // Hamburger Menu
 const hamburger = document.querySelector(".hamburger-icon");
-const toggler1 = document.querySelector(".toggler-icon1");
-const toggler2 = document.querySelector(".toggler-icon2");
-const toggler3 = document.querySelector(".toggler-icon3");
 const navBar = document.querySelector(".navbar-menu");
 
 const toggle = () => {
@@ -25,32 +22,58 @@ const toggle = () => {
 };
 
 const logo = document.querySelector(".navLogo");
+const navbar = document.getElementById("header");
+const home = document.querySelector(".item1");
+const about = document.querySelector(".item2");
+const menu = document.querySelector(".item3");
+const gallery = document.querySelector(".item4");
+const blog = document.querySelector(".item5");
+const shop = document.querySelector(".item6");
+const reservation = document.querySelector(".item7");
+const toggle1 = document.querySelector(".toggle1");
 
-const logon = (matches) => {
-  logo.src = "./Images/logo-light.png";
-};
+const mediaQuery = window.matchMedia("(min-width: 899.9px)");
 
-const check = window.matchMedia("(min-width:900px)");
-logon(check.matches);
+function handleMediaChange(mediaQuery) {
+  if (mediaQuery.matches) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY < 100) {
+        navbar.classList.remove("scrolled");
+        home.classList.remove("scrolled-color");
+        about.classList.remove("scrolled-color");
+        menu.classList.remove("scrolled-color");
+        gallery.classList.remove("scrolled-color");
+        blog.classList.remove("scrolled-color");
+        shop.classList.remove("scrolled-color");
+        reservation.classList.remove("scrolled-button");
+        logo.src = "./Images/logo-light.png";
+        toggle1.classList.remove("scrolled-color");
+      } else {
+        navbar.classList.add("scrolled");
+        home.classList.add("scrolled-color");
+        about.classList.add("scrolled-color");
+        menu.classList.add("scrolled-color");
+        gallery.classList.add("scrolled-color");
+        blog.classList.add("scrolled-color");
+        shop.classList.add("scrolled-color");
+        reservation.classList.add("scrolled-button");
+        logo.src = "./Images/logo-dark.png";
+        toggle1.classList.add("scrolled-color");
+      }
+    });
+  } else {
+    // Remove the scroll event listener when the media query doesn't match
+    window.removeEventListener("scroll", () => {});
+  }
+}
 
-check.addEventListener("change", (event) => {
-  logon(event.matches);
-});
+// Initial call to handle media change based on the current window size
+handleMediaChange(mediaQuery);
 
-// use this from 900px screen
-// const header = document.getElementById("header");
-// const navItem = document.querySelectorAll(".menu-item");
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > 100) {
-//        header.classList.add("header-scroll");
-//        navItem.style.color = "#000000!important"
-//   } else {
-//        header.classList.remove("header-scroll");
-//        navItem.style.color = "#fff";
-//   }
-// });
+// Listen for changes in the media query
+mediaQuery.addListener(handleMediaChange);
 
-// // document.addEventListener("DOMContentLoaded", userScroll);
+document.addEventListener("DOMContentLoaded", handleMediaChange);
 
 // Side Menu
 const sidemenu = document.querySelector(".side-menu");
