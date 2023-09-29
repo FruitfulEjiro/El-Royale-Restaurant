@@ -41,9 +41,9 @@ html {
 }
 
 .navbar-menu {
-  top: 5rem;
+  top: 4rem;
   left: 0rem;
-  height: 21rem;
+  height: 28rem;
   width: 100%;
   background: #000000e1;
   transform: translateX(100%);
@@ -56,16 +56,12 @@ html {
   height: 1rem;
 }
 
-.toggle-1,
-.toggle-2,
-.toggle-3 {
-  font-size: 1rem;
-  color: #000;
-  transition: all 0.3s ease-in-out;
-}
-
 .toggle1 {
   font-size: 1rem;
+}
+
+.toggle1:hover {
+  color: $primary !important;
 }
 
 .toggler {
@@ -82,32 +78,25 @@ html {
   transition: all 0.3s ease-in-out;
 }
 
-.toggler-icon1 {
-  top: -12px;
-  transform: rotateZ(0deg);
-  transition: all 0.2s ease-in-out;
-}
-
-.toggler-icon2 {
-  top: -4px;
-  transform: rotateZ(0deg);
-  transition: all 0.2s ease-in-out;
-}
-
-.toggler-icon3 {
-  top: 4px;
-  transform: rotateZ(0deg);
-  transition: all 0.2s ease-in-out;
-}
-
 .menu-item {
   font-size: 1.2rem;
-  transition: padding 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   padding: 0rem 0.6rem 0rem 0.6rem;
 }
 
+.menu-item:hover {
+  color: $primary !important;
+}
+
 #reservation-link {
+  transition: all 0.3s ease-in-out;
   border: 3px solid #fff;
+}
+
+#reservation-link:hover {
+  border: 3px solid #fff;
+  color: #000 !important;
+  background: #fff;
 }
 
 .menu-item:hover {
@@ -116,6 +105,34 @@ html {
 
 .menu-item:active {
   background: $btn-active-bg !important;
+}
+
+.about-list,
+.shop-list {
+  background: #000000f3;
+  width: 12rem;
+  height: 0rem;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.about-list:hover,
+.item2:hover ~ .about-list {
+  height: 18rem;
+}
+
+.about-list li a,
+.shop-list li a {
+  transition: all 0.2s ease-in-out;
+}
+.about-list li a:hover,
+.shop-list li a:hover {
+  color: $primary !important;
+}
+
+.shop-list:hover,
+.item6:hover ~ .shop-list {
+  height: 5rem;
 }
 
 .side-menu {
@@ -838,9 +855,10 @@ html {
   font-size: 0.7rem;
 }
 
+// Custom Classes
 .scrolled {
   background-color: #fff !important;
-  box-shadow: 0px 0.1px 3px #000!important;
+  box-shadow: 0px 0.1px 3px #000 !important;
 }
 
 .scrolled-color {
@@ -1582,7 +1600,7 @@ html {
 
 @media screen and (min-width: 1200px) {
   .nav-bar {
-    width: 1000px;
+    width: 1300px;
   }
 
   .menu-item {
@@ -1608,7 +1626,3 @@ html {
     height: 800px;
   }
 }
-
-// FIX THE SIDE MENU FOR SCREEN WITH HEIGHT OF 500 AND BELOW
-// FIX THE LOGO ON MOBILE TO SHOW LOGO DARK
-// ADD DROPDOWN AND HOVER EFFECTS TO THE NAVIGATION MENU

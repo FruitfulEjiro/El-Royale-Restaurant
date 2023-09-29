@@ -21,8 +21,8 @@ const toggle = () => {
   close = !close;
 };
 
+// Navbar Scroll Effect
 const logo = document.querySelector(".navLogo");
-const navbar = document.getElementById("header");
 const home = document.querySelector(".item1");
 const about = document.querySelector(".item2");
 const menu = document.querySelector(".item3");
@@ -32,48 +32,43 @@ const shop = document.querySelector(".item6");
 const reservation = document.querySelector(".item7");
 const toggle1 = document.querySelector(".toggle1");
 
-const mediaQuery = window.matchMedia("(min-width: 899.9px)");
+const navbar = document.getElementById("header");
+const mediaQuery = window.matchMedia("(min-width: 900px)");
 
-function handleMediaChange(mediaQuery) {
+function handleScroll() {
+  const navbar = document.getElementById("header"); // Replace with your navbar ID
+  const scrollPosition = window.scrollY;
+
   if (mediaQuery.matches) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY < 100) {
-        navbar.classList.remove("scrolled");
-        home.classList.remove("scrolled-color");
-        about.classList.remove("scrolled-color");
-        menu.classList.remove("scrolled-color");
-        gallery.classList.remove("scrolled-color");
-        blog.classList.remove("scrolled-color");
-        shop.classList.remove("scrolled-color");
-        reservation.classList.remove("scrolled-button");
-        logo.src = "./Images/logo-light.png";
-        toggle1.classList.remove("scrolled-color");
-      } else {
-        navbar.classList.add("scrolled");
-        home.classList.add("scrolled-color");
-        about.classList.add("scrolled-color");
-        menu.classList.add("scrolled-color");
-        gallery.classList.add("scrolled-color");
-        blog.classList.add("scrolled-color");
-        shop.classList.add("scrolled-color");
-        reservation.classList.add("scrolled-button");
-        logo.src = "./Images/logo-dark.png";
-        toggle1.classList.add("scrolled-color");
-      }
-    });
-  } else {
-    // Remove the scroll event listener when the media query doesn't match
-    window.removeEventListener("scroll", () => {});
+       logo.src = "./Images/logo-light.png";
+    // Styles for small screens
+    if (scrollPosition < 100) {
+      navbar.classList.remove("scrolled");
+      home.classList.remove("scrolled-color");
+      about.classList.remove("scrolled-color");
+      menu.classList.remove("scrolled-color");
+      gallery.classList.remove("scrolled-color");
+      blog.classList.remove("scrolled-color");
+      shop.classList.remove("scrolled-color");
+      reservation.classList.remove("scrolled-button");
+      logo.src = "./Images/logo-light.png";
+      toggle1.classList.remove("scrolled-color");
+    } else {
+      navbar.classList.add("scrolled");
+      home.classList.add("scrolled-color");
+      about.classList.add("scrolled-color");
+      menu.classList.add("scrolled-color");
+      gallery.classList.add("scrolled-color");
+      blog.classList.add("scrolled-color");
+      shop.classList.add("scrolled-color");
+      reservation.classList.add("scrolled-button");
+      logo.src = "./Images/logo-dark.png";
+      toggle1.classList.add("scrolled-color");
+    }
   }
 }
-
-// Initial call to handle media change based on the current window size
-handleMediaChange(mediaQuery);
-
-// Listen for changes in the media query
-mediaQuery.addListener(handleMediaChange);
-
-document.addEventListener("DOMContentLoaded", handleMediaChange);
+window.addEventListener("scroll", handleScroll);
+document.addEventListener("DOMContentLoaded", handleScroll);
 
 // Side Menu
 const sidemenu = document.querySelector(".side-menu");
@@ -88,7 +83,6 @@ const sideMenu = () => {
 };
 
 // Reservation Form
-
 const guestList = document.querySelector(".guest-list");
 const dateList = document.querySelector(".date-list");
 const timeList = document.querySelector(".time-list");
