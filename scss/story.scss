@@ -1,12 +1,11 @@
 /** @format */
-
 @import url("https://fonts.googleapis.com/css2?family=Kristi&family=Poppins:wght@400;600&family=Yeseva+One&display=swap");
 
 $border-width: 0px;
 $Poppins: "Poppins", sans-serif;
 $Kristi: "Kristi", cursive;
 $Yeseva: "Yeseva One", cursive;
-$Text-color: #2b2a2a;
+$Text-color: #383737;
 $primary: #d69846;
 $btn-active-bg: none;
 
@@ -80,6 +79,7 @@ html {
 }
 
 .menu-item {
+  height: 100%;
   font-size: 1.2rem;
   transition: all 0.3s ease-in-out;
   padding: 0rem 0.6rem 0rem 0.6rem;
@@ -110,6 +110,7 @@ html {
 
 .about-list,
 .shop-list {
+  top: 1.7rem;
   background: #000000f3;
   width: 12rem;
   height: 0rem;
@@ -119,13 +120,14 @@ html {
 
 .about-list:hover,
 .item2:hover ~ .about-list {
-  height: 18rem;
+  height: 16rem;
 }
 
 .about-list li a,
 .shop-list li a {
   transition: all 0.2s ease-in-out;
 }
+
 .about-list li a:hover,
 .shop-list li a:hover {
   color: $primary !important;
@@ -133,7 +135,7 @@ html {
 
 .shop-list:hover,
 .item6:hover ~ .shop-list {
-  height: 5rem;
+  height: 2.5rem;
 }
 
 .side-menu {
@@ -159,8 +161,136 @@ html {
   font-size: 0.7rem;
 }
 
+.story-banner {
+  height: 60vh;
+  background: linear-gradient(#0000008e, #0000008e),
+    url(../Images/Gaby.jpeg) center/cover fixed no-repeat;
+}
+
+.story-banner-container {
+  height: 100%;
+}
+
+.story-first-text {
+  font-family: $Kristi;
+  font-size: 2rem;
+}
+
+.story-main-text {
+  font-family: $Yeseva;
+}
+
+.menu-header {
+  font-family: $Kristi;
+  font-size: 2rem;
+}
+
+.menu-header br {
+  display: none;
+}
+
 .header-underline {
-  width: 4rem;
+  width: 3rem;
+}
+
+.menu-text {
+  font-family: $Yeseva;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.reservation-first-text {
+  font-size: 0.8rem;
+  color: $Text-color;
+}
+
+.sub-section {
+  border: 1px solid $primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sub-section::after {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 102%;
+  border: 1px solid $primary;
+}
+
+.first-section-text-1 {
+  font-family: $Kristi;
+  font-size: 1.5rem;
+}
+
+.first-section-text-2 {
+  font-family: $Yeseva;
+  font-size: 1.5rem;
+}
+
+.worktime {
+  border-bottom: 2px dotted #fff;
+  width: 80%;
+}
+
+.worktime .first-section-text,
+.worktime .service-time {
+  font-size: 0.8rem;
+}
+
+.call-us-now {
+  font-size: 1.7rem;
+  font-family: $Kristi;
+}
+
+.call-number {
+  font-size: 1.5rem;
+  font-family: $Yeseva;
+}
+
+.third-col-text {
+  font-size: 0.8rem;
+  color: $Text-color;
+}
+
+.mid-banner {
+  height: 40vh;
+  background: linear-gradient(#0000008e, #0000008e),
+    url(../Images/Chile-Spiked-Beans.jpeg) center/cover fixed no-repeat;
+}
+
+.mid-banner-container {
+  height: 100%;
+}
+
+.mid-banner-first-text {
+  font-family: $Kristi;
+  font-size: 2rem;
+}
+
+.mid-banner-main-text {
+  font-family: $Yeseva;
+}
+
+.story-list-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 1rem;
+}
+
+.story-list-header {
+  font-size: 2rem;
+  font-family: $Kristi;
+}
+
+.story-list-text {
+  font-size: 0.8rem;
 }
 
 .testimonials {
@@ -404,3 +534,433 @@ html {
   color: #000 !important;
   border: 3px solid #000 !important;
 }
+
+@media screen and (min-width: 320px) {
+  .navbar-menu {
+    top: 4rem;
+  }
+
+  .menu-end-text {
+    font-size: 0.8rem;
+  }
+
+  .reservation-first-text {
+    font-size: 0.9rem;
+  }
+
+  .third-col-text {
+    font-size: 0.9rem;
+  }
+
+  .story-list-text {
+    font-size: 0.9rem;
+  }
+
+  .testimony {
+    font-size: 0.9rem !important;
+  }
+
+  .testifier-name {
+    font-size: 1rem;
+  }
+
+  .first-event-img,
+  .second-event-img {
+    width: 8rem;
+    height: 11rem;
+  }
+
+  .first-event-text {
+    font-size: 2.3rem;
+  }
+
+  .second-event-text {
+    font-size: 1.7rem;
+  }
+
+  .third-event-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .side-menu-text {
+    font-size: 0.85rem;
+  }
+
+  .social-icon {
+    font-size: 1.3rem;
+  }
+
+  .side-menu-email,
+  .side-menu-number,
+  .side-menu-button {
+    font-size: 1rem;
+  }
+
+  .menu-header {
+    font-size: 2.3rem;
+  }
+
+  .menu-text {
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+  }
+
+  .story-list-header {
+    font-size: 2.5rem;
+  }
+
+  .testimonials-first-text {
+    font-size: 2.5rem;
+  }
+
+  .testimonials-second-text {
+    font-size: 2.5rem;
+  }
+
+  .star-icons .fa-star {
+    color: #ffd700;
+    font-size: 1.1rem;
+  }
+
+  .testimony {
+    font-size: 1rem !important;
+  }
+
+  .testifier-title {
+    font-size: 2rem;
+  }
+
+  .first-event-text {
+    font-size: 2.7rem;
+  }
+
+  .second-event-text {
+    font-size: 2rem;
+  }
+
+  .third-event-text {
+    font-size: 1rem;
+  }
+
+  .events-cta {
+    font-size: 1rem;
+  }
+
+  .events-cta-paragraph::before {
+    top: 1.3rem;
+  }
+
+  .newsletter-first-text {
+    font-size: 0.9rem;
+  }
+
+  .newsletter-email {
+    font-size: 0.9rem;
+  }
+
+  .first-address-text {
+    font-size: 1.2rem;
+  }
+
+  .second-address-text {
+    font-size: 0.9rem;
+  }
+
+  .map-link {
+    font-size: 1rem;
+  }
+
+  .private-dining h5 {
+    font-size: 1.2rem;
+  }
+
+  .private-dining p {
+    font-size: 0.9rem;
+  }
+
+  .footer li {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 475px) {
+  .first-event-img,
+  .second-event-img {
+    width: 10rem;
+    height: 14rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .side-menu-toggle {
+    right: 3rem;
+  }
+
+  .story-first-text,
+  .story-main-text {
+    font-size: 2.5rem;
+  }
+
+  .reservation-first-text {
+    font-size: 1rem;
+  }
+
+  .third-col-text {
+    font-size: 1rem;
+  }
+
+  .story-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: start;
+    grid-gap: 1rem;
+  }
+
+  .story-list-text {
+    font-size: 1rem;
+  }
+
+  .testimony-border::after {
+    width: 99%;
+  }
+
+  .first-event-img,
+  .second-event-img {
+    width: 14rem;
+    height: 19rem;
+  }
+
+  .second-event-text {
+    font-size: 2.5rem;
+  }
+
+  .newsletter-form {
+    height: 3rem;
+  }
+
+  .newsletter-form::after {
+    content: "";
+    position: absolute;
+    width: 99%;
+    height: 3.3rem;
+    border: 1px solid $primary;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 5rem;
+  }
+
+  .navLogo {
+    width: 11rem;
+  }
+
+  .navbar-menu {
+    top: 5rem;
+  }
+
+  .side-menu {
+    width: 23rem;
+  }
+
+  .story-banner {
+    height: 80vh;
+  }
+
+  .mid-banner {
+    height: 50vh;
+  }
+
+  .mid-banner-first-text,
+  .mid-banner-main-text {
+    font-size: 2.5rem;
+  }
+
+  .testimonial-block {
+    height: auto;
+  }
+
+  .testimonial-background {
+    width: 14.2rem;
+    height: auto;
+  }
+
+  .testimony-border {
+    height: 19rem !important;
+    background: #fff;
+  }
+
+  .star-icons .fa-star {
+    font-size: 1rem;
+  }
+
+  .testimony {
+    font-size: 0.8rem !important;
+  }
+
+  .first-event-img,
+  .second-event-img {
+    width: 9rem;
+    height: 12rem;
+  }
+
+  .first-event-text {
+    font-size: 2.5rem;
+  }
+
+  .second-event-text {
+    font-size: 2.5rem;
+  }
+
+  .third-event-text {
+    font-size: 0.9rem;
+  }
+
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .newsletter {
+    grid-area: 1/2/2/3;
+  }
+
+  .second-address-text {
+    font-size: 0.8rem;
+  }
+
+  .newsletter-first-text {
+    font-size: 0.8rem;
+  }
+
+  .newsletter-email {
+    font-size: 0.7rem;
+  }
+
+  .private-dining p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header {
+    box-shadow: 0px 0.1px 3px #fff;
+    height: 5rem;
+    transition: all 0.5s ease-in-out;
+    background: transparent;
+  }
+
+  .navbar-menu {
+    height: 100%;
+    top: 0px;
+    background: transparent;
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-item {
+    font-size: 1rem;
+  }
+
+  .navbar-menu li {
+    height: 100% !important;
+  }
+
+  .about-list,
+  .shop-list {
+    top: 5rem;
+  }
+
+  .side-menu-toggle {
+    right: 0rem;
+  }
+
+  .toggle1 {
+    color: #fff;
+  }
+
+  .reservation-first-text {
+    font-size: 0.9rem;
+  }
+
+  .third-col-text {
+    font-size: 0.9rem;
+  }
+
+  .story-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: start;
+    grid-gap: 1rem;
+  }
+
+  .story-list-text {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-background {
+    width: 16.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .side-menu-toggle {
+    right: 1rem;
+  }
+
+  .navbar-menu {
+    right: 1.5rem;
+  }
+
+  .story-list-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-block {
+    width: 55rem;
+  }
+
+  .first-event-img,
+  .second-event-img {
+    width: 13rem;
+    height: 18rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-bar {
+    width: 1201px;
+  }
+
+  .menu-item {
+    font-size: 1.1rem;
+  }
+
+  .private-dining p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .story-banner {
+    height: 640px;
+  }
+
+  .mid-banner {
+    height: 400px;
+  }
+}
+
+// copy the remaining styles for the menu and paste in story.scss

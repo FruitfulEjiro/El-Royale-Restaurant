@@ -79,6 +79,7 @@ html {
 }
 
 .menu-item {
+  height: 100%;
   font-size: 1.2rem;
   transition: all 0.3s ease-in-out;
   padding: 0rem 0.6rem 0rem 0.6rem;
@@ -109,6 +110,7 @@ html {
 
 .about-list,
 .shop-list {
+  top: 1.7rem;
   background: #000000f3;
   width: 12rem;
   height: 0rem;
@@ -118,13 +120,14 @@ html {
 
 .about-list:hover,
 .item2:hover ~ .about-list {
-  height: 18rem;
+  height: 16rem;
 }
 
 .about-list li a,
 .shop-list li a {
   transition: all 0.2s ease-in-out;
 }
+
 .about-list li a:hover,
 .shop-list li a:hover {
   color: $primary !important;
@@ -132,7 +135,7 @@ html {
 
 .shop-list:hover,
 .item6:hover ~ .shop-list {
-  height: 5rem;
+  height: 2.5rem;
 }
 
 .side-menu {
@@ -228,10 +231,6 @@ html {
 .menu-header {
   font-family: $Kristi;
   font-size: 2rem;
-}
-
-.menu-header br {
-  display: none;
 }
 
 .header-underline {
@@ -1296,10 +1295,6 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  .carousel-main-text {
-    font-size: 2.2rem;
-  }
-
   .header {
     height: 5rem;
   }
@@ -1314,6 +1309,10 @@ html {
 
   .side-menu {
     width: 23rem;
+  }
+
+  .carousel-main-text {
+    font-size: 2.2rem;
   }
 
   .first-menu,
@@ -1466,6 +1465,15 @@ html {
     font-size: 1rem;
   }
 
+  .navbar-menu li {
+    height: 100% !important;
+  }
+
+  .about-list,
+  .shop-list {
+    top: 5rem;
+  }
+
   .side-menu-toggle {
     right: 0rem;
   }
@@ -1550,16 +1558,16 @@ html {
 }
 
 @media screen and (min-width: 1024px) {
-  .carousel-main-text {
-    font-size: 4rem;
-  }
-
   .side-menu-toggle {
     right: 1rem;
   }
 
   .navbar-menu {
     right: 1.5rem;
+  }
+
+  .carousel-main-text {
+    font-size: 4rem;
   }
 
   .testimonial-block {
@@ -1600,7 +1608,7 @@ html {
 
 @media screen and (min-width: 1200px) {
   .nav-bar {
-    width: 1300px;
+    width: 1201px;
   }
 
   .menu-item {
@@ -1626,3 +1634,5 @@ html {
     height: 800px;
   }
 }
+
+// copy the remaining styles for the menu and paste in story.scss

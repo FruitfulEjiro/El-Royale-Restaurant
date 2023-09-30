@@ -31,6 +31,8 @@ const blog = document.querySelector(".item5");
 const shop = document.querySelector(".item6");
 const reservation = document.querySelector(".item7");
 const toggle1 = document.querySelector(".toggle1");
+const caret1 = document.querySelector(".caret-icon1");
+const caret2 = document.querySelector(".caret-icon2");
 
 const navbar = document.getElementById("header");
 const mediaQuery = window.matchMedia("(min-width: 900px)");
@@ -40,7 +42,7 @@ function handleScroll() {
   const scrollPosition = window.scrollY;
 
   if (mediaQuery.matches) {
-       logo.src = "./Images/logo-light.png";
+    logo.src = "./Images/logo-light.png";
     // Styles for small screens
     if (scrollPosition < 100) {
       navbar.classList.remove("scrolled");
