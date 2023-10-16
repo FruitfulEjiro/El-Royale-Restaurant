@@ -162,73 +162,216 @@ html {
   font-size: 0.7rem;
 }
 
-.events-banner {
+.faq-banner {
   height: 80vh;
   background: linear-gradient(#0000008e, #0000008e),
-    url(../Images/Chile-Spiked-Beans.jpeg) center/cover fixed no-repeat;
+    url(../Images/dinner.jpeg) center/cover no-repeat fixed;
 }
 
-.events-banner-container {
+.faq-banner-container {
   width: 100%;
   height: 100%;
 }
 
-.events-first-text {
+.faq-first-text {
   font-family: $Kristi;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
-.events-main-text {
+
+.faq-main-text {
   font-family: $Yeseva;
 }
 
-.events-card-container {
+.faq {
+  height: auto;
+}
+
+.faq-container {
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
   align-items: center;
   justify-items: center;
-  grid-gap: 1.5rem;
 }
 
-.event-badge {
-  top: 0.7rem;
-  left: 0.7rem;
-  font-size: 0.7rem;
-}
-
-.event-image {
+.faq1,
+.faq2,
+.faq3,
+.faq4,
+.faq5,
+.faq6,
+.faq7,
+.faq8 {
   width: 100%;
-  height: 13rem;
-  object-fit: cover;
-}
-
-.event-date {
-  font-size: 0.8rem;
-}
-
-.event-title {
-  font-size: 1.1rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.event-link {
-  width: 5.7rem;
-  font-size: 0.8rem;
+  height: 3.5rem;
   position: relative;
+  border: 1px solid $primary;
+}
+
+.faq-header {
+  font-size: 0.9rem;
+}
+
+.faq-icon1,
+.faq-icon2,
+.faq-icon3,
+.faq-icon4,
+.faq-icon5,
+.faq-icon6,
+.faq-icon7,
+.faq-icon8 {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.faq-text1,
+.faq-text2,
+.faq-text3,
+.faq-text4,
+.faq-text5,
+.faq-text6,
+.faq-text7,
+.faq-text8 {
+  font-size: 0.8rem;
   transition: all 0.2s ease-in-out;
 }
 
-.event-link::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: $Text-color;
-  top: 1rem;
+.faq-event-banner {
+  height: 50vh;
+  background: linear-gradient(#0000008e, #0000008e),
+    url(../Images/lunch_1.png) center/cover no-repeat fixed;
 }
 
-.event-title:hover {
-  color: $primary !important;
+.faq-event-container {
+  width: 100%;
+  height: 100%;
+}
+
+.faq-host-first-text {
+  font-family: $Kristi;
+  font-size: 2rem;
+}
+
+.faq-host-main-text {
+  font-family: $Yeseva;
+}
+
+.faq-reservation-first-text {
+  font-family: $Kristi;
+  font-size: 2rem;
+}
+
+.faq-reservation-main-text {
+  font-family: $Yeseva;
+  font-size: 1.5rem;
+}
+
+.faq-reservation-text {
+  font-size: 0.8rem;
+}
+
+.reservations-form {
+  border: 1px solid $primary;
+  height: auto;
+  position: relative;
+}
+
+.reservations-form::after {
+  content: "";
+  border: 1px solid $primary;
+  width: 99%;
+  height: 102%;
+  position: absolute;
+  //   padding: 0rem 1rem 0rem 1rem;
+}
+
+.guest-section,
+.date-section,
+.time-section {
+  width: 95%;
+}
+
+.guest-menu,
+.date-menu,
+.time-menu {
+  width: 100% !important;
+  height: 2.5rem;
+  border: 1px solid #dbdbdb;
+  background: #f6f6f6;
+}
+
+.guest-list,
+.date-list,
+.time-list {
+  width: 100%;
+}
+
+.guest-menu:focus-within,
+.date-menu:focus-within,
+.time-menu:focus-within {
+  border: 1px solid $primary;
+}
+
+.guest-list,
+.date-list,
+.time-list {
+  background: #fff;
+  top: 2.5rem;
+  left: 0rem;
+  height: 0rem;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+  box-shadow: 0px 1px 5px #000;
+}
+
+.guest-inputfield,
+.date-inputfield,
+.time-inputfield {
+  font-size: 0.8rem;
+  color: #8a8888;
+}
+
+.guesttoggler,
+.datetoggler,
+.timetoggler {
+  transition: all 0.2s ease-in-out;
+  color: #959292;
+  font-size: 0.8rem;
+}
+
+.item {
+  font-size: 0.8rem;
+}
+
+.guest-name,
+.guest-email,
+.guest-phone-number {
+  border: 1px solid $Text-color;
+  font-size: 0.8rem;
+  height: 2.5rem;
+  width: 95% !important;
+  color: #bebcbc;
+  border: 1px solid #dbdbdb;
+  background: #f6f6f6;
+}
+
+.guest-name:focus,
+.guest-email:focus,
+.guest-phone-number:focus {
+  border: 1px solid $primary;
+  box-shadow: none;
+  background: #f6f6f6;
+  height: 2.5rem;
+}
+
+.reservation-submit {
+  width: 95% !important;
+  font-size: 0.8rem;
 }
 
 .contact {
@@ -350,6 +493,10 @@ html {
   font-size: 0.7rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .scrolled {
   background-color: #fff !important;
   box-shadow: 0px 0.1px 3px #000 !important;
@@ -385,25 +532,40 @@ html {
     font-size: 1rem;
   }
 
-  .event-image {
-    height: 15rem;
+  .faq-main-text {
+    font-size: 2rem;
   }
 
-  .event-title {
-    font-size: 1.5rem;
-  }
-  .event-badge,
-  .event-date {
+  .faq-text1,
+  .faq-text2,
+  .faq-text3,
+  .faq-text4,
+  .faq-text5,
+  .faq-text6,
+  .faq-text7,
+  .faq-text8 {
     font-size: 0.9rem;
   }
 
-  .event-link {
-    font-size: 0.9rem;
-    width: 6.4rem;
+  .faq-host-main-text {
+    font-size: 2rem;
   }
 
-  .event-link::before {
-    top: 1.1rem;
+  .faq-reservation-main-text {
+    font-size: 2rem;
+  }
+
+  .faq-reservation-text {
+    font-size: 0.9rem;
+  }
+
+  .guest-inputfield,
+  .time-inputfield,
+  .date-inputfield,
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    font-size: 0.9rem;
   }
 
   .newsletter-first-text {
@@ -448,6 +610,37 @@ html {
     right: 3rem;
   }
 
+  .reservations-form {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1rem;
+  }
+
+  .guest-menu,
+  .date-menu,
+  .time-menu,
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    height: 3rem;
+    width: 14rem !important;
+  }
+
+  .guest-inputfield,
+  .date-inputfield,
+  .time-inputfield {
+    font-size: 0.9rem;
+  }
+
+  .reservation-submit {
+    grid-area: 4/1/5/3;
+    height: 3rem;
+    width: 30.5rem !important;
+  }
+
   .newsletter-form {
     height: 3rem;
   }
@@ -478,11 +671,37 @@ html {
     width: 23rem;
   }
 
-  .events-card-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    align-items: start;
+  .faq1,
+  .faq2,
+  .faq3,
+  .faq4,
+  .faq5,
+  .faq6,
+  .faq7,
+  .faq8 {
+    height: 5rem;
+  }
+
+  .faq-header {
+    font-size: 1rem;
+  }
+
+  .reservations-form::after {
+    width: 99.2%;
+    height: 102.5%;
+  }
+
+  .guest-menu,
+  .date-menu,
+  .time-menu,
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    width: 20rem !important;
+  }
+
+  .reservation-submit {
+    width: 42rem !important;
   }
 
   .contact-container {
@@ -545,18 +764,31 @@ html {
     color: #fff;
   }
 
-  .events-card-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+  .faq-reservation-text {
+    font-size: 1rem;
   }
 
-  .event-image {
-    height: 10rem;
+  .guest-menu,
+  .date-menu,
+  .time-menu,
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    width: 24rem !important;
   }
 
-  .event-title {
-    font-size: 1.2rem;
+  .guest-inputfield,
+  .time-inputfield,
+  .date-inputfield,
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    font-size: 1rem;
+  }
+
+  .reservation-submit {
+    width: 50rem !important;
+    font-size: 1rem;
   }
 }
 
@@ -569,8 +801,42 @@ html {
     right: 1.5rem;
   }
 
-  .event-image {
-    height: 13rem;
+  .faq-main-text {
+    font-size: 3rem;
+  }
+
+  .faq-host-first-text {
+    font-size: 2.5rem;
+  }
+
+  .faq-host-main-text {
+    font-size: 2.5rem;
+  }
+
+  .guest-menu,
+  .date-menu,
+  .time-menu,
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    width: 12.5rem !important;
+  }
+
+  .reservations-form {
+    width: 55rem !important;
+  }
+
+  .guest-menu,
+  .date-menu,
+  .time-menu,
+  .guest-name,
+  .guest-email,
+  .guest-phone-number {
+    width: 25rem !important;
+  }
+
+  .reservation-submit {
+    width: 52rem !important;
   }
 }
 
@@ -583,14 +849,6 @@ html {
     font-size: 1.1rem;
   }
 
-  .event-image {
-    height: 17rem;
-  }
-
-  .event-title {
-    font-size: 1.5rem;
-  }
-
   .newsletter-first-text,
   .second-address-text,
   .private-dining p {
@@ -599,7 +857,11 @@ html {
 }
 
 @media screen and (min-height: 800px) {
-  .events-banner {
+  .faq-banner {
     height: 640px;
+  }
+
+  .faq-event-banner {
+    height: 400px;
   }
 }

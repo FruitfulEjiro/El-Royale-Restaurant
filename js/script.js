@@ -38,7 +38,7 @@ const navbar = document.getElementById("header");
 const mediaQuery = window.matchMedia("(min-width: 900px)");
 
 function handleScroll() {
-  const navbar = document.getElementById("header"); // Replace with your navbar ID
+  const navbar = document.getElementById("header");
   const scrollPosition = window.scrollY;
 
   if (mediaQuery.matches) {
@@ -195,4 +195,200 @@ const time5 = () => {
 const time6 = () => {
   const text = document.querySelector(".time-item-6").textContent;
   document.querySelector(".time-inputfield").textContent = text;
+};
+
+const faq1 = document.querySelector(".faq1");
+const faq2 = document.querySelector(".faq2");
+const faq3 = document.querySelector(".faq3");
+const faq4 = document.querySelector(".faq4");
+const faq5 = document.querySelector(".faq5");
+const faq6 = document.querySelector(".faq6");
+const faq7 = document.querySelector(".faq7");
+const faq8 = document.querySelector(".faq8");
+
+const faqText1 = document.querySelector(".faq-text1");
+const faqText3 = document.querySelector(".faq-text3");
+const faqText2 = document.querySelector(".faq-text2");
+const faqText4 = document.querySelector(".faq-text4");
+const faqText5 = document.querySelector(".faq-text5");
+const faqText6 = document.querySelector(".faq-text6");
+const faqText7 = document.querySelector(".faq-text7");
+const faqText8 = document.querySelector(".faq-text8");
+
+const faqIcon1 = document.querySelector(".faq-icon1");
+const faqIcon2 = document.querySelector(".faq-icon2");
+const faqIcon3 = document.querySelector(".faq-icon3");
+const faqIcon4 = document.querySelector(".faq-icon4");
+const faqIcon5 = document.querySelector(".faq-icon5");
+const faqIcon6 = document.querySelector(".faq-icon6");
+const faqIcon7 = document.querySelector(".faq-icon7");
+const faqIcon8 = document.querySelector(".faq-icon8");
+
+const faqBox1 = () => {
+  if (close) {
+    faqText1.classList.remove("hidden");
+    faqIcon1.classList.remove("fa-square-plus");
+    faqIcon1.classList.add("fa-square-minus");
+    faq1.style.height = "auto";
+  } else {
+    if (window.matchMedia("min-width:768px")) {
+      faq1.style.height = "5rem";
+      faqText1.classList.add("hidden");
+      faqIcon1.classList.remove("fa-square-minus");
+      faqIcon1.classList.add("fa-square-plus");
+    } else {
+      faqText1.classList.add("hidden");
+      faqIcon1.classList.remove("fa-square-minus");
+      faqIcon1.classList.add("fa-square-plus");
+      faq1.style.height = "3.5rem";
+    }
+  }
+  close = !close;
+};
+const faqBox2 = () => {
+  if (close) {
+    faqText2.classList.remove("hidden");
+    faqIcon2.classList.remove("fa-square-plus");
+    faqIcon2.classList.add("fa-square-minus");
+    faq2.style.height = "auto";
+  } else {
+    if (window.matchMedia("min-width:768px")) {
+      faq2.style.height = "5rem";
+      faqText2.classList.add("hidden");
+      faqIcon2.classList.remove("fa-square-minus");
+      faqIcon2.classList.add("fa-square-plus");
+    } else {
+      faqText2.classList.add("hidden");
+      faqIcon2.classList.remove("fa-square-minus");
+      faqIcon2.classList.add("fa-square-plus");
+      faq2.style.height = "3.5rem";
+    }
+  }
+  close = !close;
+};
+const faqBox3 = () => {
+  if (close) {
+    faqText3.classList.remove("hidden");
+    faqIcon3.classList.remove("fa-square-plus");
+    faqIcon3.classList.add("fa-square-minus");
+    faq3.style.height = "auto";
+  } else {
+    if (window.matchMedia("min-width:768px")) {
+      faq3.style.height = "5rem";
+      faqText3.classList.add("hidden");
+      faqIcon3.classList.remove("fa-square-minus");
+      faqIcon3.classList.add("fa-square-plus");
+    } else {
+      faqText3.classList.add("hidden");
+      faqIcon3.classList.remove("fa-square-minus");
+      faqIcon3.classList.add("fa-square-plus");
+      faq3.style.height = "3.5rem";
+    }
+  }
+  close = !close;
+};
+const faqBox4 = () => {
+  if (close) {
+    faqText4.classList.remove("hidden");
+    faqIcon4.classList.remove("fa-square-plus");
+    faqIcon4.classList.add("fa-square-minus");
+    faq4.style.height = "auto";
+  } else {
+    if (window.matchMedia("min-width:768px")) {
+      faq4.style.height = "5rem";
+      faqText4.classList.add("hidden");
+      faqIcon4.classList.remove("fa-square-minus");
+      faqIcon4.classList.add("fa-square-plus");
+    } else {
+      faqText4.classList.add("hidden");
+      faqIcon4.classList.remove("fa-square-minus");
+      faqIcon4.classList.add("fa-square-plus");
+      faq4.style.height = "3.5rem";
+    }
+  }
+  close = !close;
+};
+const faqBox5 = () => {
+  if (close) {
+    faqText5.classList.remove("hidden");
+    faqIcon5.classList.remove("fa-square-plus");
+    faqIcon5.classList.add("fa-square-minus");
+    faq5.style.height = "auto";
+  } else {
+    if (window.matchMedia("min-width:768px")) {
+      faq5.style.height = "5rem";
+      faqText5.classList.add("hidden");
+      faqIcon5.classList.remove("fa-square-minus");
+      faqIcon5.classList.add("fa-square-plus");
+    } else {
+      faqText5.classList.add("hidden");
+      faqIcon5.classList.remove("fa-square-minus");
+      faqIcon5.classList.add("fa-square-plus");
+      faq5.style.height = "3.5rem";
+    }
+  }
+  close = !close;
+};
+const faqBox6 = () => {
+  if (close) {
+    faqText6.classList.remove("hidden");
+    faqIcon6.classList.remove("fa-square-plus");
+    faqIcon6.classList.add("fa-square-minus");
+    faq6.style.height = "auto";
+  } else {
+    if (window.matchMedia("min-width:768px")) {
+      faq6.style.height = "5rem";
+      faqText6.classList.add("hidden");
+      faqIcon6.classList.remove("fa-square-minus");
+      faqIcon6.classList.add("fa-square-plus");
+    } else {
+      faqText6.classList.add("hidden");
+      faqIcon6.classList.remove("fa-square-minus");
+      faqIcon6.classList.add("fa-square-plus");
+      faq6.style.height = "3.5rem";
+    }
+  }
+  close = !close;
+};
+const faqBox7 = () => {
+  if (close) {
+    faqText7.classList.remove("hidden");
+    faqIcon7.classList.remove("fa-square-plus");
+    faqIcon7.classList.add("fa-square-minus");
+    faq7.style.height = "auto";
+  } else {
+    if (window.matchMedia("min-width:768px")) {
+      faq7.style.height = "5rem";
+      faqText7.classList.add("hidden");
+      faqIcon7.classList.remove("fa-square-minus");
+      faqIcon7.classList.add("fa-square-plus");
+    } else {
+      faqText7.classList.add("hidden");
+      faqIcon7.classList.remove("fa-square-minus");
+      faqIcon7.classList.add("fa-square-plus");
+      faq7.style.height = "3.5rem";
+    }
+  }
+  close = !close;
+};
+const faqBox8 = () => {
+  if (close) {
+    faqText8.classList.remove("hidden");
+    faqIcon8.classList.remove("fa-square-plus");
+    faqIcon8.classList.add("fa-square-minus");
+    faq8.style.height = "auto";
+  } else {
+    if (window.matchMedia("min-width:768px")) {
+      faq8.style.height = "5rem";
+      faqText8.classList.add("hidden");
+      faqIcon8.classList.remove("fa-square-minus");
+      faqIcon8.classList.add("fa-square-plus");
+    } else {
+      faqText8.classList.add("hidden");
+      faqIcon8.classList.remove("fa-square-minus");
+      faqIcon8.classList.add("fa-square-plus");
+      faq8.style.height = "3.5rem";
+    }
+  }
+  close = !close;
 };
