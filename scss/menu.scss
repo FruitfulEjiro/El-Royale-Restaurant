@@ -162,6 +162,30 @@ html {
   font-size: 0.7rem;
 }
 
+.header-underline {
+  width: 3rem;
+}
+
+.menu-banner {
+  height: 80vh;
+  background: linear-gradient(#000000e1, #000000e1),
+    url(../Images/Shop_banner_3.jpeg);
+}
+
+.menu-banner-container {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-first-text {
+  font-family: $Kristi;
+  font-size: 2.5rem;
+}
+
+.menu-main-text {
+  font-family: $Yeseva;
+}
+
 .contact {
   background: #242221;
 }
@@ -299,14 +323,14 @@ html {
   border: 3px solid #000 !important;
 }
 
-@media screen and (min-width:320px) {
-       .navbar-menu {
+@media screen and (min-width: 320px) {
+  .navbar-menu {
     top: 4rem;
   }
 }
 
-@media screen and (min-width:375px) {
-       .side-menu-text {
+@media screen and (min-width: 375px) {
+  .side-menu-text {
     font-size: 0.85rem;
   }
 
@@ -320,7 +344,7 @@ html {
     font-size: 1rem;
   }
 
-    .newsletter-first-text {
+  .newsletter-first-text {
     font-size: 0.9rem;
   }
 
@@ -357,14 +381,15 @@ html {
   }
 }
 
-@media screen and (min-width:475px) {}
+@media screen and (min-width: 475px) {
+}
 
-@media screen and (min-width:576px) {
-       .side-menu-toggle {
+@media screen and (min-width: 576px) {
+  .side-menu-toggle {
     right: 3rem;
   }
 
-    .reservation-submit {
+  .reservation-submit {
     grid-area: 4/1/5/3;
     height: 3rem;
     width: 30.5rem !important;
@@ -383,8 +408,8 @@ html {
   }
 }
 
-@media screen and (min-width:768px) {
-       .header {
+@media screen and (min-width: 768px) {
+  .header {
     height: 5rem;
   }
 
@@ -400,7 +425,7 @@ html {
     width: 23rem;
   }
 
-    .reservation-submit {
+  .reservation-submit {
     width: 42rem !important;
   }
 
@@ -427,8 +452,8 @@ html {
   }
 }
 
-@media screen and (min-width:900px) {
-       .header {
+@media screen and (min-width: 900px) {
+  .header {
     box-shadow: 0px 0.1px 3px #fff;
     height: 5rem;
     transition: all 0.5s ease-in-out;
@@ -464,14 +489,14 @@ html {
     color: #fff;
   }
 
-    .reservation-submit {
+  .reservation-submit {
     width: 50rem !important;
     font-size: 1rem;
   }
 }
 
-@media screen and (min-width:1024px) {
-       .side-menu-toggle {
+@media screen and (min-width: 1024px) {
+  .side-menu-toggle {
     right: 1rem;
   }
 
@@ -479,12 +504,12 @@ html {
     right: 1.5rem;
   }
 
-    .reservation-submit {
+  .reservation-submit {
     width: 52rem !important;
   }
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
   .nav-bar {
     width: 1201px;
   }
