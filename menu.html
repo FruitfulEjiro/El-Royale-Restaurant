@@ -1,603 +1,891 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./css/font-awesome.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="./css/menu.css" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menu</title>
-        <link rel="stylesheet" href="../menu.css" />
-    </head>
+  <body>
+    <header id="header" class="header py-0 px-0 fixed-top z-6 container-fluid">
+      <nav
+        class="nav-bar container-xxl px-0 px-xlg-4 h-100 position-relative d-flex flex-row align-items-center justify-content-between">
+        <a href="./index.html" class="ms-2 ms-sm-3">
+          <img src="./Images/logo-dark.png" class="navLogo z-6" alt="" />
+        </a>
+        <button
+          class="side-menu-toggle me-2 d-flex flex-column position-absolute z-7"
+          onclick="sideMenu()">
+          <i class="fas fa-bars toggle1 position-absolute"></i>
+        </button>
+        <button
+          class="toggler me-0 me-sm-2 d-flex flex-column position-absolute d-lg-none"
+          onclick="toggle()">
+          <i class="fas fa-bars hamburger-icon"></i>
+        </button>
+        <ul
+          class="navbar-menu px-0 py-3 px-4 py-lg-0 m-0 z-6 ms-auto d-flex flex-column flex-lg-row align-items-center justify-content-lg-end gap-3 gap-lg-1 position-absolute">
+          <li class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center">
+            <a
+              href="./index.html"
+              class="menu-item item1 d-flex align-items-center text-white"
+              >Home</a
+            >
+          </li>
+          <li
+            class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center position-relative">
+            <a
+              href="#"
+              class="menu-item item2 d-flex align-items-center text-white z-6"
+              >About</a
+            >
+            <ul class="about-list position-absolute z-6 vstack gap-3">
+              <li class="mt-2">
+                <a class="text-white" href="./story.html">Our Story</a>
+              </li>
+              <li class="">
+                <a class="text-white" href="./chef.html">Our Chefs</a>
+              </li>
+              <li class="">
+                <a class="text-white" href="./guestbook.html">Our Guestbook</a>
+              </li>
+              <li class="">
+                <a class="text-white" href="./contact.html">Contact Us</a>
+              </li>
+              <li class="">
+                <a class="text-white" href="./events.html">Events</a>
+              </li>
+              <li class="mb-2">
+                <a class="text-white" href="./faq.html">FAQs</a>
+              </li>
+            </ul>
+          </li>
+          <li class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center">
+            <a
+              href="./menu.html"
+              class="menu-item item3 d-flex align-items-center text-white"
+              >Menu</a
+            >
+          </li>
+          <li class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center">
+            <a
+              href="#"
+              class="menu-item item4 d-flex align-items-center text-white"
+              >Gallery</a
+            >
+          </li>
+          <li class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center">
+            <a
+              href="#"
+              class="menu-item item5 d-flex align-items-center text-white"
+              >Blog</a
+            >
+          </li>
+          <li
+            class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center position-relative">
+            <a
+              href="#"
+              class="menu-item item6 d-flex align-items-center text-white"
+              >Shop</a
+            >
+            <ul class="shop-list position-absolute vstack gap-3">
+              <li class="my-2"><a class="text-white" href="#">Cart</a></li>
+            </ul>
+          </li>
+          <button class="my-2 my-lg-0">
+            <a
+              id="reservation-link"
+              href="#reservation"
+              class="menu-item item7 text-white btn rounded-0 me-lg-3"
+              >Reservations</a
+            >
+          </button>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+     <aside
+        class="side-menu bg-dark px-3 px-md-4 pt-2 pb-4 z-7 d-flex flex-column align-items-start justify-content-between position-fixed">
+        <div
+          class="side-menu-1 col-12 position-relative d-flex flex-column align-items-center justify-content-center">
+          <div
+            class="side-icon mb-5 w-100 d-flex flex-row justify-content-end px-3">
+            <i
+              class="fas fa-arrow-right text-primary d-block toggle-arrow text-success z-7 mt-3"
+              onclick="sideMenu()"></i>
+          </div>
+          <img
+            src="./Images/footer-logo.png"
+            alt=""
+            class="side-menu-logo mt-4" />
+          <p class="side-menu-text text-secondary text-center m-0 mt-3 lh-lg">
+            El Royale was the first Restaurant to open in Egypt, the restaurant
+            was designed with the history in mind we have created a soft
+            industrial dining room.
+          </p>
 
-    <body>
-        <div class="container">
-            <header class="header">
-                <div class="elroyale"><a href="./index.html"></a></div>
-                <input type="checkbox" id="menuBtn" class="menuBtn">
-                <label for="menuBtn" class="hamburgerContainer"><span class="hamburgerLine"></span></label>
-                <ul class="navMenu">
-                    <li class="header_home"><a href="./index.html" class="navLink">Home</a></li>
-                    <li class="header_about"><a href="#" class="navLink">About</a></li>
-                    <li class="header_menu"><a href="./menu.html" class="navLink">Menu</a></li>
-                    <li class="header_gallery"><a href="#" class="navLink">Gallery</a></li>
-                    <li class="header_blog"><a href="#" class="navLink">Blog</a></li>
-                    <li class="header_shop"><a href="./shop.html" class="navLink">Shop</a></li>
-                    <li class="header_reservation"><a href="#reservation" class="navLink">Reservation</a></li>
-                </ul>
-            </header>
-            <main class="main">
-                <div class="menuBanner">
-                    <p class="menuFirstText">Discover</p>
-                    <h1 class="menuSecondText">Our Menu</h1>
-                </div>
-                <div class="discoverMenu">
-                    <p class="discoverMenuFirstText">Taste The Best</p>
-                    <h1 class="discoverMenuSecondText">Discover Our Menu</h1>
-                    <p class="discoverMenuText">Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't</p>
-                </div>
-                <div class="breakfastMenu">
-                    <p class="breakfastMenuFirstText">Starts at 11:00am</p>
-                    <h1 class="breakfastMenuSecondText">Breakfast Menu</h1>
-                </div>
-                <div class="breakfastMenuItems">
-                    <div class="firstSection">
-                        <div class="firstSectionImage"></div>
-                        <div class="chickenBreast">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Chicken Breast</h1>
-                                <p class="price">$33.95</p>
-                            </div>
-                            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="salmonSteak">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Salmon Steak</h1>
-                                <p class="price">$41.95</p>
-                            </div>
-                            <p class="sub_text">Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="chickenCrispy">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Chicken Crispy</h1>
-                                <p class="price">$33.95</p>
-                            </div>
-                            <p class="sub_text">Smoked Quail, Crispy Egg, Girolles, Parsley.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="grilledFillet">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Grilled Fillet</h1>
-                                <p class="price">$26.95</p>
-                            </div>
-                            <p class="sub_text">Pork Fillet, Ginger, Garlic, Honey, Pepper & Oil.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="salmonSteak2">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Salmon Steak</h1>
-                                <p class="price">$27.95</p>
-                            </div>
-                            <p class="sub_text">Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                    <div class="secondSection">
-                        <div class="secondSectionImage"></div>
-                        <div class="smokedMeatSandwich">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Smoked Meat Sandwich</h1>
-                                <p class="price">$12.95</p>
-                            </div>
-                            <p class="sub_text">Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="salmonSandwich">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Salmon Sandwich</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="panOfFriedEggs">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Pan Of Fried Eggs</h1>
-                                <p class="price">$13.95</p>
-                            </div>
-                            <p class="sub_text">Eggs, Bacon and Cherry-Tomatoes with Bread.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="breakfastSet">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Breakfast Set</h1>
-                                <p class="price">$20.95</p>
-                            </div>
-                            <p class="sub_text">Croissants with Strawberries, Mascarpone, Honey.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="healthyBreakfast">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Healthy Breakafast</h1>
-                                <p class="price">$18.95</p>
-                            </div>
-                            <p class="sub_text">Oat Granola with Fresh Blueberries, Almond.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                    <div class="thirdSection">
-                        <div class="thirdSectionImage"></div>
-                        <div class="traditionalPancakes">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Traditional Pancakes</h1>
-                                <p class="price">$8.95</p>
-                            </div>
-                            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="americanBrunch">
-                            <div class="header_and_price">
-                                <h1 class="header_text">American Brunch</h1>
-                                <p class="price">$14.95</p>
-                            </div>
-                            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="canolliCheese">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Canolli With Cream and Cheese</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="chocolateCherryCake">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Chocolate Cherry Cake</h1>
-                                <p class="price">$9.95</p>
-                            </div>
-                            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="painAuChocolat">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Pain Au Chocolat</h1>
-                                <p class="price">$3.95</p>
-                            </div>
-                            <p class="sub_text">Homemade Croissants Contain of a Bar.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="lunchMenu">
-                    <p class="lunchMenuFirstText">Starts at 2:00pm</p>
-                    <h1 class="lunchMenuSecondText">Lunch Menu</h1>
-                </div>
-                <div class="lunchMenuItems">
-                    <div class="firstSection">
-                        <div class="firstSectionImage"></div>
-                        <div class="traditionalPancakes">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Traditional Pancakes</h1>
-                                <p class="price">$8.95</p>
-                            </div>
-                            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="americanBrunch">
-                            <div class="header_and_price">
-                                <h1 class="header_text">American Brunch</h1>
-                                <p class="price">$14.95</p>
-                            </div>
-                            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="canolliCheese">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Canolli With Cream and Cheese</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="chocolateCherryCake">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Chocolate Cherry Cake</h1>
-                                <p class="price">$9.95</p>
-                            </div>
-                            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="painAuChocolat">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Pain Au Chocolat</h1>
-                                <p class="price">$3.95</p>
-                            </div>
-                            <p class="sub_text">Homemade Croissants Contain of a Bar.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                    <div class="secondSection">
-                        <div class="secondSectionImage"></div>
-                        <div class="smokedMeatSandwich">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Smoked Meat Sandwich</h1>
-                                <p class="price">$12.95</p>
-                            </div>
-                            <p class="sub_text">Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="salmonSandwich">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Salmon Sandwich</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="panOfFriedEggs">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Pan Of Fried Eggs</h1>
-                                <p class="price">$13.95</p>
-                            </div>
-                            <p class="sub_text">Eggs, Bacon and Cherry-Tomatoes with Bread.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="breakfastSet">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Breakfast Set</h1>
-                                <p class="price">$20.95</p>
-                            </div>
-                            <p class="sub_text">Croissants with Strawberries, Mascarpone, Honey.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="healthyBreakfast">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Healthy Breakafast</h1>
-                                <p class="price">$18.95</p>
-                            </div>
-                            <p class="sub_text">Oat Granola with Fresh Blueberries, Almond.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                    <div class="thirdSection">
-                        <div class="thirdSectionImage"></div>
-                        <div class="traditionalPancakes">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Traditional Pancakes</h1>
-                                <p class="price">$8.95</p>
-                            </div>
-                            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="americanBrunch">
-                            <div class="header_and_price">
-                                <h1 class="header_text">American Brunch</h1>
-                                <p class="price">$14.95</p>
-                            </div>
-                            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="canolliCheese">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Canolli With Cream and Cheese</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="chocolateCherryCake">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Chocolate Cherry Cake</h1>
-                                <p class="price">$9.95</p>
-                            </div>
-                            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="painAuChocolat">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Pain Au Chocolat</h1>
-                                <p class="price">$3.95</p>
-                            </div>
-                            <p class="sub_text">Homemade Croissants Contain of a Bar.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="dinnerMenu">
-                    <p class="dinnerMenuFirstText">Starts At 7:00pm</p>
-                    <h1 class="dinnerMenuSecondText">Dinner Menu</h1>
-                </div>
-                <div class="dinnerMenuItems">
-                    <div class="firstSection">
-                        <div class="firstSectionImage"></div>
-                        <div class="traditionalPancakes">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Traditional Pancakes</h1>
-                                <p class="price">$8.95</p>
-                            </div>
-                            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="americanBrunch">
-                            <div class="header_and_price">
-                                <h1 class="header_text">American Brunch</h1>
-                                <p class="price">$14.95</p>
-                            </div>
-                            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="canolliCheese">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Canolli With Cream and Cheese</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="chocolateCherryCake">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Chocolate Cherry Cake</h1>
-                                <p class="price">$9.95</p>
-                            </div>
-                            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="painAuChocolat">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Pain Au Chocolat</h1>
-                                <p class="price">$3.95</p>
-                            </div>
-                            <p class="sub_text">Homemade Croissants Contain of a Bar.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                    <div class="secondSection">
-                        <div class="secondSectionImage"></div>
-                        <div class="smokedMeatSandwich">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Smoked Meat Sandwich</h1>
-                                <p class="price">$12.95</p>
-                            </div>
-                            <p class="sub_text">Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="salmonSandwich">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Salmon Sandwich</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="panOfFriedEggs">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Pan Of Fried Eggs</h1>
-                                <p class="price">$13.95</p>
-                            </div>
-                            <p class="sub_text">Eggs, Bacon and Cherry-Tomatoes with Bread.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="breakfastSet">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Breakfast Set</h1>
-                                <p class="price">$20.95</p>
-                            </div>
-                            <p class="sub_text">Croissants with Strawberries, Mascarpone, Honey.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="healthyBreakfast">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Healthy Breakafast</h1>
-                                <p class="price">$18.95</p>
-                            </div>
-                            <p class="sub_text">Oat Granola with Fresh Blueberries, Almond.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                    <div class="thirdSection">
-                        <div class="thirdSectionImage"></div>
-                        <div class="traditionalPancakes">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Traditional Pancakes</h1>
-                                <p class="price">$8.95</p>
-                            </div>
-                            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="americanBrunch">
-                            <div class="header_and_price">
-                                <h1 class="header_text">American Brunch</h1>
-                                <p class="price">$14.95</p>
-                            </div>
-                            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="canolliCheese">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Canolli With Cream and Cheese</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="chocolateCherryCake">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Chocolate Cherry Cake</h1>
-                                <p class="price">$9.95</p>
-                            </div>
-                            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="painAuChocolat">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Pain Au Chocolat</h1>
-                                <p class="price">$3.95</p>
-                            </div>
-                            <p class="sub_text">Homemade Croissants Contain of a Bar.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="dessertMenu">
-                    <p class="dessertMenuFirstText">Dont Miss</p>
-                    <h1 class="dessertMenuSecondText">Dessert Menu</h1>
-                </div>
-                <div class="dessertMenuItems">
-                    <div class="firstSection">
-                        <div class="firstSectionImage"></div>
-                        <div class="traditionalPancakes">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Traditional Pancakes</h1>
-                                <p class="price">$8.95</p>
-                            </div>
-                            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="americanBrunch">
-                            <div class="header_and_price">
-                                <h1 class="header_text">American Brunch</h1>
-                                <p class="price">$14.95</p>
-                            </div>
-                            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="canolliCheese">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Canolli With Cream and Cheese</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="chocolateCherryCake">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Chocolate Cherry Cake</h1>
-                                <p class="price">$9.95</p>
-                            </div>
-                            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                    <div class="secondSection">
-                        <div class="secondSectionImage"></div>
-                        <div class="smokedMeatSandwich">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Smoked Meat Sandwich</h1>
-                                <p class="price">$12.95</p>
-                            </div>
-                            <p class="sub_text">Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="salmonSandwich">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Salmon Sandwich</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="panOfFriedEggs">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Pan Of Fried Eggs</h1>
-                                <p class="price">$13.95</p>
-                            </div>
-                            <p class="sub_text">Eggs, Bacon and Cherry-Tomatoes with Bread.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="breakfastSet">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Breakfast Set</h1>
-                                <p class="price">$20.95</p>
-                            </div>
-                            <p class="sub_text">Croissants with Strawberries, Mascarpone, Honey.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                    <div class="thirdSection">
-                        <div class="thirdSectionImage"></div>
-                        <div class="traditionalPancakes">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Traditional Pancakes</h1>
-                                <p class="price">$8.95</p>
-                            </div>
-                            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="americanBrunch">
-                            <div class="header_and_price">
-                                <h1 class="header_text">American Brunch</h1>
-                                <p class="price">$14.95</p>
-                            </div>
-                            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="canolliCheese">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Canolli With Cream and Cheese</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="chocolateCherryCake">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Chocolate Cherry Cake</h1>
-                                <p class="price">$9.95</p>
-                            </div>
-                            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="drinkMenu">
-                    <p class="drinkMenuFirstText">Dont Miss</p>
-                    <h1 class="drinkMenuSecondText">Drinks Menu</h1>
-                </div>
-                <div class="drinkMenuItems">
-                    <div class="firstSection">
-                        <div class="firstSectionImage"></div>
-                        <div class="traditionalPancakes">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Traditional Pancakes</h1>
-                                <p class="price">$8.95</p>
-                            </div>
-                            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="americanBrunch">
-                            <div class="header_and_price">
-                                <h1 class="header_text">American Brunch</h1>
-                                <p class="price">$14.95</p>
-                            </div>
-                            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                    <div class="secondSection">
-                        <div class="secondSectionImage"></div>
-                        <div class="smokedMeatSandwich">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Smoked Meat Sandwich</h1>
-                                <p class="price">$12.95</p>
-                            </div>
-                            <p class="sub_text">Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="salmonSandwich">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Salmon Sandwich</h1>
-                                <p class="price">$15.95</p>
-                            </div>
-                            <p class="sub_text">Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                    <div class="thirdSection">
-                        <div class="thirdSectionImage"></div>
-                        <div class="traditionalPancakes">
-                            <div class="header_and_price">
-                                <h1 class="header_text">Traditional Pancakes</h1>
-                                <p class="price">$8.95</p>
-                            </div>
-                            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                        <div class="americanBrunch">
-                            <div class="header_and_price">
-                                <h1 class="header_text">American Brunch</h1>
-                                <p class="price">$14.95</p>
-                            </div>
-                            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p><hr class="breakfastMenuItemsHr"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="contact_container">
-                        <div class="address">
-                            <p class="first_address_text">Our Address</p>
-                            <p class="second_address_text">22 Alnahas Building, 2 AlBahr St, Tanta <br />Al-Gharbia
-                                Governorate, Egypt</p>
-                            <a href="#" class="map_link">View on Map</a><hr id="address_underline"/>
-                        </div>
-                        <div class="newsletter">
-                            <div class="logo"></div>
-                            <p class="newsletter_first_text">El Royale was the first restaurant to open in Egypt, the
-                                    restauraant was designed with the history in mind we have created a soft industrial dining room.
-                            </p>
-                            <form action="" class="newsletter_form">
-                                <div class="newsletter_form_first_border">
-                                    <div class="newsletter_form_second_border">
-                                        <input type="email" name="" id="" class="newsletter_email" placeholder="Subscribe Our Newsletter  ">
-                                        <button type="submit" class="newsletter_submit">></button>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="social_icon_container">
-                                <div class="social_icon instagram"></div>
-                                <div class="social_icon facebook"></div>
-                                <div class="social_icon twitter"></div>
-                            </div>
-                        </div>
-                        <div class="private_dining">
-                            <p class="private_dining_first_text">Private Dining</p>
-                            <p class="private_dining_email">Main Email: Elroyale@gmail.com</p>
-                            <p class="private_dining_number">Phone: +27 08303891</p>
-                            <a href="#" class="private_dining_reservations">Reservations</a><hr id="private_dining_reservations_underline"/>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <footer class="footer">
-                <ul class="footer_ul">
-                    <li class="footer_home"><a href="./index.html">Home</a></li>
-                    <li class="footer_menu">Menu</li>
-                    <li class="footer_gallery">Gallery</li>
-                    <li class="footer_blog">Blog</li>
-                    <li class="footer_shop"><a href="./shop.html">Shop</a></li>
-                </ul>
-                <p class="copyright">&copy; by <a href="#">Fruitful</a></p>
-            </footer>
+          <div class="social-icon-container mt-2 mt-xsm-3">
+            <i class="fa-brands fa-instagram social-icon mx-1"></i>
+            <i class="fa-brands fa-facebook social-icon mx-1"></i>
+            <i class="fa-brands fa-twitter social-icon mx-1"></i>
+            <i class="fa-brands fa-linkedin social-icon mx-1"></i>
+          </div>
         </div>
-    </body>
-    
+        <div class="side-menu2 d-grid w-100">
+          <p class="side-menu-email text-sm-center text-secondary m-0">
+            Main Email:ElRoyale@7oroof.com
+          </p>
+          <p class="side-menu-number text-sm-center text-secondary m-0 mb-2">
+            Phone: 02 010123456789
+          </p>
+          <button
+            class="side-menu-button btn col-12 btn-primary fw-semibold text-success rounded-0">
+            Make A Reservation
+          </button>
+        </div>
+      </aside>
+      <div class="menuBanner">
+        <p class="menuFirstText">Discover</p>
+        <h1 class="menuSecondText">Our Menu</h1>
+      </div>
+      <div class="discoverMenu">
+        <p class="discoverMenuFirstText">Taste The Best</p>
+        <h1 class="discoverMenuSecondText">Discover Our Menu</h1>
+        <p class="discoverMenuText">
+          Even if you're not a great chef, there's nothing to stop you
+          understanding the difference between what tastes good and what doesn't
+        </p>
+      </div>
+      <div class="breakfastMenu">
+        <p class="breakfastMenuFirstText">Starts at 11:00am</p>
+        <h1 class="breakfastMenuSecondText">Breakfast Menu</h1>
+      </div>
+      <div class="breakfastMenuItems">
+        <div class="firstSection">
+          <div class="firstSectionImage"></div>
+          <div class="chickenBreast">
+            <div class="header_and_price">
+              <h1 class="header_text">Chicken Breast</h1>
+              <p class="price">$33.95</p>
+            </div>
+            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="salmonSteak">
+            <div class="header_and_price">
+              <h1 class="header_text">Salmon Steak</h1>
+              <p class="price">$41.95</p>
+            </div>
+            <p class="sub_text">
+              Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="chickenCrispy">
+            <div class="header_and_price">
+              <h1 class="header_text">Chicken Crispy</h1>
+              <p class="price">$33.95</p>
+            </div>
+            <p class="sub_text">Smoked Quail, Crispy Egg, Girolles, Parsley.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="grilledFillet">
+            <div class="header_and_price">
+              <h1 class="header_text">Grilled Fillet</h1>
+              <p class="price">$26.95</p>
+            </div>
+            <p class="sub_text">
+              Pork Fillet, Ginger, Garlic, Honey, Pepper & Oil.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="salmonSteak2">
+            <div class="header_and_price">
+              <h1 class="header_text">Salmon Steak</h1>
+              <p class="price">$27.95</p>
+            </div>
+            <p class="sub_text">
+              Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+        <div class="secondSection">
+          <div class="secondSectionImage"></div>
+          <div class="smokedMeatSandwich">
+            <div class="header_and_price">
+              <h1 class="header_text">Smoked Meat Sandwich</h1>
+              <p class="price">$12.95</p>
+            </div>
+            <p class="sub_text">
+              Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="salmonSandwich">
+            <div class="header_and_price">
+              <h1 class="header_text">Salmon Sandwich</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">
+              Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="panOfFriedEggs">
+            <div class="header_and_price">
+              <h1 class="header_text">Pan Of Fried Eggs</h1>
+              <p class="price">$13.95</p>
+            </div>
+            <p class="sub_text">Eggs, Bacon and Cherry-Tomatoes with Bread.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="breakfastSet">
+            <div class="header_and_price">
+              <h1 class="header_text">Breakfast Set</h1>
+              <p class="price">$20.95</p>
+            </div>
+            <p class="sub_text">
+              Croissants with Strawberries, Mascarpone, Honey.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="healthyBreakfast">
+            <div class="header_and_price">
+              <h1 class="header_text">Healthy Breakafast</h1>
+              <p class="price">$18.95</p>
+            </div>
+            <p class="sub_text">Oat Granola with Fresh Blueberries, Almond.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+        <div class="thirdSection">
+          <div class="thirdSectionImage"></div>
+          <div class="traditionalPancakes">
+            <div class="header_and_price">
+              <h1 class="header_text">Traditional Pancakes</h1>
+              <p class="price">$8.95</p>
+            </div>
+            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="americanBrunch">
+            <div class="header_and_price">
+              <h1 class="header_text">American Brunch</h1>
+              <p class="price">$14.95</p>
+            </div>
+            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="canolliCheese">
+            <div class="header_and_price">
+              <h1 class="header_text">Canolli With Cream and Cheese</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="chocolateCherryCake">
+            <div class="header_and_price">
+              <h1 class="header_text">Chocolate Cherry Cake</h1>
+              <p class="price">$9.95</p>
+            </div>
+            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="painAuChocolat">
+            <div class="header_and_price">
+              <h1 class="header_text">Pain Au Chocolat</h1>
+              <p class="price">$3.95</p>
+            </div>
+            <p class="sub_text">Homemade Croissants Contain of a Bar.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+      </div>
+      <div class="lunchMenu">
+        <p class="lunchMenuFirstText">Starts at 2:00pm</p>
+        <h1 class="lunchMenuSecondText">Lunch Menu</h1>
+      </div>
+      <div class="lunchMenuItems">
+        <div class="firstSection">
+          <div class="firstSectionImage"></div>
+          <div class="traditionalPancakes">
+            <div class="header_and_price">
+              <h1 class="header_text">Traditional Pancakes</h1>
+              <p class="price">$8.95</p>
+            </div>
+            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="americanBrunch">
+            <div class="header_and_price">
+              <h1 class="header_text">American Brunch</h1>
+              <p class="price">$14.95</p>
+            </div>
+            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="canolliCheese">
+            <div class="header_and_price">
+              <h1 class="header_text">Canolli With Cream and Cheese</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="chocolateCherryCake">
+            <div class="header_and_price">
+              <h1 class="header_text">Chocolate Cherry Cake</h1>
+              <p class="price">$9.95</p>
+            </div>
+            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="painAuChocolat">
+            <div class="header_and_price">
+              <h1 class="header_text">Pain Au Chocolat</h1>
+              <p class="price">$3.95</p>
+            </div>
+            <p class="sub_text">Homemade Croissants Contain of a Bar.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+        <div class="secondSection">
+          <div class="secondSectionImage"></div>
+          <div class="smokedMeatSandwich">
+            <div class="header_and_price">
+              <h1 class="header_text">Smoked Meat Sandwich</h1>
+              <p class="price">$12.95</p>
+            </div>
+            <p class="sub_text">
+              Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="salmonSandwich">
+            <div class="header_and_price">
+              <h1 class="header_text">Salmon Sandwich</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">
+              Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="panOfFriedEggs">
+            <div class="header_and_price">
+              <h1 class="header_text">Pan Of Fried Eggs</h1>
+              <p class="price">$13.95</p>
+            </div>
+            <p class="sub_text">Eggs, Bacon and Cherry-Tomatoes with Bread.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="breakfastSet">
+            <div class="header_and_price">
+              <h1 class="header_text">Breakfast Set</h1>
+              <p class="price">$20.95</p>
+            </div>
+            <p class="sub_text">
+              Croissants with Strawberries, Mascarpone, Honey.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="healthyBreakfast">
+            <div class="header_and_price">
+              <h1 class="header_text">Healthy Breakafast</h1>
+              <p class="price">$18.95</p>
+            </div>
+            <p class="sub_text">Oat Granola with Fresh Blueberries, Almond.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+        <div class="thirdSection">
+          <div class="thirdSectionImage"></div>
+          <div class="traditionalPancakes">
+            <div class="header_and_price">
+              <h1 class="header_text">Traditional Pancakes</h1>
+              <p class="price">$8.95</p>
+            </div>
+            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="americanBrunch">
+            <div class="header_and_price">
+              <h1 class="header_text">American Brunch</h1>
+              <p class="price">$14.95</p>
+            </div>
+            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="canolliCheese">
+            <div class="header_and_price">
+              <h1 class="header_text">Canolli With Cream and Cheese</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="chocolateCherryCake">
+            <div class="header_and_price">
+              <h1 class="header_text">Chocolate Cherry Cake</h1>
+              <p class="price">$9.95</p>
+            </div>
+            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="painAuChocolat">
+            <div class="header_and_price">
+              <h1 class="header_text">Pain Au Chocolat</h1>
+              <p class="price">$3.95</p>
+            </div>
+            <p class="sub_text">Homemade Croissants Contain of a Bar.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+      </div>
+      <div class="dinnerMenu">
+        <p class="dinnerMenuFirstText">Starts At 7:00pm</p>
+        <h1 class="dinnerMenuSecondText">Dinner Menu</h1>
+      </div>
+      <div class="dinnerMenuItems">
+        <div class="firstSection">
+          <div class="firstSectionImage"></div>
+          <div class="traditionalPancakes">
+            <div class="header_and_price">
+              <h1 class="header_text">Traditional Pancakes</h1>
+              <p class="price">$8.95</p>
+            </div>
+            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="americanBrunch">
+            <div class="header_and_price">
+              <h1 class="header_text">American Brunch</h1>
+              <p class="price">$14.95</p>
+            </div>
+            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="canolliCheese">
+            <div class="header_and_price">
+              <h1 class="header_text">Canolli With Cream and Cheese</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="chocolateCherryCake">
+            <div class="header_and_price">
+              <h1 class="header_text">Chocolate Cherry Cake</h1>
+              <p class="price">$9.95</p>
+            </div>
+            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="painAuChocolat">
+            <div class="header_and_price">
+              <h1 class="header_text">Pain Au Chocolat</h1>
+              <p class="price">$3.95</p>
+            </div>
+            <p class="sub_text">Homemade Croissants Contain of a Bar.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+        <div class="secondSection">
+          <div class="secondSectionImage"></div>
+          <div class="smokedMeatSandwich">
+            <div class="header_and_price">
+              <h1 class="header_text">Smoked Meat Sandwich</h1>
+              <p class="price">$12.95</p>
+            </div>
+            <p class="sub_text">
+              Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="salmonSandwich">
+            <div class="header_and_price">
+              <h1 class="header_text">Salmon Sandwich</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">
+              Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="panOfFriedEggs">
+            <div class="header_and_price">
+              <h1 class="header_text">Pan Of Fried Eggs</h1>
+              <p class="price">$13.95</p>
+            </div>
+            <p class="sub_text">Eggs, Bacon and Cherry-Tomatoes with Bread.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="breakfastSet">
+            <div class="header_and_price">
+              <h1 class="header_text">Breakfast Set</h1>
+              <p class="price">$20.95</p>
+            </div>
+            <p class="sub_text">
+              Croissants with Strawberries, Mascarpone, Honey.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="healthyBreakfast">
+            <div class="header_and_price">
+              <h1 class="header_text">Healthy Breakafast</h1>
+              <p class="price">$18.95</p>
+            </div>
+            <p class="sub_text">Oat Granola with Fresh Blueberries, Almond.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+        <div class="thirdSection">
+          <div class="thirdSectionImage"></div>
+          <div class="traditionalPancakes">
+            <div class="header_and_price">
+              <h1 class="header_text">Traditional Pancakes</h1>
+              <p class="price">$8.95</p>
+            </div>
+            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="americanBrunch">
+            <div class="header_and_price">
+              <h1 class="header_text">American Brunch</h1>
+              <p class="price">$14.95</p>
+            </div>
+            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="canolliCheese">
+            <div class="header_and_price">
+              <h1 class="header_text">Canolli With Cream and Cheese</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="chocolateCherryCake">
+            <div class="header_and_price">
+              <h1 class="header_text">Chocolate Cherry Cake</h1>
+              <p class="price">$9.95</p>
+            </div>
+            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="painAuChocolat">
+            <div class="header_and_price">
+              <h1 class="header_text">Pain Au Chocolat</h1>
+              <p class="price">$3.95</p>
+            </div>
+            <p class="sub_text">Homemade Croissants Contain of a Bar.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+      </div>
+      <div class="dessertMenu">
+        <p class="dessertMenuFirstText">Dont Miss</p>
+        <h1 class="dessertMenuSecondText">Dessert Menu</h1>
+      </div>
+      <div class="dessertMenuItems">
+        <div class="firstSection">
+          <div class="firstSectionImage"></div>
+          <div class="traditionalPancakes">
+            <div class="header_and_price">
+              <h1 class="header_text">Traditional Pancakes</h1>
+              <p class="price">$8.95</p>
+            </div>
+            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="americanBrunch">
+            <div class="header_and_price">
+              <h1 class="header_text">American Brunch</h1>
+              <p class="price">$14.95</p>
+            </div>
+            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="canolliCheese">
+            <div class="header_and_price">
+              <h1 class="header_text">Canolli With Cream and Cheese</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="chocolateCherryCake">
+            <div class="header_and_price">
+              <h1 class="header_text">Chocolate Cherry Cake</h1>
+              <p class="price">$9.95</p>
+            </div>
+            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+        <div class="secondSection">
+          <div class="secondSectionImage"></div>
+          <div class="smokedMeatSandwich">
+            <div class="header_and_price">
+              <h1 class="header_text">Smoked Meat Sandwich</h1>
+              <p class="price">$12.95</p>
+            </div>
+            <p class="sub_text">
+              Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="salmonSandwich">
+            <div class="header_and_price">
+              <h1 class="header_text">Salmon Sandwich</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">
+              Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="panOfFriedEggs">
+            <div class="header_and_price">
+              <h1 class="header_text">Pan Of Fried Eggs</h1>
+              <p class="price">$13.95</p>
+            </div>
+            <p class="sub_text">Eggs, Bacon and Cherry-Tomatoes with Bread.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="breakfastSet">
+            <div class="header_and_price">
+              <h1 class="header_text">Breakfast Set</h1>
+              <p class="price">$20.95</p>
+            </div>
+            <p class="sub_text">
+              Croissants with Strawberries, Mascarpone, Honey.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+        <div class="thirdSection">
+          <div class="thirdSectionImage"></div>
+          <div class="traditionalPancakes">
+            <div class="header_and_price">
+              <h1 class="header_text">Traditional Pancakes</h1>
+              <p class="price">$8.95</p>
+            </div>
+            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="americanBrunch">
+            <div class="header_and_price">
+              <h1 class="header_text">American Brunch</h1>
+              <p class="price">$14.95</p>
+            </div>
+            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="canolliCheese">
+            <div class="header_and_price">
+              <h1 class="header_text">Canolli With Cream and Cheese</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">Cheese, Eggs, Strawberries, Butter & Maple.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="chocolateCherryCake">
+            <div class="header_and_price">
+              <h1 class="header_text">Chocolate Cherry Cake</h1>
+              <p class="price">$9.95</p>
+            </div>
+            <p class="sub_text">Vanilla, Milk, Dark Chocolate, Cherries.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+      </div>
+      <div class="drinkMenu">
+        <p class="drinkMenuFirstText">Dont Miss</p>
+        <h1 class="drinkMenuSecondText">Drinks Menu</h1>
+      </div>
+      <div class="drinkMenuItems">
+        <div class="firstSection">
+          <div class="firstSectionImage"></div>
+          <div class="traditionalPancakes">
+            <div class="header_and_price">
+              <h1 class="header_text">Traditional Pancakes</h1>
+              <p class="price">$8.95</p>
+            </div>
+            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="americanBrunch">
+            <div class="header_and_price">
+              <h1 class="header_text">American Brunch</h1>
+              <p class="price">$14.95</p>
+            </div>
+            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+        <div class="secondSection">
+          <div class="secondSectionImage"></div>
+          <div class="smokedMeatSandwich">
+            <div class="header_and_price">
+              <h1 class="header_text">Smoked Meat Sandwich</h1>
+              <p class="price">$12.95</p>
+            </div>
+            <p class="sub_text">
+              Baguette, Basil, Arugula, Olives, Cherry-Tomatoes.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="salmonSandwich">
+            <div class="header_and_price">
+              <h1 class="header_text">Salmon Sandwich</h1>
+              <p class="price">$15.95</p>
+            </div>
+            <p class="sub_text">
+              Salmon, Butter, Lemon Juice, Onion, Garlic & Salad.
+            </p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+        <div class="thirdSection">
+          <div class="thirdSectionImage"></div>
+          <div class="traditionalPancakes">
+            <div class="header_and_price">
+              <h1 class="header_text">Traditional Pancakes</h1>
+              <p class="price">$8.95</p>
+            </div>
+            <p class="sub_text">Paupiette of Chicken, Blue Cheese, Rosemary.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+          <div class="americanBrunch">
+            <div class="header_and_price">
+              <h1 class="header_text">American Brunch</h1>
+              <p class="price">$14.95</p>
+            </div>
+            <p class="sub_text">Applewood Smoked Bacon, Tomatoes.</p>
+            <hr class="breakfastMenuItemsHr" />
+          </div>
+        </div>
+      </div>
+      <section
+        class="contact d-flex flex-column align-items-center justify-content-center py-5 px-3">
+        <div class="contact-container container-xxl px-xsm-4 px-xm-5 px-md-3">
+          <div
+            class="address d-flex flex-column align-items-center justify-content-center mb-md-5">
+            <h5
+              class="first-address-text text-white fw-bold m-0 text-center mt-2 mb-2">
+              Our Address
+            </h5>
+            <p class="second-address-text text-info text-center m-0">
+              22 Alnahas Building, 2 AlBahr St, Tanta <br />Al-Gharbia
+              Governorate, Egypt
+            </p>
+            <p class="mt-3">
+              <a href="#" class="map-link text-center fw-bold">View on Map</a>
+            </p>
+          </div>
+
+          <div
+            class="newsletter d-flex flex-column align-items-center justify-content-center">
+            <img src="./Images/footer-logo.png" alt="" class="footer-logo" />
+            <p class="newsletter-first-text text-info text-center mt-3">
+              El Royale was the first restaurant to open in Egypt, the
+              restauraant was designed with the history in mind we have created
+              a soft industrial dining room.
+            </p>
+            <form
+              action=""
+              class="newsletter-form d-flex align-items-center justify-content-center">
+              <input
+                type="email"
+                name=""
+                id=""
+                class="newsletter-email z-5 justify-self-start border-none px-2 text-success"
+                placeholder="Subscribe To Our Newsletter " />
+              <button type="submit" class="newsletter-submit z-5">
+                <i class="fa-solid fa-arrow-right text-primary"></i>
+              </button>
+            </form>
+            <div class="social-icon-container mt-4 z-5">
+              <i class="fa-brands fa-instagram social-icon mx-1"></i>
+              <i class="fa-brands fa-facebook social-icon mx-1"></i>
+              <i class="fa-brands fa-twitter social-icon mx-1"></i>
+              <i class="fa-brands fa-linkedin social-icon mx-1"></i>
+            </div>
+          </div>
+
+          <div
+            class="private-dining d-flex flex-column align-items-center justify-content-center mb-md-5">
+            <h5
+              class="private-dining-first-text text-white fw-bold mt-2 mb-2 text-center">
+              Private Dining
+            </h5>
+            <p class="private-dining-email text-info text-center m-0">
+              Main Email: Elroyale@gmail.com
+            </p>
+            <p class="private-dining-number text-info text-center m-0">
+              Phone: +27 08303891
+            </p>
+            <p class="mt-3">
+              <a
+                href="#reservation"
+                class="private-dining-reservations text-center"
+                >Reservations</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer bg-black py-2">
+      <div class="footer-container">
+        <ul
+          class="footer-ul w-100 p-0 mb-2 vstack gap-2 gap-md-3 d-flex flex-row justify-content-center align-items-center">
+          <li class="">
+            <a href="./index.html" class="footer-home text-white fw-bold"
+              >Home</a
+            >
+          </li>
+          <li class="">
+            <a href="./menu.html" class="footer-menu text-white fw-bold"
+              >Menu</a
+            >
+          </li>
+          <li class="">
+            <a href="#" class="footer-gallery text-white fw-bold">Gallery</a>
+          </li>
+          <li class="">
+            <a href="#" class="footer-blog text-white fw-bold">Blog</a>
+          </li>
+          <li class="">
+            <a href="./shop.html" class="footer-shop text-white fw-bold"
+              >Shop</a
+            >
+          </li>
+        </ul>
+        <p class="copyright text-info text-center m-0">
+          &copy;
+          <a
+            href="https://7oroof.com"
+            class="copyright text-primary text-center"
+            >7oroof </a
+          >Coded by
+          <a href="#" class="copyright text-primary text-center">Fruitful</a>
+        </p>
+      </div>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

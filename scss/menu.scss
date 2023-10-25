@@ -1,0 +1,501 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Kristi&family=Poppins:wght@400;600&family=Yeseva+One&display=swap");
+
+$border-width: 0px;
+$Poppins: "Poppins", sans-serif;
+$Kristi: "Kristi", cursive;
+$Yeseva: "Yeseva One", cursive;
+$Text-color: #383737;
+$primary: #d69846;
+$btn-active-bg: none;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  list-style: none;
+  text-decoration: none;
+  background: none;
+  box-sizing: border-box;
+  font-family: $Poppins;
+  //   border:1px solid red;
+}
+
+.header {
+  box-shadow: 0px 0.1px 3px #000;
+  height: 4rem;
+  transition: all 0s ease-in-out;
+  background: #fff;
+}
+
+.nav-bar {
+  width: 100%;
+}
+
+.navLogo {
+  width: 8rem;
+}
+
+.navbar-menu {
+  top: 4rem;
+  left: 0rem;
+  height: 28rem;
+  width: 100%;
+  background: #000000e1;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.side-menu-toggle {
+  right: 2.5rem;
+  width: 1.1rem;
+  height: 1rem;
+}
+
+.toggle1 {
+  font-size: 1rem;
+}
+
+.toggle1:hover {
+  color: $primary !important;
+}
+
+.toggler {
+  width: auto;
+  height: auto;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger-icon {
+  font-size: 2rem;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-item {
+  height: 100%;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  padding: 0rem 0.6rem 0rem 0.6rem;
+}
+
+.menu-item:hover {
+  color: $primary !important;
+}
+
+#reservation-link {
+  transition: all 0.3s ease-in-out;
+  border: 3px solid #fff;
+}
+
+#reservation-link:hover {
+  border: 3px solid #fff;
+  color: #000 !important;
+  background: #fff;
+}
+
+.menu-item:hover {
+  background: $btn-active-bg;
+}
+
+.menu-item:active {
+  background: $btn-active-bg !important;
+}
+
+.about-list,
+.shop-list {
+  top: 1.7rem;
+  background: #000000f3;
+  width: 12rem;
+  height: 0rem;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.about-list:hover,
+.item2:hover ~ .about-list {
+  height: 16rem;
+}
+
+.about-list li a,
+.shop-list li a {
+  transition: all 0.2s ease-in-out;
+}
+
+.about-list li a:hover,
+.shop-list li a:hover {
+  color: $primary !important;
+}
+
+.shop-list:hover,
+.item6:hover ~ .shop-list {
+  height: 2.5rem;
+}
+
+.side-menu {
+  height: 100vh;
+  width: 80vw;
+  right: 0rem;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-arrow {
+  top: 0rem;
+  right: 0rem;
+}
+
+.side-menu-text,
+.side-menu-button {
+  font-size: 0.8rem;
+}
+
+.side-menu-email,
+.side-menu-number {
+  font-size: 0.7rem;
+}
+
+.contact {
+  background: #242221;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.first-address-text {
+  font-size: 0.9rem;
+}
+
+.second-address-text {
+  font-size: 0.8rem;
+}
+
+.map-link {
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.map-link::after {
+  content: "";
+  position: absolute;
+  top: 1.3rem;
+  left: 0rem;
+  width: 100%;
+  height: 2px;
+  background: $primary;
+}
+
+.footer-logo {
+  width: 7rem;
+  height: 4.5rem;
+}
+
+.newsletter {
+  grid-area: 1/1/2/2;
+}
+
+.newsletter-first-text {
+  font-size: 0.8rem;
+}
+
+.newsletter-form {
+  border: 1px solid $primary;
+  width: 100%;
+  height: 2.5rem;
+  position: relative;
+}
+
+.newsletter-form::after {
+  content: "";
+  position: absolute;
+  width: 99%;
+  height: 2.9rem;
+  border: 1px solid $primary;
+}
+
+.newsletter-email {
+  width: 80%;
+  height: 100%;
+  font-size: 0.7rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.newsletter-email:focus {
+  color: white;
+  background: none;
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+.newsletter-submit {
+  width: 20%;
+  height: 100%;
+  font-size: 0.8rem;
+}
+
+.social-icon {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.private-dining h5 {
+  font-size: 0.9rem;
+}
+
+.private-dining p {
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.private-dining-reservations::after {
+  content: "";
+  position: absolute;
+  top: 1.3rem;
+  left: 0rem;
+  width: 100%;
+  height: 2px;
+  background: $primary;
+}
+
+.footer li {
+  font-size: 0.8rem;
+}
+
+.copyright {
+  font-size: 0.7rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.scrolled {
+  background-color: #fff !important;
+  box-shadow: 0px 0.1px 3px #000 !important;
+}
+
+.scrolled-color {
+  color: #000 !important;
+}
+
+.scrolled-button {
+  color: #000 !important;
+  border: 3px solid #000 !important;
+}
+
+@media screen and (min-width:320px) {
+       .navbar-menu {
+    top: 4rem;
+  }
+}
+
+@media screen and (min-width:375px) {
+       .side-menu-text {
+    font-size: 0.85rem;
+  }
+
+  .social-icon {
+    font-size: 1.3rem;
+  }
+
+  .side-menu-email,
+  .side-menu-number,
+  .side-menu-button {
+    font-size: 1rem;
+  }
+
+    .newsletter-first-text {
+    font-size: 0.9rem;
+  }
+
+  .newsletter-email {
+    font-size: 0.9rem;
+  }
+
+  .first-address-text {
+    font-size: 1.2rem;
+  }
+
+  .second-address-text {
+    font-size: 0.9rem;
+  }
+
+  .map-link {
+    font-size: 1rem;
+  }
+
+  .private-dining h5 {
+    font-size: 1.2rem;
+  }
+
+  .private-dining p {
+    font-size: 0.9rem;
+  }
+
+  .footer li {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width:475px) {}
+
+@media screen and (min-width:576px) {
+       .side-menu-toggle {
+    right: 3rem;
+  }
+
+    .reservation-submit {
+    grid-area: 4/1/5/3;
+    height: 3rem;
+    width: 30.5rem !important;
+  }
+
+  .newsletter-form {
+    height: 3rem;
+  }
+
+  .newsletter-form::after {
+    content: "";
+    position: absolute;
+    width: 99%;
+    height: 3.3rem;
+    border: 1px solid $primary;
+  }
+}
+
+@media screen and (min-width:768px) {
+       .header {
+    height: 5rem;
+  }
+
+  .navLogo {
+    width: 11rem;
+  }
+
+  .navbar-menu {
+    top: 5rem;
+  }
+
+  .side-menu {
+    width: 23rem;
+  }
+
+    .reservation-submit {
+    width: 42rem !important;
+  }
+
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .newsletter {
+    grid-area: 1/2/2/3;
+  }
+
+  .second-address-text {
+    font-size: 0.8rem;
+  }
+
+  .newsletter-first-text {
+    font-size: 0.8rem;
+  }
+
+  .newsletter-email {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width:900px) {
+       .header {
+    box-shadow: 0px 0.1px 3px #fff;
+    height: 5rem;
+    transition: all 0.5s ease-in-out;
+    background: transparent;
+  }
+
+  .navbar-menu {
+    height: 100%;
+    top: 0px;
+    background: transparent;
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-item {
+    font-size: 1rem;
+  }
+
+  .navbar-menu li {
+    height: 100% !important;
+  }
+
+  .about-list,
+  .shop-list {
+    top: 5rem;
+  }
+
+  .side-menu-toggle {
+    right: 0rem;
+  }
+
+  .toggle1 {
+    color: #fff;
+  }
+
+    .reservation-submit {
+    width: 50rem !important;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:1024px) {
+       .side-menu-toggle {
+    right: 1rem;
+  }
+
+  .navbar-menu {
+    right: 1.5rem;
+  }
+
+    .reservation-submit {
+    width: 52rem !important;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .nav-bar {
+    width: 1201px;
+  }
+
+  .menu-item {
+    font-size: 1.1rem;
+  }
+
+  .newsletter-first-text,
+  .second-address-text,
+  .private-dining p {
+    font-size: 1rem;
+  }
+}
