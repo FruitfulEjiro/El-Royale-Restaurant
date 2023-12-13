@@ -118,26 +118,6 @@ html {
   overflow: hidden;
 }
 
-.about-list:hover,
-.item2:hover ~ .about-list {
-  height: 16rem;
-}
-
-.about-list li a,
-.shop-list li a {
-  transition: all 0.2s ease-in-out;
-}
-
-.about-list li a:hover,
-.shop-list li a:hover {
-  color: $primary !important;
-}
-
-.shop-list:hover,
-.item6:hover ~ .shop-list {
-  height: 2.5rem;
-}
-
 .side-menu {
   height: 100vh;
   width: 80vw;
@@ -1448,6 +1428,30 @@ html {
   .about-list,
   .shop-list {
     top: 5rem;
+  }
+
+  .about-list:hover,
+  .item2:hover ~ .about-list {
+    height: 16rem;
+  }
+
+  .about-list li a,
+  .shop-list li a {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .about-list li a:hover,
+  .shop-list li a:hover {
+    color: $primary !important;
+  }
+
+  .item2:hover > i {
+    transform: rotate(90deg);
+  }
+
+  .shop-list:hover,
+  .item6:hover ~ .shop-list {
+    height: 2.5rem;
   }
 
   .side-menu-toggle {

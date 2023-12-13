@@ -168,7 +168,7 @@ html {
 
 .menu-banner {
   height: 80vh;
-  background: linear-gradient(#000000b1, #000000b1),
+  background: linear-gradient(#0000008e, #0000008e),
     url(../Images/Shop_banner_3.jpeg) center/cover no-repeat fixed;
 }
 
@@ -210,12 +210,20 @@ html {
   height: 100%;
 }
 
-.breakfast-first-text {
+.breakfast-first-text,
+.lunch-first-text,
+.dinner-first-text,
+.dessert-first-text,
+.drink-first-text {
   font-family: $Kristi;
   font-size: 2rem;
 }
 
-.breakfast-main-text {
+.breakfast-main-text,
+.lunch-main-text,
+.dinner-main-text,
+.dessert-main-text,
+.drink-main-text {
   font-family: $Yeseva;
 }
 
@@ -236,8 +244,8 @@ html {
   position: absolute;
   content: "";
   border: 1px solid $primary;
-  width: 98%;
-  height: 101%;
+  width: calc(100% - 0.3rem);
+  height: calc(100% + 0.5rem);
 }
 
 .breakfast-img {
@@ -246,14 +254,20 @@ html {
   object-fit: cover;
 }
 
-.breakfast-menu-container .chicken-breast,
-.breakfast-menu-container .salmon-steak,
-.breakfast-menu-container .chcken-crispy,
-.breakfast-menu-container .smoked-meat-sandwich,
-.breakfast-menu-container .salmon-sandwich,
-.breakfast-menu-container .fried-eggs {
-  width: 100%;
+.breakfast-menu-items .chicken-breast,
+.breakfast-menu-items .salmon-steak,
+.breakfast-menu-items .chicken-crispy,
+.breakfast-menu-items .smoked-meat-sandwich,
+.breakfast-menu-items .salmon-sandwich,
+.breakfast-menu-items .fried-eggs {
+  width: 100% !important;
   height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 1rem;
 }
 
 .header-text {
@@ -278,15 +292,6 @@ html {
 .lunch-banner-container {
   width: 100%;
   height: 100%;
-}
-
-.lunch-first-text {
-  font-family: $Kristi;
-  font-size: 2rem;
-}
-
-.lunch-main-text {
-  font-family: $Yeseva;
 }
 
 .lunch-menu-container .traditional-pancakes,
@@ -322,7 +327,7 @@ html {
   position: absolute;
   content: "";
   border: 1px solid $primary;
-  width: 98%;
+  width: calc(100% - 0.4rem);
   height: calc(100% + 0.5rem);
   z-index: -1;
 }
@@ -338,20 +343,11 @@ html {
   height: 100%;
 }
 
-.dinner-first-text {
-  font-family: $Kristi;
-  font-size: 2rem;
-}
-
-.dinner-main-text {
-  font-family: $Yeseva;
-}
-
 .dinner-menu-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto auto;
-  align-items: center;
+  align-items: start;
   justify-items: center;
   grid-gap: 1rem;
 }
@@ -371,15 +367,6 @@ html {
 .dessert-banner-container {
   width: 100%;
   height: 100%;
-}
-
-.dessert-first-text {
-  font-family: $Kristi;
-  font-size: 2rem;
-}
-
-.dessert-main-text {
-  font-family: $Yeseva;
 }
 
 .dessert-menu-container {
@@ -403,12 +390,19 @@ html {
 .dessert-menu-items .smoked-meat-sandwich,
 .dessert-menu-items .salmon-sandwich,
 .dessert-menu-items .fried-eggs {
+  width: 100% !important;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-bottom: 2px dashed $Text-color;
+}
+
+.dessert-menu-items .first-section,
+.dessert-menu-items .second-section,
+.dessert-menu-items .third-section {
+  width: 100% !important;
 }
 
 .drink-banner {
@@ -422,15 +416,6 @@ html {
   height: 100%;
 }
 
-.drink-first-text {
-  font-family: $Kristi;
-  font-size: 2rem;
-}
-
-.drink-main-text {
-  font-family: $Yeseva;
-}
-
 .drink-first-section,
 .drink-second-section {
   display: grid;
@@ -438,7 +423,7 @@ html {
   grid-template-rows: auto auto;
   align-items: center;
   justify-items: center;
-  grid-gap:1rem;
+  grid-gap: 1rem;
 }
 
 .drink-img {
@@ -462,7 +447,7 @@ html {
   position: absolute;
   content: "";
   border: 1px solid $primary;
-  width: 98%;
+  width: calc(100% - 0.4rem);
   height: calc(100% + 0.5rem);
   z-index: -1;
 }
@@ -471,6 +456,7 @@ html {
 .drink-menu-items .smoked-meat-sandwich,
 .drink-menu-items .american-brunch,
 .drink-menu-items .salmon-sandwich {
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -620,6 +606,18 @@ html {
   .navbar-menu {
     top: 4rem;
   }
+
+  .discover-menu-text {
+    font-size: 0.9rem;
+  }
+
+  .header-text {
+    font-size: 1.1rem;
+  }
+
+  .sub-text {
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (min-width: 375px) {
@@ -674,12 +672,89 @@ html {
   }
 }
 
-@media screen and (min-width: 475px) {
-}
-
 @media screen and (min-width: 576px) {
   .side-menu-toggle {
     right: 3rem;
+  }
+
+  .breakfast-menu-items .chicken-breast,
+  .breakfast-menu-items .salmon-steak,
+  .breakfast-menu-items .chicken-crispy,
+  .breakfast-menu-items .smoked-meat-sandwich,
+  .breakfast-menu-items .salmon-sandwich,
+  .breakfast-menu-items .fried-eggs {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: start;
+    grid-gap: 2rem;
+  }
+
+  .lunch-menu-container .traditional-pancakes,
+  .lunch-menu-container .american-brunch,
+  .lunch-menu-container .canolli-cheese,
+  .lunch-menu-container .chocolate-cherry-cake {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0rem;
+  }
+
+  .lunch-menu-container .american-brunch .lunch-img,
+  .lunch-menu-container .chocolate-cherry-cake .lunch-img {
+    grid-area: 1/2/2/3;
+  }
+
+  .lunch-img {
+    height: 15rem;
+  }
+
+  .lunch-text-section {
+    width: 90%;
+    height: 90%;
+    border: 1px solid $primary;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dinner-menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: start;
+    justify-items: center;
+    grid-gap: 1rem;
+  }
+
+  .dessert-img {
+    height: 20rem;
+  }
+
+  .drink-first-section,
+  .drink-second-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1rem;
+  }
+
+  .drink-second-section .drink-menu-section {
+    grid-area: 1/1/2/2;
+  }
+
+  .drink-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .reservation-submit {
@@ -716,6 +791,19 @@ html {
 
   .side-menu {
     width: 23rem;
+  }
+
+  .dessert-menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: start;
+    justify-items: center;
+    grid-gap: 3rem;
+  }
+
+  .dessert-img {
+    height: 13rem;
   }
 
   .reservation-submit {
@@ -782,6 +870,67 @@ html {
     color: #fff;
   }
 
+  .discover-menu-text {
+    font-size: 1rem;
+  }
+
+  .header-text {
+    font-size: 1.3rem;
+  }
+
+  .sub-text {
+    font-size: 1rem;
+  }
+
+  .breakfast-first-text,
+  .lunch-first-text,
+  .dinner-first-text,
+  .dessert-first-text,
+  .drink-first-text {
+    font-family: $Kristi;
+    font-size: 2.5rem;
+  }
+
+  .breakfast-main-text,
+  .lunch-main-text,
+  .dinner-main-text,
+  .dessert-main-text,
+  .drink-main-text {
+    font-family: $Yeseva;
+    font-size: 2.5rem;
+  }
+
+  .lunch-menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .lunch-menu-container .american-brunch .lunch-img,
+  .lunch-menu-container .chocolate-cherry-cake .lunch-img {
+    grid-area: 1/1/2/2;
+  }
+
+  .lunch-menu-container .canolli-cheese .lunch-img,
+  .lunch-menu-container .chocolate-cherry-cake .lunch-img {
+    grid-area: 1/2/2/3;
+  }
+
+  .lunch-img {
+    height: 13rem;
+  }
+
+  .dinner-menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+    justify-items: center;
+    grid-gap: 1rem;
+  }
+
   .reservation-submit {
     width: 50rem !important;
     font-size: 1rem;
@@ -811,9 +960,22 @@ html {
     font-size: 1.1rem;
   }
 
+  .drink-img {
+    height: 30rem;
+  }
+
   .newsletter-first-text,
   .second-address-text,
   .private-dining p {
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .breakfast-banner,
+  .lunch-banner,
+  .dinner-banner,
+  .dessert-banner .drink-banner {
+    height: 480px;
   }
 }
