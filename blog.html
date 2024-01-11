@@ -1,0 +1,578 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./css/font-awesome.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="./css/blog.css" />
+  </head>
+
+  <body>
+    <header id="header" class="header py-0 px-0 fixed-top z-6 container-fluid">
+      <nav
+        class="nav-bar container-xxl px-0 px-xlg-4 h-100 position-relative d-flex flex-row align-items-center justify-content-between">
+        <a href="./index.html" class="ms-2 ms-sm-3">
+          <img src="./Images/logo-dark.png" class="navLogo z-6" alt="" />
+        </a>
+        <button
+          class="side-menu-toggle me-2 d-flex flex-column position-absolute z-7"
+          onclick="sideMenu()">
+          <i class="fas fa-bars toggle1 position-absolute"></i>
+        </button>
+        <button
+          class="toggler me-0 me-sm-2 d-flex flex-column position-absolute d-lg-none"
+          onclick="toggle()">
+          <i class="fas fa-bars hamburger-icon"></i>
+        </button>
+        <ul
+          class="navbar-menu px-0 py-3 px-4 py-lg-0 m-0 z-6 ms-auto d-flex flex-column flex-lg-row align-items-center justify-content-lg-end gap-3 gap-lg-1 position-absolute">
+          <li class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center">
+            <a
+              href="./index.html"
+              class="menu-item item1 d-flex align-items-center text-white"
+              >Home</a
+            >
+          </li>
+          <li
+            class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center position-relative">
+            <a
+              href="#"
+              class="menu-item item2 d-flex align-items-center text-white z-6"
+              >About</a
+            >
+            <ul class="about-list position-absolute z-6 vstack gap-3">
+              <li class="mt-2">
+                <a class="text-white" href="./story.html">Our Story</a>
+              </li>
+              <li class="">
+                <a class="text-white" href="./chef.html">Our Chefs</a>
+              </li>
+              <li class="">
+                <a class="text-white" href="./guestbook.html">Our Guestbook</a>
+              </li>
+              <li class="">
+                <a class="text-white" href="./contact.html">Contact Us</a>
+              </li>
+              <li class="">
+                <a class="text-white" href="./events.html">Events</a>
+              </li>
+              <li class="mb-2">
+                <a class="text-white" href="./faq.html">FAQs</a>
+              </li>
+            </ul>
+          </li>
+          <li class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center">
+            <a
+              href="./menu.html"
+              class="menu-item item3 d-flex align-items-center text-white"
+              >Menu</a
+            >
+          </li>
+          <li class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center">
+            <a
+              href="./gallery.html"
+              class="menu-item item4 d-flex align-items-center text-white"
+              >Gallery</a
+            >
+          </li>
+          <li class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center">
+            <a
+              href="./blog.html"
+              class="menu-item item5 d-flex align-items-center text-white"
+              >Blog</a
+            >
+          </li>
+          <li
+            class="mx-xxl-2 my-2 my-lg-0 d-flex align-items-center position-relative">
+            <a
+              href="#"
+              class="menu-item item6 d-flex align-items-center text-white"
+              >Shop</a
+            >
+            <ul class="shop-list position-absolute vstack gap-3">
+              <li class="my-2"><a class="text-white" href="#">Cart</a></li>
+            </ul>
+          </li>
+          <button class="my-2 my-lg-0">
+            <a
+              id="reservation-link"
+              href="#reservation"
+              class="menu-item item7 text-white btn rounded-0 me-lg-3"
+              >Reservations</a
+            >
+          </button>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <aside
+        class="side-menu bg-dark px-3 px-md-4 pt-2 pb-4 z-7 d-flex flex-column align-items-start justify-content-between position-fixed">
+        <div
+          class="side-menu-1 col-12 position-relative d-flex flex-column align-items-center justify-content-center">
+          <div
+            class="side-icon mb-5 w-100 d-flex flex-row justify-content-end px-3">
+            <i
+              class="fas fa-arrow-right text-primary d-block toggle-arrow text-success z-7 mt-3"
+              onclick="sideMenu()"></i>
+          </div>
+          <img
+            src="./Images/footer-logo.png"
+            alt=""
+            class="side-menu-logo mt-4" />
+          <p class="side-menu-text text-secondary text-center m-0 mt-3 lh-lg">
+            El Royale was the first Restaurant to open in Egypt, the restaurant
+            was designed with the history in mind we have created a soft
+            industrial dining room.
+          </p>
+
+          <div class="social-icon-container mt-2 mt-xsm-3">
+            <i class="fa-brands fa-instagram social-icon mx-1"></i>
+            <i class="fa-brands fa-facebook social-icon mx-1"></i>
+            <i class="fa-brands fa-twitter social-icon mx-1"></i>
+            <i class="fa-brands fa-linkedin social-icon mx-1"></i>
+          </div>
+        </div>
+        <div class="side-menu2 d-grid w-100">
+          <p class="side-menu-email text-sm-center text-secondary m-0">
+            Main Email:ElRoyale@7oroof.com
+          </p>
+          <p class="side-menu-number text-sm-center text-secondary m-0 mb-2">
+            Phone: 02 010123456789
+          </p>
+          <button
+            class="side-menu-button btn col-12 btn-primary fw-semibold text-success rounded-0">
+            Make A Reservation
+          </button>
+        </div>
+      </aside>
+
+      <section class="blog-banner">
+        <div
+          class="blog-banner-container container d-flex flex-column align-items-center justify-content-center">
+          <h3 class="blog-first-text text-white text-center">Don't Miss</h3>
+          <h1 class="blog-main-text text-white text-center">Our News</h1>
+        </div>
+      </section>
+
+      <section class="news container d-md-flex flex-row align-items-start justify-content-center gap-lg-4 py-0">
+        <div class="news-block mx-auto pt-5">
+          <div class="news-block-1 col-12 card border-0 my-2">
+            <img
+              src="./Images/Chile-Spiked-Beans.jpeg"
+              alt=""
+              class="card-img-top news-img" />
+            <div class="news-sub-block card-body px-1">
+              <div class="news-alert-container">
+                <button class="alert-1 badge bg-primary p-2 rounded-1 fw-light">
+                  Food
+                </button>
+                <button class="alert-2 badge bg-primary p-2 rounded-1 fw-light">
+                  Recipe
+                </button>
+              </div>
+              <h1 class="news-block-header card-title fw-bold my-3">
+                Healthy & Simple Recipes That Are Perfect For Spring
+              </h1>
+              <p class="news-block-date card-subtitle text-secondary mt-1">
+                Jan 20, 2020
+              </p>
+              <p class="news-block-text card-text text-secondary mt-2 mb-2">
+                My favorite form of cold weather exercise is snow-shoeing, but
+                by chance i haven't been able to go this year. Busy working at
+                the computer when fresh snow fell...
+              </p>
+              <p class="m-0">
+                <a
+                  href="#"
+                  class="news-readmore card-link text-dark fw-semi-bold m-0"
+                  >Read More</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="news-block-2 col-12 card border-0 my-2">
+            <img
+              src="./Images/Shop_banner.jpeg"
+              alt=""
+              class="card-img-top news-img" />
+            <div class="news-sub-block card-body px-1">
+              <div class="news-alert-container">
+                <button class="alert-1 badge bg-primary p-2 rounded-1 fw-light">
+                  Food
+                </button>
+                <button class="alert-2 badge bg-primary p-2 rounded-1 fw-light">
+                  Recipe
+                </button>
+              </div>
+              <h1 class="news-block-header card-title fw-bold my-3">
+                Healthy & Simple Recipes That Are Perfect For Spring
+              </h1>
+              <p class="news-block-date card-subtitle text-secondary mt-1">
+                Jan 20, 2020
+              </p>
+              <p class="news-block-text card-text text-secondary mt-2 mb-2">
+                My favorite form of cold weather exercise is snow-shoeing, but
+                by chance i haven't been able to go this year. Busy working at
+                the computer when fresh snow fell...
+              </p>
+              <p class="m-0">
+                <a
+                  href="#"
+                  class="news-readmore card-link text-dark fw-semi-bold m-0"
+                  >Read More</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="news-block-3 col-12 card border-0 my-2">
+            <img
+              src="./Images/Shop_banner_2.jpeg"
+              alt=""
+              class="card-img-top news-img" />
+            <div class="news-sub-block card-body px-1">
+              <div class="news-alert-container">
+                <button class="alert-1 badge bg-primary p-2 rounded-1 fw-light">
+                  Food
+                </button>
+                <button class="alert-2 badge bg-primary p-2 rounded-1 fw-light">
+                  Recipe
+                </button>
+              </div>
+              <h1 class="news-block-header card-title fw-bold my-3">
+                Healthy & Simple Recipes That Are Perfect For Spring
+              </h1>
+              <p class="news-block-date card-subtitle text-secondary mt-1">
+                Jan 20, 2020
+              </p>
+              <p class="news-block-text card-text text-secondary mt-2 mb-2">
+                My favorite form of cold weather exercise is snow-shoeing, but
+                by chance i haven't been able to go this year. Busy working at
+                the computer when fresh snow fell...
+              </p>
+              <p class="m-0">
+                <a
+                  href="#"
+                  class="news-readmore card-link text-dark fw-semi-bold m-0"
+                  >Read More</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="news-block-4 col-12 card border-0 my-2">
+            <img
+              src="./Images/Shop_banner_3.jpeg"
+              alt=""
+              class="card-img-top news-img" />
+            <div class="news-sub-block card-body px-1">
+              <div class="news-alert-container">
+                <button class="alert-1 badge bg-primary p-2 rounded-1 fw-light">
+                  Food
+                </button>
+                <button class="alert-2 badge bg-primary p-2 rounded-1 fw-light">
+                  Recipe
+                </button>
+              </div>
+              <h1 class="news-block-header card-title fw-bold my-3">
+                Healthy & Simple Recipes That Are Perfect For Spring
+              </h1>
+              <p class="news-block-date card-subtitle text-secondary mt-1">
+                Jan 20, 2020
+              </p>
+              <p class="news-block-text card-text text-secondary mt-2 mb-2">
+                My favorite form of cold weather exercise is snow-shoeing, but
+                by chance i haven't been able to go this year. Busy working at
+                the computer when fresh snow fell...
+              </p>
+              <p class="m-0">
+                <a
+                  href="#"
+                  class="news-readmore card-link text-dark fw-semi-bold m-0"
+                  >Read More</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="news-block-5 col-12 card border-0 my-2">
+            <img
+              src="./Images/Shop_banner_4.jpeg"
+              alt=""
+              class="card-img-top news-img" />
+            <div class="news-sub-block card-body px-1">
+              <div class="news-alert-container">
+                <button class="alert-1 badge bg-primary p-2 rounded-1 fw-light">
+                  Food
+                </button>
+                <button class="alert-2 badge bg-primary p-2 rounded-1 fw-light">
+                  Recipe
+                </button>
+              </div>
+              <h1 class="news-block-header card-title fw-bold my-3">
+                Healthy & Simple Recipes That Are Perfect For Spring
+              </h1>
+              <p class="news-block-date card-subtitle text-secondary mt-1">
+                Jan 20, 2020
+              </p>
+              <p class="news-block-text card-text text-secondary mt-2 mb-2">
+                My favorite form of cold weather exercise is snow-shoeing, but
+                by chance i haven't been able to go this year. Busy working at
+                the computer when fresh snow fell...
+              </p>
+              <p class="m-0">
+                <a
+                  href="#"
+                  class="news-readmore card-link text-dark fw-semi-bold m-0"
+                  >Read More</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="news-block-6 col-12 card border-0 my-2">
+            <img
+              src="./Images/grilled_seafood_paella.jpeg"
+              alt=""
+              class="card-img-top news-img" />
+            <div class="news-sub-block card-body px-1">
+              <div class="news-alert-container">
+                <button class="alert-1 badge bg-primary p-2 rounded-1 fw-light">
+                  Food
+                </button>
+                <button class="alert-2 badge bg-primary p-2 rounded-1 fw-light">
+                  Recipe
+                </button>
+              </div>
+              <h1 class="news-block-header card-title fw-bold my-3">
+                Healthy & Simple Recipes That Are Perfect For Spring
+              </h1>
+              <p class="news-block-date card-subtitle text-secondary mt-1">
+                Jan 20, 2020
+              </p>
+              <p class="news-block-text card-text text-secondary mt-2 mb-2">
+                My favorite form of cold weather exercise is snow-shoeing, but
+                by chance i haven't been able to go this year. Busy working at
+                the computer when fresh snow fell...
+              </p>
+              <p class="m-0">
+                <a
+                  href="#"
+                  class="news-readmore card-link text-dark fw-semi-bold m-0"
+                  >Read More</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="news-sidebar container py-5">
+          <div class="search-bar container p-3 my-3 mt-2">
+            <p class="search-text fw-bold m-0">Search</p>
+            <form
+              action=""
+              class="d-flex flex-row align-items-center justify-content-between px-2">
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Type and hit enter ..." />
+              <button type="submit"><i class="fa-solid fa-search"></i></button>
+            </form>
+          </div>
+          <div class="categories container p-3 my-3">
+            <p class="categories-header fw-bold mb-3">Categories</p>
+            <ul class="category-list p-0 m-0">
+              <li class="dinner-recipes py-2">
+                <i class="fa-solid fa-greater-than"></i> Dinner Recipes
+              </li>
+              <li class="vegan-recipes py-2">
+                <i class="fa-solid fa-greater-than"></i> Vegan Recipes
+              </li>
+              <li class="healthy-food py-2">
+                <i class="fa-solid fa-greater-than"></i> Healthy Food
+              </li>
+              <li class="italian-food py-2">
+                <i class="fa-solid fa-greater-than"></i> Italian Food
+              </li>
+              <li class="indian-food py-2">
+                <i class="fa-solid fa-greater-than"></i> Indian Food
+              </li>
+              <li class="korean-food py-2">
+                <i class="fa-solid fa-greater-than"></i> Korean Food
+              </li>
+            </ul>
+          </div>
+          <div class="recent-posts container p-3 my-3">
+               <p class="recent-posts-header fw-bold mb-3">Recent Posts</p>
+
+            <div class="post1 col-12 card border-0 my-2">
+              <img
+                src="./Images/grilled_seafood_paella.jpeg"
+                alt=""
+                class="card-img-top post-img" />
+              <div class="card-body px-1 pb-0">
+                <p class="card-subtitle text-secondary post-date m-0">Oct 23, 2020</p>
+                <h1 class="card-title post-header fw-bold my-3">
+                  Tiny Apple Pies With Cinnamon Buns For Two
+                </h1>
+              </div>
+            </div>
+            <div class="post2 col-12 card border-0 my-2">
+              <img
+                src="./Images/Shop_banner_4.jpeg"
+                alt=""
+                class="card-img-top post-img" />
+              <div class="card-body px-1 pb-0">
+                <p class="card-subtitle text-secondary post-date m-0">Oct 7, 2020</p>
+                <h1 class="card-title post-header fw-bold my-3">
+                  Healthy & Simple Recipes That Are Perfect For Spring
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="tags container my-3 py-3">
+               <p class="tags-header fw-bold m-0">Tags</p>
+            <button
+              class="alert-1 badge bg-primary p-2 my-1 mx-xsm-1 rounded-0 fw-light">
+              Responsive
+            </button>
+            <button
+              class="alert-2 badge bg-primary p-2 my-1 mx-xsm-1 rounded-0 fw-light">
+              Fresh
+            </button>
+            <button
+              class="alert-1 badge bg-primary p-2 my-1 mx-xsm-1 rounded-0 fw-light">
+              Modern
+            </button>
+            <button
+              class="alert-2 badge bg-primary p-2 my-1 mx-xsm-1 rounded-0 fw-light">
+              Coporate
+            </button>
+            <button
+              class="alert-2 badge bg-primary p-2 my-1 mx-xsm-1 rounded-0 fw-light">
+              Business
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="contact d-flex flex-column align-items-center justify-content-center py-5 px-3">
+        <div class="contact-container container-xxl px-xsm-4 px-xm-5 px-md-3">
+          <div
+            class="address d-flex flex-column align-items-center justify-content-center mb-md-5">
+            <h5
+              class="first-address-text text-white fw-bold m-0 text-center mt-2 mb-2">
+              Our Address
+            </h5>
+            <p class="second-address-text text-info text-center m-0">
+              22 Alnahas Building, 2 AlBahr St, Tanta <br />Al-Gharbia
+              Governorate, Egypt
+            </p>
+            <p class="mt-3">
+              <a href="#" class="map-link text-center fw-bold">View on Map</a>
+            </p>
+          </div>
+
+          <div
+            class="newsletter d-flex flex-column align-items-center justify-content-center">
+            <img src="./Images/footer-logo.png" alt="" class="footer-logo" />
+            <p class="newsletter-first-text text-info text-center mt-3">
+              El Royale was the first restaurant to open in Egypt, the
+              restauraant was designed with the history in mind we have created
+              a soft industrial dining room.
+            </p>
+            <form
+              action=""
+              class="newsletter-form d-flex align-items-center justify-content-center">
+              <input
+                type="email"
+                name=""
+                id=""
+                class="newsletter-email z-5 justify-self-start border-none px-2 text-success"
+                placeholder="Subscribe To Our Newsletter " />
+              <button type="submit" class="newsletter-submit z-5">
+                <i class="fa-solid fa-arrow-right text-primary"></i>
+              </button>
+            </form>
+            <div class="social-icon-container mt-4 z-5">
+              <i class="fa-brands fa-instagram social-icon mx-1"></i>
+              <i class="fa-brands fa-facebook social-icon mx-1"></i>
+              <i class="fa-brands fa-twitter social-icon mx-1"></i>
+              <i class="fa-brands fa-linkedin social-icon mx-1"></i>
+            </div>
+          </div>
+
+          <div
+            class="private-dining d-flex flex-column align-items-center justify-content-center mb-md-5">
+            <h5
+              class="private-dining-first-text text-white fw-bold mt-2 mb-2 text-center">
+              Private Dining
+            </h5>
+            <p class="private-dining-email text-info text-center m-0">
+              Main Email: Elroyale@gmail.com
+            </p>
+            <p class="private-dining-number text-info text-center m-0">
+              Phone: +27 08303891
+            </p>
+            <p class="mt-3">
+              <a
+                href="#reservation"
+                class="private-dining-reservations text-center"
+                >Reservations</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer bg-black py-2">
+      <div class="footer-container">
+        <ul
+          class="footer-ul w-100 p-0 mb-2 vstack gap-2 gap-md-3 d-flex flex-row justify-content-center align-items-center">
+          <li class="">
+            <a href="./index.html" class="footer-home text-white fw-bold"
+              >Home</a
+            >
+          </li>
+          <li class="">
+            <a href="./menu.html" class="footer-menu text-white fw-bold"
+              >Menu</a
+            >
+          </li>
+          <li class="">
+            <a href="#" class="footer-gallery text-white fw-bold">Gallery</a>
+          </li>
+          <li class="">
+            <a href="#" class="footer-blog text-white fw-bold">Blog</a>
+          </li>
+          <li class="">
+            <a href="./shop.html" class="footer-shop text-white fw-bold"
+              >Shop</a
+            >
+          </li>
+        </ul>
+        <p class="copyright text-info text-center m-0">
+          &copy;
+          <a
+            href="https://7oroof.com"
+            class="copyright text-primary text-center"
+            >7oroof </a
+          >Coded by
+          <a href="#" class="copyright text-primary text-center">Fruitful</a>
+        </p>
+      </div>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
