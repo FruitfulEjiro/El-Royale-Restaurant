@@ -43,7 +43,7 @@ html {
 .navbar-menu {
   top: 4rem;
   left: 0rem;
-  height: 28rem;
+  height: 24rem;
   width: 100%;
   background: #000000e1;
   transform: translateX(100%);
@@ -87,6 +87,7 @@ html {
 
 .menu-item:hover {
   color: $primary !important;
+  background: $btn-active-bg;
 }
 
 #reservation-link {
@@ -98,10 +99,6 @@ html {
   border: 3px solid #fff;
   color: #000 !important;
   background: #fff;
-}
-
-.menu-item:hover {
-  background: $btn-active-bg;
 }
 
 .menu-item:active {

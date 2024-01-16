@@ -34,6 +34,16 @@ const toggle1 = document.querySelector(".toggle1");
 const caret1 = document.querySelector(".caret-icon1");
 const caret2 = document.querySelector(".caret-icon2");
 
+about.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (close) {
+    document.querySelector(".about-list").style.height = "16rem";
+  } else {
+    document.querySelector(".about-list").style.height = "0rem";
+  }
+  close = !close;
+});
+
 const navbar = document.getElementById("header");
 const mediaQuery = window.matchMedia("(min-width: 900px)");
 
